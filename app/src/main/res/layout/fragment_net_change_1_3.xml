@@ -1,0 +1,180 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="接口名称：客户信息查询"
+        android:textSize="@dimen/default_small_size" 
+         android:textColor="@color/color_black"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="接口编号:"
+            android:textSize="@dimen/default_mini_size" />
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:background="@drawable/corner_rectangle_lightgray2_bg3"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="ESR_SFEFS_FEWFW"
+            android:textSize="@dimen/default_mini_size" 
+            android:layout_marginRight="10dp"
+            android:textColor="@color/color_black"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="需求编号:"
+            android:textSize="@dimen/default_mini_size" />
+
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:background="@drawable/corner_rectangle_lightgray2_bg3"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="ESR_SFEFS_FEWFW"
+            android:textSize="@dimen/default_mini_size"
+            android:textColor="@color/color_black"
+            android:layout_marginRight="10dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="需求人员:"
+            android:textSize="@dimen/default_mini_size" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv4"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/corner_rectangle_lightgray2_bg3"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="郑泽博"
+                android:textSize="@dimen/default_mini_size" 
+                 android:textColor="@color/color_black"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:gravity="center"
+                android:text="评审结论"
+                android:textSize="@dimen/default_mini_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+            
+                android:gravity="center"
+                android:text="变更类型"
+                android:layout_marginLeft="25dp"
+                android:textSize="@dimen/default_mini_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="需求人员:"
+            android:textSize="@dimen/default_mini_size" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv5"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/corner_rectangle_lightgray2_bg3"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="郑泽博"
+                android:textSize="@dimen/default_mini_size"
+                android:textColor="@color/color_black" />
+
+            <TextView
+                android:id="@+id/tv6"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/oval_green"
+                android:gravity="center"
+                android:text="通过"
+                android:textSize="@dimen/default_mini_size"
+                android:layout_marginBottom="5dp"
+                 android:textColor="@color/color_white"/>
+
+            <TextView
+                android:id="@+id/tv7"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/oval_green"
+                android:gravity="center"
+                android:text="变更"
+                android:textSize="@dimen/default_mini_size" 
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/color_white"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

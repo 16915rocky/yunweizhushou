@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+   
+    android:orientation="vertical" >
+   <LinearLayout 
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal">
+       <RelativeLayout 
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:layout_height="match_parent">
+           <View 
+               android:layout_width="1dp"
+               android:layout_height="wrap_content"
+               android:layout_centerHorizontal="true"
+               android:background="@color/color_gray2"/>
+           <TextView 
+               android:layout_width="15dp"
+               android:layout_height="15dp"
+               android:layout_centerHorizontal="true"
+               android:layout_centerVertical="true"
+               android:background="@drawable/oval_double_green"/>
+       </RelativeLayout>
+     	<RelativeLayout 
+     	    android:layout_width="0dp"
+     	    android:layout_weight="5"
+     	    android:layout_height="wrap_content">
+     	   <TextView 
+     	       android:id="@+id/tv1_fault_riskwarning_item"
+     	       android:layout_width="match_parent"
+     	       android:layout_height="wrap_content"
+     	       android:textSize="@dimen/default_ssmall_size"
+     	       android:text="1242414124124"/> 
+     	        <TextView 
+     	       android:id="@+id/tv2_fault_riskwarning_item"
+     	       android:layout_width="match_parent"
+     	       android:layout_height="wrap_content"
+     	   	  android:layout_below="@+id/tv1_fault_riskwarning_item"
+     	       android:layout_alignParentBottom="true"
+     	       android:textSize="@dimen/default_ssmall_size"
+     	       android:layout_marginBottom="5dp"
+     	       android:text="2017-03-11 12:21:21"/> 
+     	       <View 
+     	           android:layout_width="match_parent"
+     	           android:layout_height="1dp"
+     	           android:layout_marginBottom="1dp"
+     	            android:layout_alignParentBottom="true"
+     	            android:background="@color/color_gray2"/>
+     	</RelativeLayout>
+   </LinearLayout> 
+
+</LinearLayout>

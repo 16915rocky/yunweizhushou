@@ -1,0 +1,134 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/system_tree_detail_head_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_lightblue"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="资源类型"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/default_ssmall_size" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="名称"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/default_ssmall_size" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="资源描述"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/default_ssmall_size" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="系统层级"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/default_ssmall_size" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="应用\n联系人"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/default_ssmall_size" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="物理\nIP地址"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/default_ssmall_size" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/system_tree_detail_head_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_lightblue"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <TextView
+            android:visibility="gone"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="资源类型"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/default_ssmall_size" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="名称"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/default_ssmall_size" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="资源描述"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/default_ssmall_size" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="实例名称"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/default_ssmall_size" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="运行用户"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/default_ssmall_size" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="归属\n服务器"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/default_ssmall_size" />
+    </LinearLayout>
+
+</LinearLayout>

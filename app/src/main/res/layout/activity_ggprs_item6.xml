@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   xmlns:app ="http://schemas.android.com/apk/res-auto"     
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_marginLeft="5dp"
+    android:orientation="horizontal">
+      <LinearLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:orientation="vertical" >
+
+            
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@mipmap/icon_ggprs_zhuji" />
+        </LinearLayout>
+     <RelativeLayout 
+         android:layout_width="60dp"
+         android:layout_height="50dp">
+       <TextView 
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="集团省端\n通讯服务器"
+           android:layout_centerVertical="true"
+           android:gravity="center"
+           android:textSize="@dimen/default_mini_size"/>
+     </RelativeLayout>
+	  <RelativeLayout
+         android:layout_width="50dp"
+         android:layout_height="50dp"                 
+         android:background="@drawable/rectangle_gray" >
+         <TextView
+             android:id="@+id/hzlz"
+             android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+             android:textSize="10sp"
+             android:text="汇总累账"            
+              android:layout_centerHorizontal="true"
+             android:layout_marginTop="15dp"
+             android:textColor="@color/color_white"
+           />
+          <TextView
+             android:id="@+id/sbacklog"
+             android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+             android:textSize="10sp"
+             android:layout_marginTop="28dp"
+             android:text="0"
+             android:layout_centerHorizontal="true"
+             android:textColor="@color/color_white"
+           />
+          <com.chinamobile.yunweizhushou.view.WaveView
+               android:id="@+id/waveview5"
+              android:layout_alignParentBottom="true"
+              android:layout_width="match_parent"              
+              android:layout_height="0dp"   
+                    
+              />
+     </RelativeLayout>
+     <RelativeLayout 
+        android:layout_width="30dp"
+        android:layout_height="50dp">
+         <com.chinamobile.yunweizhushou.view.DashView
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        app:dashWidth="2dp"
+	        app:lineWidth="4dp"
+	        android:layout_centerVertical="true"
+	        app:lineColor="@color/color_blue"
+	        app:dashOrientation="0"
+	        app:lineHeight="1dp"/>      
+	          <com.chinamobile.yunweizhushou.view.DashView
+	        android:layout_width="match_parent"
+	        android:layout_height="25dp"
+	        app:dashWidth="2dp"
+	        app:lineWidth="4dp"
+	        android:layout_marginLeft="15dp"
+	        app:lineColor="@color/color_blue"
+	        app:dashOrientation="1"
+	        app:lineHeight="1dp"/>     
+     </RelativeLayout>
+     <RelativeLayout
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:gravity="center" >
+
+          <ImageView
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:src="@mipmap/icon_rhombus" />
+			
+           
+         <LinearLayout 
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="vertical"
+             android:gravity="center"
+             android:layout_marginTop="16dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/oval6_1"
+                        android:layout_width="3dp"
+                        android:layout_height="3dp"
+                        android:src="@drawable/oval_deepgreen" />
+
+                    <ImageView
+                          android:id="@+id/oval6_2"
+                        android:layout_width="3dp"
+                        android:layout_height="3dp"
+                        android:layout_marginLeft="2dp"
+                        android:src="@drawable/oval_deepgreen" />
+
+                    <ImageView
+                          android:id="@+id/oval6_3"
+                        android:layout_width="3dp"
+                        android:layout_height="3dp"
+                        android:layout_marginLeft="2dp"
+                        android:src="@drawable/oval_deepgreen" />
+
+                    <ImageView
+                          android:id="@+id/oval6_4"
+                        android:layout_width="3dp"
+                        android:layout_height="3dp"
+                        android:layout_marginLeft="2dp"
+                        android:src="@drawable/oval_deepgreen" />
+                </LinearLayout>
+                 <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="3dp"
+                        android:layout_height="3dp"
+                        android:src="@drawable/oval_gray3" />
+
+                    <ImageView
+                        android:layout_width="3dp"
+                        android:layout_height="3dp"
+                        android:layout_marginLeft="2dp"
+                        android:src="@drawable/oval_gray3" />
+
+                    <ImageView
+                        android:layout_width="3dp"
+                        android:layout_height="3dp"
+                        android:layout_marginLeft="2dp"
+                        android:src="@drawable/oval_gray3" />
+
+                    <ImageView
+                        android:layout_width="3dp"
+                        android:layout_height="3dp"
+                        android:layout_marginLeft="2dp"
+                        android:src="@drawable/oval_gray3" />
+                </LinearLayout>
+         </LinearLayout>
+            
+        </RelativeLayout>
+        <LinearLayout 
+            android:layout_width="20dp"
+            android:layout_height="50dp">
+          <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+         <com.chinamobile.yunweizhushou.view.DashView
+	        android:layout_width="15dp"
+	        android:layout_height="wrap_content"
+	        app:dashWidth="2dp"
+	        app:lineWidth="4dp"
+	        android:layout_centerVertical="true"
+	        app:lineColor="@color/color_blue"
+	        app:dashOrientation="0"
+	        app:lineHeight="1dp"/> 
+	     <com.chinamobile.yunweizhushou.view.DashView
+	        android:layout_width="match_parent"
+	        android:layout_height="25dp"
+	        app:dashWidth="2dp"
+	        app:lineWidth="4dp"
+	        android:layout_marginLeft="15dp"
+	        app:lineColor="@color/color_blue"
+	        app:dashOrientation="1"
+	        app:lineHeight="1dp"/>    
+	        <TextView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="账务\nMDB"
+	            android:textSize="6sp"
+	            android:layout_alignParentBottom="true"/>
+	             
+     </RelativeLayout>
+            
+        </LinearLayout>
+        <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center"
+            android:orientation="vertical" >
+			<View
+			    android:layout_width="1dp"
+			    android:layout_height="match_parent"
+			    android:background="@color/color_blue" />
+            
+        </RelativeLayout>
+</LinearLayout>

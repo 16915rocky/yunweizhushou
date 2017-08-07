@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/common_title"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:gravity="center"
+               android:layout_weight="1">
+
+               <EditText
+                   android:id="@+id/et_item1"
+                   android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                   android:gravity="center"
+                   android:layout_margin="5dp"
+                   android:textSize="@dimen/default_middle_size"
+                   android:textColorHint="@color/color_gray2"
+                   android:background="@drawable/corner_rectangle_white_bg2"
+                   android:hint="号码"/>
+           </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:layout_weight="1">
+                <TextView
+                    android:id="@+id/et_item2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="@dimen/default_middle_size"
+                    android:layout_margin="5dp"
+                    android:textColorHint="@color/color_gray2"
+                    android:background="@drawable/corner_rectangle_white_bg2"
+                    android:hint="请选择时间"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="0.8"
+            android:gravity="center"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_query"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:text="查询"
+                android:gravity="center"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/default_xlarge_size"
+                android:background="@drawable/corner_rectangle_deepblue_bg2"/>
+        </LinearLayout>
+    </LinearLayout>
+    <ListView
+        android:id="@+id/lv_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ListView>
+</LinearLayout>

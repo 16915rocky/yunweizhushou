@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.chinamobile.yunweizhushou.view.MyRefreshLayout
+        android:id="@+id/middleRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ListView
+            android:id="@+id/middleListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_white"
+            android:divider="@null"
+            android:scrollbars="none" >
+        </ListView>
+    </com.chinamobile.yunweizhushou.view.MyRefreshLayout>
+
+</LinearLayout>

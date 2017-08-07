@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_margin="10dp" 
+    >
+       
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	     android:layout_height="0dp"
+	    android:layout_weight="1"
+	    android:gravity="center"
+	    android:layout_marginTop="10dp"
+	    android:orientation="vertical">
+	    <TextView 
+	        android:id="@+id/tv1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="合作式渠道"
+	        android:gravity="center"
+	     
+	        android:textSize="@dimen/default_large_size"
+	        />
+	      <com.chinamobile.yunweizhushou.view.DashboardView
+	        android:id="@+id/dashboard_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bigSliceCount="10"
+            app:headerRadius="35dp"
+            app:headerTitle="得分"
+            app:maxValue="100"
+            app:arcColor="@color/color_white"
+            app:measureTextSize="8sp"
+            app:headerTextSize="15sp"
+            app:radius="70dp"        
+            app:sliceCountInOneBigSlice="11"
+            app:realTimeValue="50"
+            app:textColor="#030303"
+            app:startAngle="120"
+            app:stripeMode="inner"
+            app:stripeWidth="10dp"
+            app:sweepAngle="300">
+	        
+	    </com.chinamobile.yunweizhushou.view.DashboardView>
+	 
+	</LinearLayout>
+
+</LinearLayout>

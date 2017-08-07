@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+      android:id="@+id/ear_ralativelayout">
+
+   <ScrollView
+     
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:scrollbars="none" >
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/color_lightblue"
+        android:gravity="center"
+        android:text="业务异常排名"
+        android:textColor="@color/color_white" />
+
+    <ListView
+        android:id="@+id/esb_ar_listview1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/tv1"
+        android:scrollbars="none" >
+    </ListView>
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/esb_ar_listview1"
+        android:background="@color/color_lightblue"
+        android:gravity="center"
+        android:text="系统异常排名"
+        android:textColor="@color/color_white" />
+
+    <ListView
+        android:id="@+id/esb_ar_listview2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv2"
+        android:scrollbars="none" >
+    </ListView>
+    </RelativeLayout>  
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottomChooce"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+       
+        android:layout_alignParentBottom="true"
+        
+        android:background="@drawable/corner_rectangle_lightblue_bg"
+        android:gravity="center" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"  
+            android:gravity="center"   
+            android:textColor="@color/color_white"     
+            android:text="频次:" />
+
+        <TextView
+            android:id="@+id/bottomChooce_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+               android:gravity="center"  
+               android:textColor="@color/color_white"               
+            android:text="5m" />
+    </LinearLayout>
+
+</RelativeLayout>

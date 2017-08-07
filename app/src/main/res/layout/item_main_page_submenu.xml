@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+     android:background="@color/color_lightgray2"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/mainpage_recharge_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/fragment_gridview_bg_selector"
+        android:orientation="horizontal"
+        android:layout_margin="3dp" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.5"
+            android:orientation="vertical"
+            android:padding="2dp" >
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="充值"
+                android:gravity="center"
+                android:minLines="2"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/default_small_size" />
+
+            <TextView
+                android:id="@+id/subTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:maxLines="2"
+                android:minLines="2"
+                android:text="分渠道入口充值量\n成功率等各类指标"
+                android:textColor="@color/main_page_small_text_color"
+                android:textSize="@dimen/default_ssmall_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5" >
+
+            <ImageView
+                android:id="@+id/menuIcon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/icon_mainpage_pay" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

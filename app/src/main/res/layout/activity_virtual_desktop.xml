@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_title" />
+    <com.chinamobile.yunweizhushou.view.MyRefreshLayout
+        android:id="@+id/rt_virtual_desktop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_zhfwl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textSize="@dimen/default_middle_size"
+                android:gravity="center"
+                android:text="" />
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/line_chart_vd"
+                android:layout_width="match_parent"
+                android:layout_height="180dp" >
+            </com.github.mikephil.charting.charts.LineChart>
+
+            <TextView
+                android:id="@+id/tv_fled"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:textSize="@dimen/default_middle_size"
+                android:text="" />
+
+            <com.github.mikephil.charting.charts.HorizontalBarChart
+                android:id="@+id/hbar_chart"
+                android:layout_width="match_parent"
+                 android:gravity="start"
+                android:layout_height="180dp" >
+            </com.github.mikephil.charting.charts.HorizontalBarChart>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" 
+                    android:orientation="vertical">
+                    <TextView 
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:textSize="@dimen/default_large_size"
+                        android:gravity="center"
+                        android:text="活动度排名"/>
+
+                    <com.chinamobile.yunweizhushou.view.MyListView
+                        android:id="@+id/lv_active_top10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+                    </com.chinamobile.yunweizhushou.view.MyListView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" 
+                    android:orientation="vertical">
+                     <TextView 
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:textSize="@dimen/default_large_size"
+                        android:gravity="center"
+                        android:text="安装量排名"/>
+
+                    <com.chinamobile.yunweizhushou.view.MyListView
+                        android:id="@+id/lv_install_top10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+                    </com.chinamobile.yunweizhushou.view.MyListView>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</com.chinamobile.yunweizhushou.view.MyRefreshLayout>
+</LinearLayout>

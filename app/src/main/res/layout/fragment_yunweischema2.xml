@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/common_list_7_title"
+        layout="@layout/common_title" />
+
+   
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" 
+           >
+
+            <LinearLayout
+                android:id="@+id/common_list_7_extra"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/color_lightgray3"
+                android:visibility="gone" >
+             <!--     <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/activity_network_linechart"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginRight="3dp" >
+            </com.github.mikephil.charting.charts.LineChart> -->
+            <lecho.lib.hellocharts.view.LineChartView
+            android:id="@+id/activity_network_linechart"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+            </LinearLayout>
+
+            <include
+                android:id="@+id/common_list_title_7"
+                layout="@layout/head_list_blue_title_7" />
+
+            <ListView
+                android:id="@+id/common_list_7_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+            </ListView>
+        </LinearLayout>
+  
+
+</LinearLayout>

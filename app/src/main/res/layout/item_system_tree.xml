@@ -1,0 +1,38 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white"
+    android:orientation="vertical"
+    android:padding="5dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/corner_top_border_lightblue"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_systemtree_head" />
+
+        <TextView
+            android:id="@+id/system_tree_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="电子渠道运营中心"
+            android:textColor="@color/color_lightblue"
+            android:textSize="@dimen/default_middle_size" />
+    </LinearLayout>
+
+    <com.chinamobile.yunweizhushou.view.MyGridView
+        android:id="@+id/system_tree_gridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="2" >
+    </com.chinamobile.yunweizhushou.view.MyGridView>
+
+</LinearLayout>

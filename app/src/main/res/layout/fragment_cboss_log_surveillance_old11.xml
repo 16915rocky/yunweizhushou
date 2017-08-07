@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app ="http://schemas.android.com/apk/res-auto"   
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+    
+    
+    <RelativeLayout 
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="50dp">
+          
+        
+	       		          	
+    </RelativeLayout>
+     <RelativeLayout 
+        android:layout_width="80dp"
+        android:layout_height="50dp">
+          <com.chinamobile.yunweizhushou.view.DashView
+              android:id="@+id/old11_dashview"
+	        android:layout_width="30dp"
+	        android:layout_height="10dp"
+	        app:dashWidth="2dp"
+	        app:lineWidth="4dp"	    
+	        app:lineColor="@color/color_blue"
+	        app:dashOrientation="0"
+	    	android:layout_marginTop="25dp"
+	    	android:layout_alignParentRight="true"
+	        app:lineHeight="1dp"
+	        /> 
+        	<ImageView 
+        	    android:layout_width="8dp"
+        	    android:layout_height="8dp"
+        	    android:src="@mipmap/icon_left_blue"
+        	    android:layout_marginTop="22dp"
+        	  android:layout_alignParentRight="true"
+        	  android:layout_marginRight="23dp"
+        	    />
+        	<TextView 
+        	    android:layout_width="50dp"
+        	    android:layout_height="match_parent"
+        	    android:text="中心化"
+        	    android:gravity="center"
+        	    android:textSize="@dimen/default_mini_size"
+        	    android:background="@color/color_gray2"
+        	    android:layout_marginRight="30dp"
+        	    />
+	       		          	
+    </RelativeLayout>
+      
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout 
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:background="@color/color_gray">
+            
+           <TextView 
+                  android:id="@+id/tv1_old11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="remote"
+            android:textSize="@dimen/default_mini_size"
+               android:layout_centerHorizontal="true"
+               android:gravity="center"
+               android:textColor="@color/color_white"
+               android:layout_marginTop="5dp"
+            /> 
+            <TextView 
+                android:id="@+id/tv2_old11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+               android:layout_centerHorizontal="true"
+                android:textColor="@color/color_white"
+                android:layout_below="@+id/tv1_old11"/>
+             <com.chinamobile.yunweizhushou.view.WaveView
+               android:id="@+id/waveview1_old11"
+              android:layout_alignParentBottom="true"
+              android:layout_width="match_parent"              
+              android:layout_height="0dp"   
+                    
+              />	
+    </RelativeLayout>
+    	<TextView 
+    	    android:layout_width="match_parent"
+    	    android:layout_height="wrap_content"
+    	    android:gravity="center"
+    	    android:text="10.70.205.75\n10.70.215.75"
+    	    android:textSize="@dimen/default_mini_size"/>
+    	
+    	   <com.chinamobile.yunweizhushou.view.DashView
+	        android:layout_width="10dp"
+	        android:layout_height="20dp"
+	        app:dashWidth="2dp"
+	        app:lineWidth="4dp"	    
+	        app:lineColor="@color/color_blue"
+	        app:dashOrientation="1"
+	        app:lineHeight="1dp"
+	     	android:layout_gravity="center"
+	        /> 
+    	
+    </LinearLayout>
+    
+
+     <RelativeLayout
+         android:layout_width="80dp"
+         android:layout_height="50dp" >
+
+         <com.chinamobile.yunweizhushou.view.DashView
+             android:layout_width="30dp"
+             android:layout_height="10dp"
+             android:layout_marginTop="25dp"
+             app:dashOrientation="0"
+             app:dashWidth="2dp"
+             app:lineColor="@color/color_blue"
+             app:lineHeight="1dp"
+             app:lineWidth="4dp" />
+
+         <ImageView
+             android:id="@+id/imageView1"
+             android:layout_width="8dp"
+             android:layout_height="8dp"
+             android:layout_marginLeft="25dp"
+             android:layout_marginTop="22dp"
+             android:src="@mipmap/icon_right_blue" />
+
+         <TextView
+             android:layout_width="50dp"
+             android:layout_height="match_parent"
+             android:layout_alignParentRight="true"
+             android:layout_alignParentTop="true"
+             android:background="@color/color_gray2"
+             android:gravity="center"
+             android:text="CrmWeb"
+             android:textSize="@dimen/default_mini_size" />
+        
+
+     </RelativeLayout>
+ 
+    <RelativeLayout 
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="50dp">
+    </RelativeLayout>    
+       
+</LinearLayout>

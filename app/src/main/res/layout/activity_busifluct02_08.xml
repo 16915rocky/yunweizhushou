@@ -1,0 +1,93 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.30" >
+        
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.86" >
+
+        <TextView
+            android:id="@+id/tw1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/rect_green_bg"
+            android:gravity="center"
+            android:text="计费表"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/default_mini_size" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.9" >
+        <TextView
+            android:id="@+id/tv666"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:gravity="start"
+            android:layout_centerVertical="true"
+            android:text="积压量:666"
+            android:textSize="@dimen/default_mini_size"
+            android:textColor="@color/color_lightblue" />
+   
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.8" >
+
+        <TextView
+            android:id="@+id/tw2"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/rect_green_bg"
+            android:gravity="center"
+            android:text="不计费表"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/default_mini_size" />
+        
+    </RelativeLayout>
+    <RelativeLayout 
+        android:layout_width="0dp"
+        android:layout_weight="0.7"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv777"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:gravity="start"
+            android:layout_centerVertical="true"
+            android:text="异常量:666"
+            android:textSize="@dimen/default_mini_size" 
+            android:textColor="@color/color_lightblue"/>
+
+    </RelativeLayout>
+
+   
+
+   
+    
+    
+
+    
+
+</LinearLayout>

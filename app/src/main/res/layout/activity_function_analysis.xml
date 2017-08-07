@@ -1,0 +1,95 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_title" />
+    <include layout="@layout/item_charge_people"
+        android:visibility="visible"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white" >
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="0.2"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <!--
+            <TextView
+                android:id="@+id/function_performance"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="6dp"
+                android:textColor="@color/color_lightblue"
+                android:text="实时性能检测" />
+            -->
+
+            <com.chinamobile.yunweizhushou.view.OperationTextView
+                android:id="@+id/function_performance"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+              />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <!--
+            <TextView
+                android:id="@+id/function_total"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="6dp"
+                android:text="恶化接口分析" />
+            -->
+
+            <com.chinamobile.yunweizhushou.view.OperationTextView
+                android:id="@+id/function_total"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="0.2"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <!--
+         <View
+        android:id="@+id/bottomBar"
+        android:layout_width="100dp"
+        android:layout_height="2dp"
+        android:background="@color/color_lightblue"
+        android:visibility="visible" />
+    -->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_gray" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/function_analysis_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </android.support.v4.view.ViewPager> 
+
+</LinearLayout>

@@ -1,0 +1,1723 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <include layout="@layout/common_title"/>
+    
+  <com.chinamobile.yunweizhushou.view.MyRefreshLayout
+        android:id="@+id/user_perception_refreshlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:background="@mipmap/icon_mapofzhejiang"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <com.chinamobile.yunweizhushou.view.SwitchView
+                        android:id="@+id/switchview1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="营业厅"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/default_ssmall_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <com.chinamobile.yunweizhushou.view.SwitchView
+                         android:id="@+id/switchview2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="社会\n渠道"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/default_ssmall_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lt_huzhou"
+                    android:layout_width="30dp"
+                    android:layout_height="78dp"
+                    android:layout_marginLeft="120dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="湖州" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_marginLeft="3dp"
+                            android:background="@drawable/oval_green"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tv_huzhou_fluency"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="23"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_huzhou_oval1"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_marginLeft="3dp"
+                            android:background="@drawable/oval_yellow"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tv_huzhou_slow"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="23"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                             android:id="@+id/tv_huzhou_oval2"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                             android:layout_marginLeft="3dp"
+                            android:background="@drawable/oval_orange"
+                            android:gravity="center" />
+
+                        <TextView
+                               android:id="@+id/tv_huzhou_pause"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="123"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_huzhou_oval3"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                             android:layout_marginLeft="3dp"
+                            android:background="@drawable/oval_red"
+                            android:gravity="center" />
+
+                        <TextView
+                              android:id="@+id/tv_huzhou_interrupt"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="13"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                 <LinearLayout
+                    android:id="@+id/lt_jiaxing"
+                    android:layout_width="30dp"
+                    android:layout_height="78dp"
+                    android:layout_marginLeft="190dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="嘉兴" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_marginLeft="3dp"
+                            android:background="@drawable/oval_green"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tv_jiaxing_fluency"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="23"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_jiaxing_oval1"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_marginLeft="3dp"
+                            android:background="@drawable/oval_yellow"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tv_jiaxing_slow"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="23"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                             android:id="@+id/tv_jiaxing_oval2"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                             android:layout_marginLeft="3dp"
+                            android:background="@drawable/oval_orange"
+                            android:gravity="center" />
+
+                        <TextView
+                               android:id="@+id/tv_jiaxing_pause"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="123"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_jiaxing_oval3"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                             android:layout_marginLeft="3dp"
+                            android:background="@drawable/oval_red"
+                            android:gravity="center" />
+
+                        <TextView
+                              android:id="@+id/tv_jiaxing_interrupt"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="13"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lt_hangzhou"
+                    android:layout_width="30dp"
+                    android:layout_height="78dp"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="100dp"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="杭州" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_marginLeft="3dp"
+                            android:background="@drawable/oval_green"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tv_hangzhou_fluency"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="23"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_hangzhou_oval1"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_marginLeft="3dp"
+                            android:background="@drawable/oval_yellow"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tv_hangzhou_slow"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="23"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                             android:id="@+id/tv_hangzhou_oval2"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                             android:layout_marginLeft="3dp"
+                            android:background="@drawable/oval_orange"
+                            android:gravity="center" />
+
+                        <TextView
+                               android:id="@+id/tv_hangzhou_pause"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="123"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_hangzhou_oval3"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                             android:layout_marginLeft="3dp"
+                            android:background="@drawable/oval_red"
+                            android:gravity="center" />
+
+                        <TextView
+                              android:id="@+id/tv_hangzhou_interrupt"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="13"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lt_shaoxing"
+                    android:layout_width="30dp"
+                    android:layout_height="78dp"
+                    android:layout_marginLeft="180dp"
+                    android:layout_marginTop="100dp"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="绍兴" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_marginLeft="3dp"
+                            android:background="@drawable/oval_green"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tv_shaoxing_fluency"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="23"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_shaoxing_oval1"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_marginLeft="3dp"
+                            android:background="@drawable/oval_yellow"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tv_shaoxing_slow"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="23"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                             android:id="@+id/tv_shaoxing_oval2"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                             android:layout_marginLeft="3dp"
+                            android:background="@drawable/oval_orange"
+                            android:gravity="center" />
+
+                        <TextView
+                               android:id="@+id/tv_shaoxing_pause"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="123"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_shaoxing_oval3"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                             android:layout_marginLeft="3dp"
+                            android:background="@drawable/oval_red"
+                            android:gravity="center" />
+
+                        <TextView
+                              android:id="@+id/tv_shaoxing_interrupt"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="13"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lt_ningbo"
+                    android:layout_width="30dp"
+                    android:layout_height="78dp"
+                    android:layout_marginLeft="240dp"
+                    android:layout_marginTop="100dp"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="宁波" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_marginLeft="3dp"
+                            android:background="@drawable/oval_green"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tv_ningbo_fluency"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="23"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_ningbo_oval1"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_marginLeft="3dp"
+                            android:background="@drawable/oval_yellow"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tv_ningbo_slow"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="23"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                             android:id="@+id/tv_ningbo_oval2"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                             android:layout_marginLeft="3dp"
+                            android:background="@drawable/oval_orange"
+                            android:gravity="center" />
+
+                        <TextView
+                               android:id="@+id/tv_ningbo_pause"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="123"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_ningbo_oval3"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                             android:layout_marginLeft="3dp"
+                            android:background="@drawable/oval_red"
+                            android:gravity="center" />
+
+                        <TextView
+                              android:id="@+id/tv_ningbo_interrupt"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="13"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                 <LinearLayout
+                    android:id="@+id/lt_zhoushan"
+                    android:layout_width="30dp"
+                    android:layout_height="78dp"
+                    android:layout_marginLeft="280dp"
+                    android:layout_marginTop="40dp"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="舟山" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_marginLeft="3dp"
+                            android:background="@drawable/oval_green"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tv_zhoushan_fluency"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="23"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_zhoushan_oval1"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_marginLeft="3dp"
+                            android:background="@drawable/oval_yellow"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tv_zhoushan_slow"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="23"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                             android:id="@+id/tv_zhoushan_oval2"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                             android:layout_marginLeft="3dp"
+                            android:background="@drawable/oval_orange"
+                            android:gravity="center" />
+
+                        <TextView
+                               android:id="@+id/tv_zhoushan_pause"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="123"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_zhoushan_oval3"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                             android:layout_marginLeft="3dp"
+                            android:background="@drawable/oval_red"
+                            android:gravity="center" />
+
+                        <TextView
+                              android:id="@+id/tv_zhoushan_interrupt"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="13"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+                </LinearLayout>
+
+               <LinearLayout
+                    android:id="@+id/lt_quzhou"
+                    android:layout_width="30dp"
+                    android:layout_height="78dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="200dp"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="衢州" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_marginLeft="3dp"
+                            android:background="@drawable/oval_green"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tv_quzhou_fluency"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="23"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_quzhou_oval1"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_marginLeft="3dp"
+                            android:background="@drawable/oval_yellow"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tv_quzhou_slow"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="23"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                             android:id="@+id/tv_quzhou_oval2"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                             android:layout_marginLeft="3dp"
+                            android:background="@drawable/oval_orange"
+                            android:gravity="center" />
+
+                        <TextView
+                               android:id="@+id/tv_quzhou_pause"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="123"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_quzhou_oval3"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                             android:layout_marginLeft="3dp"
+                            android:background="@drawable/oval_red"
+                            android:gravity="center" />
+
+                        <TextView
+                              android:id="@+id/tv_quzhou_interrupt"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="13"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+                </LinearLayout>
+               <LinearLayout
+                    android:id="@+id/lt_jinhua"
+                    android:layout_width="30dp"
+                    android:layout_height="78dp"
+                    android:layout_marginLeft="140dp"
+                    android:layout_marginTop="170dp"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="金华" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_marginLeft="3dp"
+                            android:background="@drawable/oval_green"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tv_jinhua_fluency"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="23"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_jinhua_oval1"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_marginLeft="3dp"
+                            android:background="@drawable/oval_yellow"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tv_jinhua_slow"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="23"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                             android:id="@+id/tv_jinhua_oval2"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                             android:layout_marginLeft="3dp"
+                            android:background="@drawable/oval_orange"
+                            android:gravity="center" />
+
+                        <TextView
+                               android:id="@+id/tv_jinhua_pause"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="123"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_jinhua_oval3"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                             android:layout_marginLeft="3dp"
+                            android:background="@drawable/oval_red"
+                            android:gravity="center" />
+
+                        <TextView
+                              android:id="@+id/tv_jinhua_interrupt"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="13"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+                </LinearLayout>
+             <LinearLayout
+                    android:id="@+id/lt_taizhou"
+                    android:layout_width="30dp"
+                    android:layout_height="78dp"
+                    android:layout_marginLeft="210dp"
+                    android:layout_marginTop="200dp"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="台州" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_marginLeft="3dp"
+                            android:background="@drawable/oval_green"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tv_taizhou_fluency"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="23"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_taizhou_oval1"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_marginLeft="3dp"
+                            android:background="@drawable/oval_yellow"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tv_taizhou_slow"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="23"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                             android:id="@+id/tv_taizhou_oval2"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                             android:layout_marginLeft="3dp"
+                            android:background="@drawable/oval_orange"
+                            android:gravity="center" />
+
+                        <TextView
+                               android:id="@+id/tv_taizhou_pause"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="123"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_taizhou_oval3"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                             android:layout_marginLeft="3dp"
+                            android:background="@drawable/oval_red"
+                            android:gravity="center" />
+
+                        <TextView
+                              android:id="@+id/tv_taizhou_interrupt"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="13"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+                </LinearLayout>
+
+               <LinearLayout
+                    android:id="@+id/lt_lishui"
+                    android:layout_width="30dp"
+                    android:layout_height="78dp"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginTop="280dp"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="丽水" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_marginLeft="3dp"
+                            android:background="@drawable/oval_green"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tv_lishui_fluency"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="23"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_lishui_oval1"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_marginLeft="3dp"
+                            android:background="@drawable/oval_yellow"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tv_lishui_slow"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="23"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                             android:id="@+id/tv_lishui_oval2"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                             android:layout_marginLeft="3dp"
+                            android:background="@drawable/oval_orange"
+                            android:gravity="center" />
+
+                        <TextView
+                               android:id="@+id/tv_lishui_pause"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="123"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_lishui_oval3"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                             android:layout_marginLeft="3dp"
+                            android:background="@drawable/oval_red"
+                            android:gravity="center" />
+
+                        <TextView
+                              android:id="@+id/tv_lishui_interrupt"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="13"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+                </LinearLayout>
+
+               <LinearLayout
+                    android:id="@+id/lt_wenzhou"
+                    android:layout_width="30dp"
+                    android:layout_height="78dp"
+                    android:layout_marginLeft="200dp"
+                    android:layout_marginTop="280dp"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="温州" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_marginLeft="3dp"
+                            android:background="@drawable/oval_green"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tv_wenzhou_fluency"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="23"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_wenzhou_oval1"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_marginLeft="3dp"
+                            android:background="@drawable/oval_yellow"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tv_wenzhou_slow"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="23"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                             android:id="@+id/tv_wenzhou_oval2"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                             android:layout_marginLeft="3dp"
+                            android:background="@drawable/oval_orange"
+                            android:gravity="center" />
+
+                        <TextView
+                               android:id="@+id/tv_wenzhou_pause"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="123"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_wenzhou_oval3"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                             android:layout_marginLeft="3dp"
+                            android:background="@drawable/oval_red"
+                            android:gravity="center" />
+
+                        <TextView
+                              android:id="@+id/tv_wenzhou_interrupt"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="13"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="330dp"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:background="@drawable/oval_green"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="流畅"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:background="@drawable/oval_yellow"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="缓慢"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:background="@drawable/oval_orange"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="卡顿"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:background="@drawable/oval_red"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="中断"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/lt_cornofright"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="330dp"
+                    android:background="@drawable/corner_rectangle_bold_stroke_white"
+                    android:gravity="start"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/lt1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="3dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="流畅"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/default_mini_size" />
+
+                        <TextView
+                            android:id="@+id/tv_fluency"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="000"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lt2"
+                 		 android:layout_below="@+id/lt1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="缓慢"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/default_mini_size" />
+
+                        <TextView
+                            android:id="@+id/tv_slow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="000"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lt3"
+                         android:layout_below="@+id/lt2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="卡顿"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/default_mini_size" />
+
+                        <TextView
+                            android:id="@+id/tv_pause"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="000"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lt4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                          android:layout_below="@+id/lt3"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                           
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="中断"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/default_mini_size" />
+
+                        <TextView 
+                            android:id="@+id/tv_interrupt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="center"
+                            android:text="000"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/default_mini_size" />
+                    </LinearLayout>
+                    <ImageView 
+                         android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_alignParentRight="true"
+                             android:layout_marginRight="4dp"
+                           android:src="@mipmap/icon_right_white"
+                            android:layout_centerVertical="true"/>
+                </RelativeLayout>
+            </RelativeLayout>
+              <RelativeLayout 
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+
+              >
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:textColor="@color/color_lightblue"
+                    android:text="最差感知TOP5"/>
+                
+                <TextView 
+                    android:id="@+id/tv_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="更多"
+                    android:gravity="center"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:textSize="@dimen/default_mini_size"/>
+                <ImageView 
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_centerVertical="true"
+                     android:layout_alignParentRight="true"
+                     android:layout_marginRight="5dp"
+                    android:src="@mipmap/icon_right_blue"/>
+                </RelativeLayout>
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:background="@color/color_lightblue"
+                android:orientation="horizontal">
+                <TextView 
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="排名"
+                    android:textColor="@color/color_white"
+                    android:layout_height="match_parent"
+                    android:gravity="center"/>
+                 <TextView 
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="类型"
+                     android:textColor="@color/color_white"
+                    android:layout_height="match_parent"
+                    android:gravity="center"/>
+                  <TextView 
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="地市"
+                     android:textColor="@color/color_white"
+                    android:layout_height="match_parent"
+                    android:gravity="center"/>
+                   <TextView 
+                    android:layout_width="0dp"
+                    android:layout_weight="2.3"
+                     android:textColor="@color/color_white"
+                    android:text="组织名称"
+                    android:layout_height="match_parent"
+                    android:gravity="center"/>
+                    <TextView 
+                    android:layout_width="0dp"
+                    android:layout_weight="1.2"
+                     android:textColor="@color/color_white"
+                    android:text="平均耗时"
+                    android:layout_height="match_parent"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/listview1_user_perception2"
+                android:layout_width="match_parent"
+                android:scrollbars="none"
+                android:layout_height="match_parent"/>
+ 			 <RelativeLayout 
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:textColor="@color/color_lightblue"
+                    android:text="最佳感知TOP5"/>
+                
+                <TextView 
+                    android:id="@+id/tv_more2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="更多"
+                    android:gravity="center"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:textSize="@dimen/default_mini_size"/>
+                <ImageView 
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_centerVertical="true"
+                     android:layout_alignParentRight="true"
+                     android:layout_marginRight="5dp"
+                    android:src="@mipmap/icon_right_blue"/>
+                </RelativeLayout>
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:background="@color/color_lightblue"
+                android:orientation="horizontal">
+                <TextView 
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="排名"
+                    android:textColor="@color/color_white"
+                    android:layout_height="match_parent"
+                    android:gravity="center"/>
+                 <TextView 
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="类型"
+                     android:textColor="@color/color_white"
+                    android:layout_height="match_parent"
+                    android:gravity="center"/>
+                  <TextView 
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="地市"
+                     android:textColor="@color/color_white"
+                    android:layout_height="match_parent"
+                    android:gravity="center"/>
+                   <TextView 
+                    android:layout_width="0dp"
+                    android:layout_weight="2.3"
+                     android:textColor="@color/color_white"
+                    android:text="组织名称"
+                    android:layout_height="match_parent"
+                    android:gravity="center"/>
+                    <TextView 
+                    android:layout_width="0dp"
+                    android:layout_weight="1.2"
+                     android:textColor="@color/color_white"
+                    android:text="平均耗时"
+                    android:layout_height="match_parent"
+                    android:gravity="center"/>
+            </LinearLayout>
+              <ListView
+                android:id="@+id/listview2_user_perception2"
+                android:layout_width="match_parent"
+                android:scrollbars="none"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+        
+    </ScrollView>
+</com.chinamobile.yunweizhushou.view.MyRefreshLayout>
+</LinearLayout>

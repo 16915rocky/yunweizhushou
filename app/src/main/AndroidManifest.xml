@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.chinamobile.yunweizhushou"
+   >
+
+    <uses-permission  android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RIDE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" >
+    </uses-permission>
+
+    <application
+        android:name=".common.MainApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/icon_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+
+        android:theme="@style/AppTheme">
+        <activity android:name=".ui.login.SplashActivity" android:theme="@style/AppTheme.NoBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.main.MainActivity" />
+        <activity android:name=".ui.main.MoreItemActivity" />
+        <activity android:name=".common.permission.PermissionActivity"  android:theme="@style/AppTheme.NoBar"/>
+        <activity android:name=".ui.login.LoginActivity" android:theme="@style/AppTheme.NoBar"/>
+        <activity android:name=".ui.main.MainPageActivity"/>
+        <!--故障-->
+        <activity android:name=".ui.fault.CalendarActivity"/>
+        <activity android:name=".ui.fault.ChangeActivity"/>
+        <activity android:name=".ui.fault.CommentActivity"/>
+        <activity android:name=".ui.fault.FaultManageActivity"/>
+        <activity android:name=".ui.fault.FaultManageOfHistoryNextActivity"/>
+        <activity android:name=".ui.fault.FaultRiskOrKeyNextActivity"/>
+        <activity android:name=".ui.fault.FaultTodayDetailActivity"/>
+        <activity android:name=".ui.fault.NetChangeDetailActivity"/>
+        <activity android:name=".ui.fault.SearchActivity"/>
+        <!--监控-->
+        <activity android:name=".ui.monitoring.DashBoard2Activity"/>
+        <activity android:name=".ui.monitoring.MonitoringAlarmActivity"/>
+        <!--集团考核-->
+        <activity android:name=".ui.teamcheck.AssessmentActivity"/>
+        <activity android:name=".ui.teamcheck.DetailOfAnnualActivity"/>
+        <activity android:name=".ui.teamcheck.TeamcheckManageActivity"/>
+        <activity android:name=".ui.teamcheck.TeamRankDetailActivity"/>
+        <!--投诉-->
+        <activity android:name=".ui.complaint.ComplainManageActivity"/>
+        <activity android:name=".ui.complaint.ReportFormDetailActivity"/>
+        <activity android:name=".ui.complaint.ReportFormGraphDetailActivity"/>
+        <activity android:name=".ui.complaint.UnfinishComplaintDetailActivity"/>
+        <!--业务受理量-->
+        <activity android:name=".ui.businessaccept.BusinessAcceptManageActivity"/>
+        <activity android:name=".ui.businessaccept.BusinessAcceptHorizenGraphActivity"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".common.GraphListActivity2"/>
+        <!--资金入账-->
+        <activity android:name=".ui.capitalrecorded.RityajiDetailActivity"/>
+        <activity android:name=".ui.capitalrecorded.RityajiManageActivity"/>
+        <!--实体厅指标-->
+        <activity android:name=".ui.ubstantivehall.EntityHallIndexActivity"/>
+        <!--用户感知-->
+        <activity android:name=".ui.userperception.UserPerceptionActivity2"/>
+        <activity android:name=".ui.userperception.UserPerceptionNextActivity2"/>
+        <!--esb接口-->
+        <activity android:name=".ui.esbInterface.ESBNextManageActivity"/>
+        <activity android:name=".ui.esbInterface.GovernAnalysisActivity"/>
+        <activity android:name=".ui.esbInterface.WaterBallGraphActivity"/>
+        <activity android:name=".ui.esbInterface.WaterBallHorizenGraphActivity"/>
+        <!--日志专区-->
+        <activity android:name=".logZone.LogZoneActivity"/>
+        <activity android:name=".logZone.LogZoneGplotActivity"/>
+        <activity android:name=".logZone.LogZoneTable3Activity"/>
+        <!--积压专区-->
+        <activity android:name=".ui.backlogZone.BacklogZoneActivity"/>
+        <activity android:name=".ui.backlogZone.GraphListActivity"/>
+        <!--异常专区-->
+        <activity android:name=".ui.abnormalZone.AbnormalZoneActivity"/>
+        <activity android:name=".common.MainPageSubMenuActivity"/>
+        <!--mq3-->
+        <activity android:name=".ui.mqTo3.MQTo3Activity"/>
+        <!--数据库连接池容量管理-->
+        <activity android:name=".ui.bdConnectionPool.DBConnectionPoolActivity"/>
+        <activity android:name=".ui.bdConnectionPool.DBConnectionPoolDetailActivity"/>
+        <!--线程容量管理-->
+        <activity android:name=".ui.threadCapacity.ThreadCapacityManagementActivity"/>
+        <!--考核专区-->
+        <activity android:name=".ui.capes.CapesManageActivity"/>
+        <activity android:name=".ui.capes.RechargeFunctionGraphDetailActivity"/>
+        <activity android:name=".ui.capes.ReconciliationScheduleDetailActivity"/>
+        <activity android:name=".ui.cboss.CbossManageActivity"/>
+        <activity android:name=".ui.assessmentOfTheZone.AssessmentOfTheZoneActivity"/>
+        <activity android:name=".ui.cboss.CbossDetailActivity"/>
+        <!--实名制-->
+        <activity android:name=".ui.realNameSystem.RealNameSystemActivity"/>
+        <activity android:name=".ui.realNameSystem.PieChartActivity"/>
+        <!--信控-->
+        <activity android:name=".ui.creditControl.CreditControl3Activity"/>
+        <activity android:name=".ui.creditControl.CreditControl4Activity"/>
+        <activity android:name=".ui.creditControl.CreditControl5Activity"/>
+        <!--酬金出账-->
+        <activity android:name=".ui.moneyoutCheck.MoneyoutCheckActivity"/>
+        <activity android:name=".ui.moneyoutCheck.MoneyoutCheckPieActivity"/>
+        <!--下周期-->
+        <activity android:name=".ui.nextCycle.NextActivity"/>
+        <!--计费立体监控-->
+        <activity android:name=".ui.billFlow.GGPRSActivity"/>
+        <!--扣费提醒-->
+        <activity android:name=".ui.busifluct.BusifluctActivity2"/>
+        <activity android:name=".ui.busifluct.DeductionRemindActivity"/>
+        <!--流量统付-->
+        <activity android:name=".ui.flowProvince.FlowProvinceActivity"/>
+        <!--人脸识别-->
+        <activity android:name=".ui.faceRecognititon.face_recognititonActivity"/>
+        <!--宽带专区-->
+        <activity android:name=".ui.bandService.BandServiceActivity"/>
+        <activity android:name=".ui.bandService.BandServiceActivity2"/>
+        <!--能力平台-->
+        <activity android:name=".ui.capabilityPlatform.AbilityManageActivity"/>
+        <!--开通中心-->
+        <activity android:name=".ui.openCenter.OpenCenterActivity"/>
+        <!--规则中心-->
+        <activity android:name=".ui.ruleCenter.RuleManageActivity"/>
+        <!--订单中心-->
+        <activity android:name=".ui.orderCenter.OrderCenterActivity"/>
+        <!--账户中心-->
+        <activity android:name=".ui.AccountCenter.IntegrationServiceActivity"/>
+        <!--入网变更-->
+        <activity android:name=".ui.netChange.NetChangeActivity2"/>
+        <activity android:name=".ui.netChange.NetChangeChangeActivity"/>
+        <activity android:name=".ui.netChange.NetChangeDetailManageActivity"/>
+        <activity android:name=".ui.netChange.NetChangeDetailSearchActivity"/>
+        <activity android:name=".ui.netChange.NetChangeErrorActivity"/>
+        <activity android:name=".ui.netChange.NetChangeLackActivity"/>
+        <activity android:name=".ui.netChange.OnlineChangeActivity"/>
+        <!--自动化巡检-->
+        <activity android:name=".ui.autoCheck.AutoCheckActivity"/>
+        <!--入网验收-->
+        <activity android:name=".ui.networkAcceptance.NetworkAcceptanceActivity"/>
+        <activity android:name=".ui.networkAcceptance.NetworkAcceptanceGraphActivity"/>
+        <!--核心生产线-->
+        <activity android:name=".ui.produceLine.ProduceLineManageActivity"/>
+        <activity android:name=".ui.produceLine.PoduceLineMoneyoutDetailActivity"/>
+        <activity android:name=".ui.produceLine.ProduceLineMonthChangeStateActivity"/>
+        <activity android:name=".ui.produceLine.ProduceLineMonthFocusActivity"/>
+        <!--运维资产-->
+        <activity android:name=".ui.yunweiAsset.YunweiAssertMCActivity"/>
+        <activity android:name=".ui.yunweiAsset.YunweiAssertMCNextListActivity"/>
+        <activity android:name=".ui.yunweiAsset.YunweiAssetActivity2"/>
+        <activity android:name=".ui.yunweiAsset.YunweiAssetBusinessCertificateActivity"/>
+        <activity android:name=".ui.yunweiAsset.YunweiAssetDataSave2Activity"/>
+        <activity android:name=".ui.yunweiAsset.YunweiAssetDataSaveActivity"/>
+        <activity android:name=".ui.yunweiAsset.YunweiAssetDBMActivity"/>
+        <activity android:name=".ui.yunweiAsset.YunweiAssetDetail1Activity"/>
+        <activity android:name=".ui.yunweiAsset.YunweiAssetDetail2Activity"/>
+        <activity android:name=".ui.yunweiAsset.YunweiAssetTACActivity"/>
+        <activity android:name=".ui.yunweiAsset.YunweiAssetWebLogicActivity"/>
+        <activity android:name=".ui.yunweiAsset.YunweiOnlineChangeActivity"/>
+        <!--需求运营-->
+        <activity android:name=".ui.demandPanoramic.DemandPanoramicActivity"/>
+        <activity android:name=".ui.demandPanoramic.DemandPanoramicDetailActivity"/>
+        <!--性能分析-->
+        <activity android:name=".ui.functionAnalysis.FunctionAnalysisActivity"/>
+        <activity android:name=".ui.functionAnalysis.FunctionAnalysisDetailActivity"/>
+        <!--权限审批-->
+        <activity android:name=".ui.yiyangShenpi.YiyangShenpiActivity"/>
+        <activity android:name=".ui.yiyangShenpi.YiyangShenpiNextActivity"/>
+        <!--故障自愈-->
+        <activity android:name=".ui.selfRepair.SelfRepairActivity"/>
+        <activity android:name=".ui.selfRepair.SelfRepairNextActivity"/>
+        <!--业务启示录-->
+        <activity android:name=".ui.serviceChain.ServiceChainActivity"/>
+        <activity android:name=".ui.serviceChain.ServiceChainNextActivity"/>
+        <!--支撑播报-->
+        <activity android:name=".ui.braceBroadcast.BraceBroadcastActivity"/>
+        <activity android:name=".common.GraphListActivity3"/>
+        <!--应急演练-->
+        <activity android:name=".ui.emergencyExercise.EmergencyExerciseActivity"/>
+        <activity android:name=".ui.emergencyExercise.TrillDetailActivity"/>
+        <!--自动化平台-->
+        <activity android:name=".ui.planManagement.PlanManagementActivity"/>
+        <!--用户感知指标-->
+        <activity android:name=".ui.userPerceptionIndex.UserPerceptionIndexActivity"/>
+        <activity android:name=".ui.userPerceptionIndex.UserPerceptionIndexNextActivity"/>
+        <!--虚拟桌面-->
+        <activity android:name=".ui.virtualDesktop.VirtualDesktopActivity"/>
+        <!--核心业务分级标准-->
+        <activity android:name=".ui.levelStandar.LevelStandardActivity"/>
+        <!--故障分级标准-->
+        <activity android:name=".ui.webView.WebViewActivity"/>
+        <!--系统架构图-->
+        <activity android:name=".ui.systemTree.ImageShowActivity"/>
+        <activity android:name=".ui.systemTree.HallFocusManageActivity"/>
+        <activity android:name=".ui.systemTree.SystemTreeActivity"/>
+        <activity android:name=".ui.systemTree.SystemTreeActivity5"/>
+        <activity android:name=".ui.systemTree.SystemTreeDetailDetailActivity"/>
+        <activity android:name=".ui.systemTree.SystemTreeNewDetail1Activity"/>
+        <!--在线预览-->
+        <activity android:name=".ui.onLinePreview.OnlinePreviewActivity"/>
+        <!--值班表-->
+        <activity android:name=".ui.dutyChart.DutyChartActivity"/>
+        <!--智维排名-->
+        <activity android:name=".ui.useRank.UseRankingActivity"/>
+        <!--开通网元失败专区-->
+        <activity android:name=".ui.hotZoneKTWY.HotZoneKTWYActivity"/>
+        <activity android:name=".ui.hotZoneKTWY.HotZoneKTWYNextActivity"/>
+        <!--统一支付失败专区-->
+        <activity android:name=".ui.hontZoneTYZF.HotZoneActivity"/>
+        <!--跨区补卡专区-->
+        <activity android:name=".ui.hotZoneKQBK.KQBKActivity"/>
+        <!--物联网专区指标-->
+        <activity android:name=".ui.hotZoneWLWZQZB.HotZoneWLWZBActivity"/>
+        <activity android:name=".ui.main.SearchActivity"/>
+        <activity android:name=".ui.main.QrCodeActivity"/>
+        <!--告警专区-->
+        <activity android:name=".ui.GJTarget.GJTargetActivity"/>
+        <!--对账单进度-->
+        <activity android:name=".ui.reconciliationSchedule.ReconciliationScheduleActivity"/>
+        <activity android:name=".ui.reconciliationSchedule.ReconciliationScheduleDetailActivity"/>
+       <!--预缴返充-->
+        <activity android:name=".ui.PayMoreGetShit.PayMoreActivity"/>
+        <activity android:name=".ui.PayMoreGetShit.PayMoreSubActivity"/>
+        <activity android:name=".ui.PayMoreGetShit.GraphListActivityFinal"/>
+        <!--云详单-->
+        <activity android:name=".ui.cloudBillingAudit.CloudBillingAuditActivity"/>
+        <!--全网流量统付-->
+        <activity android:name=".ui.networkFlowPay.EnetTrafficSysActivity"/>
+        <!--客户热点感知指标-->
+        <activity android:name=".ui.userPerceptionIndex.UserPerceptionIndexNext2Activity"/>
+       <!--局数据专区-->
+        <activity android:name=".ui.officeDataZone.OfficeDataZoneActivity"/>
+        <!--服务查询-->
+        <activity android:name=".ui.serviceLogQuery.ServiceLogQueryActivity"/>
+        <!--平台登录量监控-->
+        <activity android:name=".ui.platformLogin.PlatformLoginActivity"/>
+        <!--账管专区-->
+        <activity android:name=".ui.accountingArea.AccountingAareActivity"/>
+        <activity android:name=".ui.contentsOfTheFirstIssue.ProcessInspectionActivity"/>
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.fulan2.ywassistant.fileProvider"
+            android:grantUriPermissions="true"
+            android:exported="false"
+            >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

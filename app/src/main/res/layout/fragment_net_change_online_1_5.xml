@@ -1,0 +1,228 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical" >
+
+  <LinearLayout 
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:paddingTop="3dp"
+      android:paddingBottom="3dp"
+      android:paddingLeft="3dp"
+      android:paddingRight="3dp">
+      
+      <TextView 
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:layout_height="wrap_content"
+          android:text="开发子任务名称:"
+          android:gravity="end"
+          android:textSize="@dimen/default_mini_size"/>
+       <TextView 
+           android:id="@+id/tv1"
+          android:layout_width="0dp"
+          android:layout_weight="3"
+          android:layout_height="match_parent"
+          android:text="中国kkkkkkkkkkkkkkkkk"
+          android:gravity="center"
+          android:textSize="@dimen/default_mini_size"
+           android:layout_marginLeft="10dp"/>
+     
+  </LinearLayout>
+    <LinearLayout 
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:paddingTop="3dp"
+      android:paddingBottom="3dp"
+      android:paddingLeft="3dp"
+      android:paddingRight="3dp">
+      
+      <TextView 
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:layout_height="wrap_content"
+          android:text="实例名称:"
+          android:gravity="end"
+          android:textSize="@dimen/default_mini_size"/>
+       <TextView 
+          android:id="@+id/tv2"
+          android:layout_width="0dp"
+          android:layout_weight="3"
+          android:layout_height="match_parent"
+          android:text="中国kkkkkkkkkkkkkkkkk"
+          android:gravity="center"
+          android:textSize="@dimen/default_mini_size"
+          android:background="@drawable/corner_rectangle_lightgray_bg"
+            android:layout_marginLeft="10dp"
+         />
+     
+  </LinearLayout>
+   <LinearLayout 
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:paddingTop="3dp"
+      android:paddingBottom="3dp"
+      android:paddingLeft="3dp"
+      android:paddingRight="3dp">
+      
+      <TextView 
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:layout_height="wrap_content"
+          android:text="进程类型:"
+          android:gravity="end"
+          android:textSize="@dimen/default_mini_size"/>
+       <TextView 
+           android:id="@+id/tv3"
+          android:layout_width="0dp"
+          android:layout_weight="3"
+          android:layout_height="match_parent"
+          android:text="中国kkkkkkkkkkkkkkkkk"
+          android:gravity="center"
+          android:textSize="@dimen/default_mini_size"
+           android:layout_marginLeft="10dp"
+           android:background="@drawable/corner_rectangle_lightgray_bg"/>
+     
+  </LinearLayout>
+  
+      <LinearLayout 
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:paddingTop="3dp"
+      android:paddingBottom="3dp"
+      android:paddingLeft="3dp"
+      android:paddingRight="3dp">
+   
+
+          <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"     
+            android:layout_weight="1"       
+            android:gravity="end"
+            android:text="变更类型:"
+            android:textSize="@dimen/default_mini_size"
+            
+            android:layout_marginBottom="10dp"/>
+            
+             <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp" 
+            android:layout_weight="1"           
+            android:gravity="end"
+            android:text="类型:"
+            android:textSize="@dimen/default_mini_size"
+            />
+        </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="3"
+        android:orientation="horizontal" >
+
+        <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/tv4"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"     
+            android:layout_weight="1"       
+            android:gravity="center"
+            android:text="1111"
+            android:textSize="@dimen/default_mini_size"
+            android:background="@drawable/corner_rectangle_lightgray2_bg3" 
+            android:layout_marginBottom="10dp"/>
+            
+             <TextView
+                 android:id="@+id/tv5"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" 
+            android:layout_weight="1"           
+            android:gravity="center"
+            android:text="1111"
+            android:textSize="@dimen/default_mini_size"
+            android:background="@drawable/corner_rectangle_lightgray2_bg3" />
+        </LinearLayout>
+
+        
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.5" >
+
+            <TextView
+                android:id="@+id/tv6"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/oval_green"
+            android:gravity="center"
+            android:text="监控状态"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@+id/tv11"
+            android:textSize="@dimen/default_mini_size"
+            android:layout_alignParentLeft="true"
+             android:textColor="@color/color_white"
+           />
+            
+              <TextView
+                  android:id="@+id/tv12"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignLeft="@+id/tv7"
+                  android:layout_alignParentRight="true"
+                  android:layout_marginRight="20dp"
+                  android:text="监控状态"
+                  android:textSize="@dimen/default_mini_size" />
+
+            <TextView
+                android:id="@+id/tv7"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/oval_green"
+            android:gravity="center"
+            android:text="配置状态"
+            android:layout_marginRight="20dp"
+            android:layout_below="@+id/tv12"
+            android:textSize="@dimen/default_mini_size"
+            android:layout_alignParentRight="true"
+             android:textColor="@color/color_white"
+           />
+
+            <TextView
+                android:id="@+id/tv11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/tv7"
+                android:layout_alignLeft="@+id/tv6"
+                android:layout_alignRight="@+id/tv6"
+                android:gravity="center"
+                android:text="部署状态"
+                android:textSize="@dimen/default_mini_size" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+     
+  </LinearLayout>
+
+</LinearLayout>

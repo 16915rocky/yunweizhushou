@@ -1,0 +1,449 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_lightgray2"
+    android:orientation="vertical" >
+    
+    <include
+        android:id="@+id/satisfied_business_title"
+        layout="@layout/common_title"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="营业厅"
+                android:textSize="@dimen/default_middle_size" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="渠道"
+                android:textSize="@dimen/default_middle_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/ORG_TIME1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:text="数据为最近一分钟记录"
+                android:textColor="@color/color_gray"
+                android:textSize="@dimen/default_mini_size" />
+
+            <TextView
+                android:id="@+id/ORG_TIME2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:text="数据为最近一分钟记录"
+                android:textColor="@color/color_gray"
+                android:textSize="@dimen/default_mini_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_lightgray2"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/sati_hall_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/corner_rectangle_white_bg2"
+                android:orientation="vertical"
+                android:padding="5dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="成功量"
+                        android:textColor="@color/color_dark"
+                        android:textSize="@dimen/default_mini_size" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.6"
+                        android:src="@mipmap/icon_user_satisfied" />
+
+                    <TextView
+                        android:id="@+id/sati_degree_hall_1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:background="@drawable/corner_rectangle_deepgreen_bg"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/default_ssmall_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="业务失败量"
+                        android:textColor="@color/color_dark"
+                        android:textSize="@dimen/default_mini_size" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.6"
+                        android:src="@mipmap/icon_user_hehe" />
+
+                    <TextView
+                        android:id="@+id/sati_degree_hall_2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:background="@drawable/corner_rectangle_yellow_bg"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/default_ssmall_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="系统失败量"
+                        android:textColor="@color/color_dark"
+                        android:textSize="@dimen/default_mini_size" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.6"
+                        android:src="@mipmap/icon_user_unsatisfied" />
+
+                    <TextView
+                        android:id="@+id/sati_degree_hall_3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:background="@drawable/corner_rectangle_orange_bg"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/default_ssmall_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="业务成功率"
+                        android:textColor="@color/color_dark"
+                        android:textSize="@dimen/default_mini_size" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.6"
+                        android:src="@mipmap/yewu_chengonglv" />
+
+                    <TextView
+                        android:id="@+id/sati_degree_hall_4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:background="@drawable/corner_rectangle_deepblue_bg"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/default_ssmall_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="系统成功率"
+                        android:textColor="@color/color_dark"
+                        android:textSize="@dimen/default_mini_size" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.6"
+                        android:src="@mipmap/xitong_chenggonglv" />
+
+                    <TextView
+                        android:id="@+id/sati_degree_hall_5"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:background="@drawable/corner_rectangle_deepblue_bg2"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/default_ssmall_size" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sati_way_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/corner_rectangle_white_bg2"
+                android:orientation="vertical"
+                android:padding="5dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="成功量"
+                        android:textColor="@color/color_dark"
+                        android:textSize="@dimen/default_mini_size" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.6"
+                        android:src="@mipmap/icon_user_satisfied" />
+
+                    <TextView
+                        android:id="@+id/sati_degree_way_1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:background="@drawable/corner_rectangle_deepgreen_bg"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/default_ssmall_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="业务失败量"
+                        android:textColor="@color/color_dark"
+                        android:textSize="@dimen/default_mini_size" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.6"
+                        android:src="@mipmap/icon_user_hehe" />
+
+                    <TextView
+                        android:id="@+id/sati_degree_way_2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:background="@drawable/corner_rectangle_yellow_bg"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/default_ssmall_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="系统失败量"
+                        android:textColor="@color/color_dark"
+                        android:textSize="@dimen/default_mini_size" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.6"
+                        android:src="@mipmap/icon_user_unsatisfied" />
+
+                    <TextView
+                        android:id="@+id/sati_degree_way_3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:background="@drawable/corner_rectangle_orange_bg"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/default_ssmall_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="业务成功率"
+                        android:textColor="@color/color_dark"
+                        android:textSize="@dimen/default_mini_size" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.6"
+                        android:src="@mipmap/yewu_chengonglv" />
+
+                    <TextView
+                        android:id="@+id/sati_degree_way_4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:background="@drawable/corner_rectangle_deepblue_bg"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/default_ssmall_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="系统成功率"
+                        android:textColor="@color/color_dark"
+                        android:textSize="@dimen/default_mini_size" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.6"
+                        android:src="@mipmap/xitong_chenggonglv" />
+
+                    <TextView
+                        android:id="@+id/sati_degree_way_5"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:background="@drawable/corner_rectangle_deepblue_bg2"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/default_ssmall_size" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <com.chinamobile.yunweizhushou.view.MyRefreshLayout
+            android:id="@+id/refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        <com.chinamobile.yunweizhushou.view.MyListView
+            android:id="@+id/listview"
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </com.chinamobile.yunweizhushou.view.MyListView>
+        </com.chinamobile.yunweizhushou.view.MyRefreshLayout>
+    </LinearLayout>
+
+</LinearLayout>

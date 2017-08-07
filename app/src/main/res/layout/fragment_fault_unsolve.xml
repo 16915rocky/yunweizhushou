@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.chinamobile.yunweizhushou.view.MyRefreshLayout
+        android:id="@+id/fault_unsolve_swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <ListView
+                android:id="@+id/fault_unsolve_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none" >
+            </ListView>
+
+            <!--
+                 <TextView
+                android:id="@+id/frame_no_error"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="当前故障数为0"
+                android:textColor="@color/color_deepgreen"
+                android:textSize="@dimen/default_large_size"
+                android:visibility="gone" />
+            -->
+
+            <ImageView
+                android:id="@+id/frame_no_error"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@mipmap/icon_no_error"
+                android:visibility="gone" />
+        </LinearLayout>
+    </com.chinamobile.yunweizhushou.view.MyRefreshLayout>
+
+</RelativeLayout>

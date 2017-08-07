@@ -1,0 +1,178 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+     <include layout="@layout/item_charge_people"
+        android:visibility="visible"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+      
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            android:layout_weight="1.3" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/rect_green_bg"
+                android:gravity="center"
+                android:text="扣费提醒\n工单表"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/default_mini_size" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tv111"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="积压量:666"
+                    android:textSize="@dimen/default_mini_size" 
+                    android:textColor="@color/color_lightblue"
+                    />
+
+                <TextView
+                    android:id="@+id/tv222"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="异常量:666"
+                    android:textSize="@dimen/default_mini_size"
+                    android:textColor="@color/color_lightblue" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            android:layout_weight="1.5" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"   
+        android:orientation="horizontal" 
+        >
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            android:layout_weight="1.3" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:layout_weight="1" />
+
+                <RelativeLayout 
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" >
+                		<View 
+                		   android:layout_width="2dp"
+                           android:layout_height="match_parent"
+                           android:background="@color/color_lightblue"
+                           android:layout_centerHorizontal="true"
+                            />
+                 </RelativeLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textSize="@dimen/default_mini_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textSize="@dimen/default_mini_size" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            android:layout_weight="1.5" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/flow_provice_layout1"
+        layout="@layout/activity_busifluct02_03" 
+        />
+
+    <include
+        android:id="@+id/flow_provice_layout2"
+        layout="@layout/activity_busifluct02_04" />
+
+    <include
+        android:id="@+id/flow_provice_layout2"
+        layout="@layout/activity_busifluct02_05" />
+
+    <include
+        android:id="@+id/flow_provice_layout2"
+        layout="@layout/activity_busifluct02_06" />
+
+      <include
+        android:id="@+id/flow_provice_layout2"
+        layout="@layout/activity_busifluct02_07" />
+      <include
+        android:id="@+id/flow_provice_layout2"
+        layout="@layout/activity_busifluct02_08" />
+       <include
+        android:id="@+id/flow_provice_layout2"
+        layout="@layout/activity_busifluct02_09" />
+        <include
+        android:id="@+id/flow_provice_layout2"
+        layout="@layout/activity_busifluct02_10" />
+
+</LinearLayout>

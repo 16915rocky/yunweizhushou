@@ -1,0 +1,1026 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_lightgray2"
+    android:orientation="vertical" >
+    
+    
+     <include layout="@layout/common_title" />
+      <include layout="@layout/item_charge_people"
+        android:visibility="visible"/>
+
+       <com.chinamobile.yunweizhushou.view.MyRefreshLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+           <android.support.v4.widget.NestedScrollView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+     
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" 
+        android:paddingTop="10dp"
+       >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" 
+            >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="5dp" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/icon_renlianshibie2" />
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="人脸"
+                    android:textSize="@dimen/default_middle_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="5dp" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/icon_renlianshibie1" />
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="人像"
+                    android:textSize="@dimen/default_middle_size" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" 
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:id="@+id/ORG_TIME1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:paddingLeft="5dp"
+                android:text="数据为最近一分钟记录"
+                android:textColor="@color/color_gray"
+                android:textSize="@dimen/default_small_size" />
+
+            <TextView
+                android:id="@+id/ORG_TIME2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:paddingLeft="5dp"
+                android:text="数据为最近一分钟记录"
+                android:textColor="@color/color_gray"
+                android:textSize="@dimen/default_small_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_lightgray2"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/sati_hall_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/corner_rectangle_white_bg2"
+                android:orientation="vertical"
+                android:padding="5dp" >
+
+                <LinearLayout
+                    android:id="@+id/face_recegnition_sum1_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" 
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="总量"
+                        android:textColor="@color/color_dark"
+                        android:textSize="@dimen/default_small_size" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.6"
+                        android:src="@mipmap/icon_zhongliang"
+                        android:layout_marginRight="12dp" />
+
+                    <TextView
+                        android:id="@+id/face_recegnition_sum1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:background="@drawable/corner_rectangle_deepblue_bg"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/default_ssmall_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/face_recegnition_chenggonglv1_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:orientation="horizontal" 
+                    android:paddingBottom="5dp"
+                     android:paddingTop="5dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="成功率"
+                        android:textColor="@color/color_dark"
+                        android:textSize="@dimen/default_small_size" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.6"
+                        android:src="@mipmap/icon_chenggonglv2"
+                        android:layout_marginRight="12dp" />
+
+                    <TextView
+                        android:id="@+id/face_recegnition_chenggonglv1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:background="@drawable/corner_rectangle_deepgreen_bg"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/default_ssmall_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                       android:id="@+id/face_recegnition_wxyl1_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:orientation="horizontal" 
+                    android:paddingBottom="5dp"
+                     android:paddingTop="5dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="未完成"
+                        android:textColor="@color/color_dark"
+                        android:textSize="@dimen/default_small_size" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.6"
+                        android:src="@mipmap/icon_user_hehe"
+                        android:layout_marginRight="12dp" />
+
+                    <TextView
+                        android:id="@+id/face_recegnition_wxyl1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:background="@drawable/corner_rectangle_yellow_bg"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/default_ssmall_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                     android:id="@+id/face_recegnition_err1_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp" 
+                     android:paddingTop="5dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="失败量"
+                        android:textColor="@color/color_dark"
+                        android:textSize="@dimen/default_small_size" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.6"
+                        android:src="@mipmap/icon_user_unsatisfied"
+                        android:layout_marginRight="12dp" />
+
+                    <TextView
+                        android:id="@+id/face_recegnition_err1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:background="@drawable/corner_rectangle_orange_bg"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/default_ssmall_size" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sati_way_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/corner_rectangle_white_bg2"
+                android:orientation="vertical"
+                android:padding="5dp" >
+
+                <LinearLayout
+                    android:id="@+id/face_recegnition_sum2_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" 
+                    android:paddingBottom="5dp"
+                     android:paddingTop="5dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="总量"
+                        android:textColor="@color/color_dark"
+                        android:textSize="@dimen/default_small_size" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.6"
+                        android:src="@mipmap/icon_zhongliang"
+                        android:layout_marginRight="12dp"  />
+
+                    <TextView
+                        android:id="@+id/face_recegnition_sum2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:background="@drawable/corner_rectangle_deepblue_bg"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/default_ssmall_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                       android:id="@+id/face_recegnition_chenggonglv2_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:orientation="horizontal" 
+                    android:paddingBottom="5dp"
+                     android:paddingTop="5dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="成功率"
+                        android:textColor="@color/color_dark"
+                        android:textSize="@dimen/default_small_size" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.6"
+                        android:src="@mipmap/icon_chenggonglv2"
+                        android:layout_marginRight="12dp" />
+
+                    <TextView
+                        android:id="@+id/face_recegnition_chenggonglv2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:background="@drawable/corner_rectangle_deepgreen_bg"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/default_ssmall_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                     android:id="@+id/face_recegnition_wxyl2_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp" 
+                     android:paddingTop="5dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="未完成"
+                        android:textColor="@color/color_dark"
+                        android:textSize="@dimen/default_small_size" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.6"
+                        android:src="@mipmap/icon_user_hehe"
+                        android:layout_marginRight="12dp" />
+
+                    <TextView
+                        android:id="@+id/face_recegnition_wxyl2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:background="@drawable/corner_rectangle_yellow_bg"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/default_ssmall_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                     android:id="@+id/face_recegnition_err2_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                     android:paddingTop="5dp" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="失败量"
+                        android:textColor="@color/color_dark"
+                        android:textSize="@dimen/default_small_size" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.6"
+                        android:src="@mipmap/icon_user_unsatisfied"
+                        android:layout_marginRight="12dp" />
+
+                    <TextView
+                        android:id="@+id/face_recegnition_err2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:background="@drawable/corner_rectangle_orange_bg"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/default_ssmall_size" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+       
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_leibie" />
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="失败分类"
+                 android:textSize="@dimen/default_middle_size"/>
+       
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_lightgray2"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/face_recegnition_xitong1_list"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/corner_rectangle_white_bg2"
+                android:orientation="vertical"
+                android:padding="5dp" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" 
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:src="@mipmap/icon_shixinyuan32" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:gravity="center"
+                        android:text="系統忙"
+                        android:textSize="@dimen/default_small_size" />
+
+                    <TextView
+                        android:id="@+id/face_recegnition_xitong1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:src="@mipmap/icon_user_satisfied"
+                        android:text="0"
+                        android:textSize="@dimen/default_middle_size" />
+                </LinearLayout>
+                 <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp" 
+                    android:paddingTop="5dp"
+                     android:id="@+id/face_recegnition_buyizhi1_list">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:src="@mipmap/icon_shixinyuan32" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:gravity="center"
+                        android:text="不一致"
+                        android:textSize="@dimen/default_small_size" />
+
+                    <TextView
+                        android:id="@+id/face_recegnition_buyizhi1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:src="@mipmap/icon_user_satisfied"
+                        android:text="0"
+                        android:textSize="@dimen/default_middle_size" />
+                </LinearLayout>
+                 <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" 
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                        android:id="@+id/face_recegnition_bucunzai1_list">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:src="@mipmap/icon_shixinyuan32" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:gravity="center"
+                        android:text="不存在"
+                        android:textSize="@dimen/default_small_size" />
+
+                    <TextView
+                         android:id="@+id/face_recegnition_bucunzai1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:src="@mipmap/icon_user_satisfied"
+                        android:text="0"
+                        android:textSize="@dimen/default_middle_size" />
+                </LinearLayout>
+                 <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" 
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:id="@+id/face_recegnition_zhengjain1_list">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:src="@mipmap/icon_shixinyuan32" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:gravity="center"
+                        android:text="非手持证件照"
+                        android:textSize="@dimen/default_small_size" />
+
+                    <TextView
+                        android:id="@+id/face_recegnition_zhengjain1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:src="@mipmap/icon_user_satisfied"
+                        android:text="0"
+                        android:textSize="@dimen/default_middle_size" />
+                </LinearLayout>
+                
+                    <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp" 
+                    android:paddingTop="5dp"
+                     android:id="@+id/face_recegnition_wurenxiang1_list">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:src="@mipmap/icon_shixinyuan32" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:gravity="center"
+                        android:text="无半身人像"
+                        android:textSize="@dimen/default_small_size" />
+
+                    <TextView
+                        android:id="@+id/face_recegnition_wurenxiang1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:src="@mipmap/icon_user_satisfied"
+                        android:text="0"
+                        android:textSize="@dimen/default_middle_size" />
+                </LinearLayout>
+                   <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" 
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                     android:id="@+id/face_recegnition_wucaiji1_list">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:src="@mipmap/icon_shixinyuan32" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:gravity="center"
+                        android:text="无采集像信息"
+                        android:textSize="@dimen/default_small_size" />
+
+                    <TextView
+                          android:id="@+id/face_recegnition_wucaiji1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:src="@mipmap/icon_user_satisfied"
+                        android:text="0"
+                        android:textSize="@dimen/default_middle_size" />
+                </LinearLayout>
+                  <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" 
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                       android:id="@+id/face_recegnition_zhanbi1_list">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:src="@mipmap/icon_shixinyuan32" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:gravity="center"
+                        android:text="头像占比低于阀值"
+                        android:textSize="@dimen/default_small_size" />
+
+                    <TextView
+                        android:id="@+id/face_recegnition_zhanbi1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:src="@mipmap/icon_user_satisfied"
+                        android:text="0"
+                        android:textSize="@dimen/default_middle_size" />
+                </LinearLayout>
+                  <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                      android:id="@+id/face_recegnition_bufuuhe1_list" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:src="@mipmap/icon_shixinyuan32" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:gravity="center"
+                        android:text="采集像不符合规定"
+                        android:textSize="@dimen/default_small_size" />
+
+                    <TextView
+                         android:id="@+id/face_recegnition_bufuuhe1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:src="@mipmap/icon_user_satisfied"
+                        android:text="0"
+                        android:textSize="@dimen/default_small_size" />
+                </LinearLayout>
+              
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/corner_rectangle_white_bg2"
+                android:orientation="vertical"
+                android:padding="5dp" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" 
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                     android:id="@+id/face_recegnition_xitong2_list">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:src="@mipmap/icon_shixinyuan32" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:gravity="center"
+                        android:text="系統忙"
+                        android:textSize="@dimen/default_small_size" />
+
+                    <TextView
+                        android:id="@+id/face_recegnition_xitong2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:src="@mipmap/icon_user_satisfied"
+                        android:text="0"
+                        android:textSize="@dimen/default_middle_size" />
+                </LinearLayout>
+                 <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp" 
+                    android:paddingTop="5dp"
+                    android:id="@+id/face_recegnition_buyizhi2_list">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:src="@mipmap/icon_shixinyuan32" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:gravity="center"
+                        android:text="不一致"
+                        android:textSize="@dimen/default_small_size" />
+
+                    <TextView
+                        android:id="@+id/face_recegnition_buyizhi2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:src="@mipmap/icon_user_satisfied"
+                        android:text="0"
+                        android:textSize="@dimen/default_middle_size" />
+                </LinearLayout>
+                 <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" 
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                     android:id="@+id/face_recegnition_bucunzai2_list">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:src="@mipmap/icon_shixinyuan32" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:gravity="center"
+                        android:text="不存在"
+                        android:textSize="@dimen/default_small_size" />
+
+                    <TextView
+                        android:id="@+id/face_recegnition_bucunzai2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:src="@mipmap/icon_user_satisfied"
+                        android:text="0"
+                        android:textSize="@dimen/default_middle_size" />
+                </LinearLayout>
+                 <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" 
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:id="@+id/face_recegnition_zhengjain2_list">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:src="@mipmap/icon_shixinyuan32" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:gravity="center"
+                        android:text="非手持证件照"
+                        android:textSize="@dimen/default_small_size" />
+
+                    <TextView
+                           android:id="@+id/face_recegnition_zhengjain2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:src="@mipmap/icon_user_satisfied"
+                        android:text="0"
+                        android:textSize="@dimen/default_middle_size" />
+                </LinearLayout>
+                
+                    <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" 
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                     android:id="@+id/face_recegnition_wurenxiang2_list">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:src="@mipmap/icon_shixinyuan32" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:gravity="center"
+                        android:text="无半身人像"
+                        android:textSize="@dimen/default_small_size" />
+
+                    <TextView
+                          android:id="@+id/face_recegnition_wurenxiang2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:src="@mipmap/icon_user_satisfied"
+                        android:text="0"
+                        android:textSize="@dimen/default_middle_size" />
+                </LinearLayout>
+                   <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" 
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                     android:id="@+id/face_recegnition_wucaiji2_list">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:src="@mipmap/icon_shixinyuan32" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:gravity="center"
+                        android:text="无采集像信息"
+                        android:textSize="@dimen/default_small_size" />
+
+                    <TextView
+                        android:id="@+id/face_recegnition_wucaiji2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:src="@mipmap/icon_user_satisfied"
+                        android:text="0"
+                        android:textSize="@dimen/default_middle_size" />
+                </LinearLayout>
+                  <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" 
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                     android:id="@+id/face_recegnition_zhanbi2_list">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:src="@mipmap/icon_shixinyuan32" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:gravity="center"
+                        android:text="头像占比低于阀值"
+                        android:textSize="@dimen/default_small_size" />
+
+                    <TextView
+                         android:id="@+id/face_recegnition_zhanbi2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:src="@mipmap/icon_user_satisfied"
+                        android:text="0"
+                        android:textSize="@dimen/default_middle_size" />
+                </LinearLayout>
+                  <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp" 
+                    android:paddingTop="5dp"
+                     android:id="@+id/face_recegnition_bufuuhe2_list" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:src="@mipmap/icon_shixinyuan32" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:gravity="center"
+                        android:text="采集像不符合规定"
+                        android:textSize="@dimen/default_small_size" />
+
+                    <TextView
+                        android:id="@+id/face_recegnition_bufuuhe2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:src="@mipmap/icon_user_satisfied"
+                        android:text="0"
+                        android:textSize="@dimen/default_middle_size" />
+                </LinearLayout>
+              
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+           </android.support.v4.widget.NestedScrollView>
+    </com.chinamobile.yunweizhushou.view.MyRefreshLayout>
+
+</LinearLayout>

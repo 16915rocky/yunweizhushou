@@ -1,0 +1,141 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_gray" />
+
+    <TextView
+        android:id="@+id/bottom_timer_1min"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_click_selector"
+        android:clickable="true"
+        android:gravity="center"
+        android:padding="8dp"
+        android:tag="1"
+        android:text="1分钟" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_gray" />
+
+    <TextView
+        android:id="@+id/bottom_timer_5min"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_click_selector"
+        android:clickable="true"
+        android:gravity="center"
+        android:padding="8dp"
+        android:tag="5"
+        android:text="5分钟" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_gray" />
+
+    <TextView
+        android:id="@+id/bottom_timer_10min"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_click_selector"
+        android:clickable="true"
+        android:gravity="center"
+        android:padding="8dp"
+        android:tag="10"
+        android:text="10分钟" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_gray" />
+
+    <TextView
+        android:id="@+id/bottom_timer_1h"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_click_selector"
+        android:clickable="true"
+        android:gravity="center"
+        android:padding="8dp"
+        android:tag="60"
+        android:text="1小时" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_gray" />
+
+    <TextView
+        android:id="@+id/bottom_timer_6h"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_click_selector"
+        android:clickable="true"
+        android:gravity="center"
+        android:padding="8dp"
+        android:tag="360"
+        android:text="6小时" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_gray" />
+
+    <TextView
+        android:id="@+id/bottom_timer_1d"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_click_selector"
+        android:clickable="true"
+        android:gravity="center"
+        android:padding="8dp"
+        android:tag="1440"
+        android:text="1天" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_gray" />
+
+    <TextView
+        android:id="@+id/bottom_timer_1week"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_click_selector"
+        android:clickable="true"
+        android:gravity="center"
+        android:padding="8dp"
+        android:tag="10080"
+        android:text="1星期" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_gray" />
+
+    <TextView
+        android:id="@+id/bottom_timer_1month"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_click_selector"
+        android:clickable="true"
+        android:gravity="center"
+        android:padding="8dp"
+        android:tag="43200"
+        android:text="1月" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_gray" />
+
+</LinearLayout>

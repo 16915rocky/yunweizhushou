@@ -1,0 +1,822 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.chinamobile.yunweizhushou.view.MyRefreshLayout
+        android:id="@+id/busi_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <com.chinamobile.yunweizhushou.view.MyListView
+                    android:id="@+id/busi_list_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none" >
+                </com.chinamobile.yunweizhushou.view.MyListView>
+
+                <com.chinamobile.yunweizhushou.view.MyListView
+                    android:id="@+id/busi_list_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none" >
+                </com.chinamobile.yunweizhushou.view.MyListView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center" >
+
+                            <TextView
+                                android:id="@+id/busi_city_1"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:background="@drawable/oval_blue"
+                                android:gravity="center"
+                                android:tag="570,571,572,573,574,575,576,577,578,579,580"
+                                android:text="全部"
+                                android:textColor="@color/color_white" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center" >
+
+                            <TextView
+                                android:id="@+id/busi_city_2"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:background="@drawable/oval_blue"
+                                android:gravity="center"
+                                android:tag="571"
+                                android:text="杭州"
+                                android:textColor="@color/color_white" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center" >
+
+                            <TextView
+                                android:id="@+id/busi_city_3"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:background="@drawable/oval_blue"
+                                android:gravity="center"
+                                android:tag="574"
+                                android:text="宁波"
+                                android:textColor="@color/color_white" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center" >
+
+                            <TextView
+                                android:id="@+id/busi_city_4"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:background="@drawable/oval_blue"
+                                android:gravity="center"
+                                android:tag="577"
+                                android:text="温州"
+                                android:textColor="@color/color_white" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center" >
+
+                            <TextView
+                                android:id="@+id/busi_city_5"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:background="@drawable/oval_blue"
+                                android:gravity="center"
+                                android:tag="576"
+                                android:text="台州"
+                                android:textColor="@color/color_white" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center" >
+
+                            <TextView
+                                android:id="@+id/busi_city_6"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:background="@drawable/oval_blue"
+                                android:gravity="center"
+                                android:tag="579"
+                                android:text="金华"
+                                android:textColor="@color/color_white" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal" >
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center" >
+
+                            <TextView
+                                android:id="@+id/busi_city_7"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:background="@drawable/oval_blue"
+                                android:gravity="center"
+                                android:tag="575"
+                                android:text="绍兴"
+                                android:textColor="@color/color_white" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center" >
+
+                            <TextView
+                                android:id="@+id/busi_city_8"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:background="@drawable/oval_blue"
+                                android:gravity="center"
+                                android:tag="573"
+                                android:text="嘉兴"
+                                android:textColor="@color/color_white" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center" >
+
+                            <TextView
+                                android:id="@+id/busi_city_9"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:background="@drawable/oval_blue"
+                                android:gravity="center"
+                                android:tag="578"
+                                android:text="丽水"
+                                android:textColor="@color/color_white" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center" >
+
+                            <TextView
+                                android:id="@+id/busi_city_10"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:background="@drawable/oval_blue"
+                                android:gravity="center"
+                                android:tag="572"
+                                android:text="湖州"
+                                android:textColor="@color/color_white" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center" >
+
+                            <TextView
+                                android:id="@+id/busi_city_11"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:background="@drawable/oval_blue"
+                                android:gravity="center"
+                                android:tag="570"
+                                android:text="衢州"
+                                android:textColor="@color/color_white" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center" >
+
+                            <TextView
+                                android:id="@+id/busi_city_12"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:background="@drawable/oval_blue"
+                                android:gravity="center"
+                                android:tag="580"
+                                android:text="舟山"
+                                android:textColor="@color/color_white" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 第一个8图 -->
+
+                <LinearLayout
+                    android:id="@+id/busi_group_layout_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/color_gray" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <LinearLayout
+                            android:id="@+id/busi_layout_01"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:background="@drawable/button_click_selector"
+                            android:clickable="true"
+                            android:orientation="vertical"
+                            android:padding="3dp"
+                            android:tag="营业厅" >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="start"
+                                android:text="营业厅"
+                                android:textSize="@dimen/default_ssmall_size" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:layout_marginRight="10dp"
+                                android:padding="3dp"
+                                android:src="@mipmap/icon_busi_01" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="match_parent"
+                            android:background="@color/color_gray" />
+
+                        <LinearLayout
+                            android:id="@+id/busi_layout_02"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/button_click_selector"
+                            android:clickable="true"
+                            android:orientation="vertical"
+                            android:padding="3dp"
+                            android:tag="短厅" >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="短厅"
+                                android:textSize="@dimen/default_ssmall_size" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:padding="3dp"
+                                android:src="@mipmap/icon_busi_02" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="match_parent"
+                            android:background="@color/color_gray" />
+
+                        <LinearLayout
+                            android:id="@+id/busi_layout_03"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/button_click_selector"
+                            android:clickable="true"
+                            android:orientation="vertical"
+                            android:padding="3dp"
+                            android:tag="客服" >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="客服"
+                                android:textSize="@dimen/default_ssmall_size" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:padding="3dp"
+                                android:src="@mipmap/icon_busi_03" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="match_parent"
+                            android:background="@color/color_gray" />
+
+                        <LinearLayout
+                            android:id="@+id/busi_layout_04"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/button_click_selector"
+                            android:clickable="true"
+                            android:orientation="vertical"
+                            android:padding="3dp"
+                            android:tag="cboss" >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="cboss"
+                                android:textSize="@dimen/default_ssmall_size" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:padding="3dp"
+                                android:src="@mipmap/icon_busi_04" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/color_gray" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <LinearLayout
+                            android:id="@+id/busi_layout_05"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:background="@drawable/button_click_selector"
+                            android:clickable="true"
+                            android:orientation="vertical"
+                            android:padding="3dp"
+                            android:tag="合作式渠道" >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="start"
+                                android:text="合作式渠道"
+                                android:textSize="@dimen/default_ssmall_size" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:layout_marginRight="10dp"
+                                android:padding="3dp"
+                                android:src="@mipmap/icon_busi_05" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="match_parent"
+                            android:background="@color/color_gray" />
+
+                        <LinearLayout
+                            android:id="@+id/busi_layout_06"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/button_click_selector"
+                            android:clickable="true"
+                            android:orientation="vertical"
+                            android:padding="3dp"
+                            android:tag="手厅" >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="手厅"
+                                android:textSize="@dimen/default_ssmall_size" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:padding="3dp"
+                                android:src="@mipmap/icon_busi_06" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="match_parent"
+                            android:background="@color/color_gray" />
+
+                        <LinearLayout
+                            android:id="@+id/busi_layout_07"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/button_click_selector"
+                            android:clickable="true"
+                            android:orientation="vertical"
+                            android:padding="3dp"
+                            android:tag="营业批量" >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="营业批量"
+                                android:textSize="@dimen/default_ssmall_size" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:padding="3dp"
+                                android:src="@mipmap/icon_busi_07" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="match_parent"
+                            android:background="@color/color_gray" />
+
+                        <LinearLayout
+                            android:id="@+id/busi_layout_08"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/button_click_selector"
+                            android:clickable="true"
+                            android:orientation="vertical"
+                            android:padding="3dp"
+                            android:tag="网厅" >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="网厅"
+                                android:textSize="@dimen/default_ssmall_size" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:padding="3dp"
+                                android:src="@mipmap/icon_busi_08" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/color_gray" />
+                </LinearLayout>
+
+                <!-- 第二个8图 -->
+
+                <LinearLayout
+                    android:id="@+id/busi_group_layout_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/color_gray" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <LinearLayout
+                            android:id="@+id/busi_layout_09"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:background="@drawable/button_click_selector"
+                            android:clickable="true"
+                            android:orientation="vertical"
+                            android:padding="3dp"
+                            android:tag="增值策划" >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="start"
+                                android:text="增值策划"
+                                android:textSize="@dimen/default_ssmall_size" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:layout_marginRight="10dp"
+                                android:padding="3dp"
+                                android:src="@mipmap/icon_busi_09" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="match_parent"
+                            android:background="@color/color_gray" />
+
+                        <LinearLayout
+                            android:id="@+id/busi_layout_10"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/button_click_selector"
+                            android:clickable="true"
+                            android:orientation="vertical"
+                            android:padding="3dp"
+                            android:tag="业务变更" >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="业务变更"
+                                android:textSize="@dimen/default_ssmall_size" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:padding="3dp"
+                                android:src="@mipmap/icon_busi_10" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="match_parent"
+                            android:background="@color/color_gray" />
+
+                        <LinearLayout
+                            android:id="@+id/busi_layout_11"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/button_click_selector"
+                            android:clickable="true"
+                            android:orientation="vertical"
+                            android:padding="3dp"
+                            android:tag="客户资料" >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="客户资料"
+                                android:textSize="@dimen/default_ssmall_size" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:padding="3dp"
+                                android:src="@mipmap/icon_busi_11" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="match_parent"
+                            android:background="@color/color_gray" />
+
+                        <LinearLayout
+                            android:id="@+id/busi_layout_12"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/button_click_selector"
+                            android:clickable="true"
+                            android:orientation="vertical"
+                            android:padding="3dp"
+                            android:tag="宽带" >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="宽带"
+                                android:textSize="@dimen/default_ssmall_size" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:padding="3dp"
+                                android:src="@mipmap/icon_busi_12" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/color_gray" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <LinearLayout
+                            android:id="@+id/busi_layout_13"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:background="@drawable/button_click_selector"
+                            android:clickable="true"
+                            android:orientation="vertical"
+                            android:padding="3dp"
+                            android:tag="停复机" >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="start"
+                                android:text="停复机"
+                                android:textSize="@dimen/default_ssmall_size" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:layout_marginRight="10dp"
+                                android:padding="3dp"
+                                android:src="@mipmap/icon_busi_13" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="match_parent"
+                            android:background="@color/color_gray" />
+
+                        <LinearLayout
+                            android:id="@+id/busi_layout_14"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/button_click_selector"
+                            android:clickable="true"
+                            android:orientation="vertical"
+                            android:padding="3dp"
+                            android:tag="开销户补换卡" >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="补换卡"
+                                android:textSize="@dimen/default_ssmall_size" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:padding="3dp"
+                                android:src="@mipmap/icon_busi_14" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="match_parent"
+                            android:background="@color/color_gray" />
+
+                        <LinearLayout
+                            android:id="@+id/busi_layout_15"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/button_click_selector"
+                            android:clickable="true"
+                            android:orientation="vertical"
+                            android:padding="3dp"
+                            android:tag="家庭亲情网" >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="亲情网"
+                                android:textSize="@dimen/default_ssmall_size" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:padding="3dp"
+                                android:src="@mipmap/icon_busi_15" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="match_parent"
+                            android:background="@color/color_gray" />
+
+                        <LinearLayout
+                            android:id="@+id/busi_layout_16"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/button_click_selector"
+                            android:clickable="true"
+                            android:orientation="vertical"
+                            android:padding="3dp"
+                            android:tag="多终端流量" >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="终端流量"
+                                android:textSize="@dimen/default_ssmall_size" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:padding="3dp"
+                                android:src="@mipmap/icon_busi_16" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/color_gray" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </com.chinamobile.yunweizhushou.view.MyRefreshLayout>
+
+</LinearLayout>

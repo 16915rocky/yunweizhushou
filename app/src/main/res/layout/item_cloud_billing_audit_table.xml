@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cloudScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:background="@color/color_white"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/th1"
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="名称"
+                android:textSize="@dimen/default_ssmall_size" />
+
+            <TextView
+                android:id="@+id/th2"
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="文件数"
+                android:textSize="@dimen/default_ssmall_size" />
+
+            <TextView
+                android:id="@+id/th3"
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="重复文件数"
+                android:textSize="@dimen/default_ssmall_size" />
+
+            <TextView
+                android:id="@+id/th4"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="总条数"
+                android:textSize="@dimen/default_ssmall_size" />
+
+            <TextView
+                android:id="@+id/th5"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="正确总条数"
+                android:textSize="@dimen/default_ssmall_size" />
+
+            <TextView
+                android:id="@+id/th6"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="处理时间"
+                android:textSize="@dimen/default_ssmall_size" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="3dp"
+            android:background="#20545454" />
+    </LinearLayout>
+
+</HorizontalScrollView>

@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <android.support.v4.widget.CircleImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:src="@mipmap/icon_default_head" >
+        </android.support.v4.widget.CircleImageView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3.5"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/fault_today_comment_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="用户1" />
+
+        <TextView
+            android:id="@+id/fault_today_comment_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="数据库数据库数据库数据库数据库数据库数据库数据库数据库数据库"
+            android:textSize="@dimen/default_ssmall_size" />
+
+        <TextView
+            android:id="@+id/fault_today_comment_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="5分钟前"
+            android:textColor="@color/color_gray"
+            android:textSize="@dimen/default_mini_size" />
+    </LinearLayout>
+
+</LinearLayout>

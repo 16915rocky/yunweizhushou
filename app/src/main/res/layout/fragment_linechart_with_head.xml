@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white"
+    android:orientation="vertical" >
+    <TextView
+        android:id="@+id/fragment_linechart_head_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/corner_rectangle_lightgray2_bg"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textColor="@color/color_lightblue"
+        android:textSize="@dimen/default_ssmall_size" />
+
+    <TextView
+        android:id="@+id/fragment_linechart_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        android:textColor="@color/color_dark"
+        android:textSize="@dimen/default_ssmall_size" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/fragment_linechart"
+        android:layout_width="match_parent"
+        android:layout_height="300dp" >
+    </com.github.mikephil.charting.charts.LineChart>
+
+</LinearLayout>

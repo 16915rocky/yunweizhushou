@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.2"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/level_standard_item_num"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/oval_gray"
+            android:gravity="center"
+            android:textColor="@color/color_white"
+            android:text="01" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/level_standard_item_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:text="客户资料变更"
+        android:textSize="@dimen/default_large_size" />
+
+    <TextView
+        android:id="@+id/level_standard_item_point"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.8"
+        android:drawableLeft="@mipmap/icon_level_standard_point"
+        android:gravity="center"
+        android:text="11"
+        android:textColor="@color/color_lightblue"
+        android:textSize="@dimen/default_xlarge_size" />
+
+</LinearLayout>

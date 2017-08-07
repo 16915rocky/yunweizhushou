@@ -1,0 +1,220 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_title" />
+
+    <ScrollView
+        android:id="@+id/drill_detail_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_lightgray2"
+                android:padding="5dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/widget_left_icon_large_blue"
+                    android:text="演练内容"
+                    android:textSize="@dimen/default_middle_size" />
+
+                <TextView
+                    android:id="@+id/trill_detail_person1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="负责人："
+                    android:textSize="@dimen/default_ssmall_size" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="完成时间:"
+                    android:textSize="@dimen/default_ssmall_size" />
+
+                <TextView
+                    android:id="@+id/trill_detail_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:layout_weight="3"
+                    android:background="@drawable/corner_rectangle_lightgray2_bg2"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text=""
+                    android:textSize="@dimen/default_ssmall_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="演练系统:"
+                    android:textSize="@dimen/default_ssmall_size" />
+
+                <TextView
+                    android:id="@+id/trill_detail_system"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:layout_weight="3"
+                    android:background="@drawable/corner_rectangle_lightgray2_bg2"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text=""
+                    android:textSize="@dimen/default_ssmall_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="演练场景:"
+                    android:textSize="@dimen/default_ssmall_size" />
+
+                <TextView
+                    android:id="@+id/trill_detail_scene"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:layout_weight="3"
+                    android:background="@drawable/corner_rectangle_lightgray2_bg2"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text=""
+                    android:textSize="@dimen/default_ssmall_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_lightgray2"
+                android:padding="5dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/widget_left_icon_large_blue"
+                    android:text="演练目的"
+                    android:textSize="@dimen/default_middle_size" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/trill_detail_target"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:padding="10dp"
+                android:text=""
+                android:textSize="@dimen/default_ssmall_size" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_lightgray2"
+                android:padding="5dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/widget_left_icon_large_blue"
+                    android:text="演练过程"
+                    android:textSize="@dimen/default_middle_size" />
+            </LinearLayout>
+
+            <com.chinamobile.yunweizhushou.view.MyListView
+                android:id="@+id/trill_detail_list"
+                android:layout_width="match_parent"
+                android:listSelector="@null"
+                android:divider="@null"
+                android:layout_height="wrap_content" >
+            </com.chinamobile.yunweizhushou.view.MyListView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_lightgray2"
+                android:padding="5dp" >
+
+                <TextView
+                    android:id="@+id/trill_detail_summary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/widget_left_icon_large_blue"
+                    android:text="演练总结"
+                    android:textSize="@dimen/default_middle_size" />
+                
+                <TextView 
+                    android:gravity="center_vertical"
+                    android:text="(演练结束后三日内完成)"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/default_mini_size"
+                    android:textColor="@color/color_dark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@id/trill_detail_summary"
+                    android:layout_marginLeft="5dp"
+                    />
+
+                <TextView
+                    android:id="@+id/trill_detail_person2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="负责人："
+                    android:textSize="@dimen/default_ssmall_size" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/trill_detail_end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:padding="10dp"
+                android:text=""
+                android:textSize="@dimen/default_ssmall_size" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

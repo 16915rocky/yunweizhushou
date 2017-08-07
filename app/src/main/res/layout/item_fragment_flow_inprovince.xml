@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.4"       
+        android:gravity="end" >
+
+        <TextView
+            android:id="@+id/flow_province_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rect_green_bg"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="接口一\n成功率"
+            android:gravity="center"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/default_mini_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="start|center_vertical" >
+
+        <View
+            android:id="@+id/imp1_line"
+            android:layout_width="10dp"
+            android:layout_height="1px"
+            android:background="@color/color_deepgreen" />
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/oval_double_green" />
+
+        <TextView
+            android:id="@+id/flow_province_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text=""
+            android:textColor="@color/color_lightblue"
+            android:textSize="@dimen/default_mini_size" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <View
+            android:layout_width="5dp"
+            android:layout_height="20dp"
+            android:background="@color/color_lightblue">
+        </View>
+        <TextView
+            android:id="@+id/tv_more_item_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="最近"/>
+    </LinearLayout>
+    
+      <com.chinamobile.yunweizhushou.view.CustomGridView
+          android:id="@+id/gv_more_item_grid"
+          android:numColumns="4"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+      </com.chinamobile.yunweizhushou.view.CustomGridView>
+</LinearLayout>

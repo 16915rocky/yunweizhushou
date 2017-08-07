@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/common_title" />
+     <include layout="@layout/item_charge_people"
+        android:visibility="visible"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/jifen_tab1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:minLines="2"
+            android:paddingTop="3dp"
+            android:text="账户中心\nCSF"
+            android:textSize="@dimen/default_ssmall_size" />
+        <TextView
+            android:id="@+id/jifen_tabmq"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:minLines="2"
+            android:paddingTop="3dp"
+            android:text="账户中心\nMQ"
+            android:textSize="@dimen/default_ssmall_size" />
+
+        <TextView
+            android:id="@+id/jifen_tab2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:minLines="2"
+            android:paddingTop="3dp"
+            android:text="积分业务"
+            android:textSize="@dimen/default_ssmall_size" />
+ 
+        <TextView
+            android:id="@+id/jifen_tab3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:minLines="2"
+            android:paddingTop="3dp"
+            android:text="积分兑换\n平衡性检查"
+            android:textSize="@dimen/default_ssmall_size" 
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/jifen_tab4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:minLines="2"
+            android:paddingTop="3dp"
+            android:text="cboss\n积分业务"
+            android:textSize="@dimen/default_ssmall_size" 
+            android:visibility="gone"/> 
+    </LinearLayout>
+
+    <View
+        android:id="@+id/jifen_bottomBar"
+        android:layout_width="100dp"
+        android:layout_height="2dp"
+        android:background="@color/color_lightblue" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#40545454" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/business_detection_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

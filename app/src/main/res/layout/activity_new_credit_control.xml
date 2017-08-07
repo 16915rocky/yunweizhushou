@@ -1,0 +1,689 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/color_lightgray3">
+    
+       <include layout="@layout/common_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+        android:layout_margin="5dp"
+        android:padding="5dp"
+         android:background="@drawable/corner_rectangle_white_bg">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal" 
+           >
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8" >
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A"
+                    android:textColor="@color/color_red"
+                    android:textSize="@dimen/default_xxlarge_size"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+                
+                <LinearLayout 
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                     <TextView
+                         android:id="@+id/element_a1"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:background="@drawable/corner_rectangle_lightgray_bg"
+                         android:gravity="center"
+                         android:text="CHECK\n-A" />
+
+                </LinearLayout>
+
+               <LinearLayout 
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center">
+                     <TextView   
+                          android:id="@+id/element_a4"                                     
+                    android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="查看\n结果" 
+                    android:background="@drawable/corner_rectangle_lightgray_bg"
+                                    
+                    />
+                </LinearLayout>
+
+                
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical" >
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+             
+                android:gravity="center"
+                android:orientation="horizontal">
+                <TextView 
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="571"/>
+                  <TextView 
+                       android:id="@+id/element_a2"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="停信控"
+                    android:gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/corner_rectangle_lightgray_bg"/>
+                   <TextView 
+                        android:id="@+id/element_a3"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="启守护"
+                    android:gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/corner_rectangle_lightgray_bg"/>
+            </LinearLayout>
+             <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+             
+                android:gravity="center"
+                android:orientation="horizontal">
+                <TextView 
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="572"/>
+                  <TextView 
+                       android:id="@+id/element_a5"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="停信控"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/corner_rectangle_lightgray_bg"/>
+                   <TextView 
+                        android:id="@+id/element_a6"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:text="启守护"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/corner_rectangle_lightgray_bg"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+        android:padding="5dp"
+           android:layout_margin="5dp"
+      
+         android:background="@drawable/corner_rectangle_white_bg">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8" >
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="B"
+                    android:textColor="@color/color_red"
+                    android:textSize="@dimen/default_xxlarge_size"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+            
+                android:orientation="vertical" >
+
+                 <RelativeLayout 
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                   >
+
+                     <TextView
+                          android:id="@+id/element_b1"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:background="@drawable/corner_rectangle_lightgray_bg"
+                         android:gravity="center"
+                         android:text="CHECK\n-B" 
+                         android:layout_marginTop="20dp"
+                        />
+
+                </RelativeLayout>
+
+               <RelativeLayout 
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center">
+                     <TextView     
+                             android:id="@+id/element_b4"                                   
+                    android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="查看\n结果" 
+                    android:background="@drawable/corner_rectangle_lightgray_bg"
+                        android:layout_marginBottom="20dp"            
+                    />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical" >
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+             
+                android:gravity="center"
+                android:orientation="horizontal">
+                <TextView 
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="570"/>
+                  <TextView 
+                          android:id="@+id/element_b2"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="停信控"
+                    android:gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/corner_rectangle_lightgray_bg"/>
+                   <TextView 
+                           android:id="@+id/element_b3"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="启守护"
+                    android:gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/corner_rectangle_lightgray_bg"/>
+            </LinearLayout>
+             <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+             
+                android:gravity="center"
+                android:orientation="horizontal">
+                <TextView 
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="574"/>
+                  <TextView 
+                          android:id="@+id/element_b5"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="停信控"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/corner_rectangle_lightgray_bg"/>
+                   <TextView 
+                           android:id="@+id/element_b6"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:text="启守护"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/corner_rectangle_lightgray_bg"/>
+            </LinearLayout>
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+             
+                android:gravity="center"
+                android:orientation="horizontal">
+                <TextView 
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="579"/>
+                  <TextView 
+                          android:id="@+id/element_b7"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="停信控"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/corner_rectangle_lightgray_bg"/>
+                   <TextView 
+                           android:id="@+id/element_b8"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:text="启守护"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/corner_rectangle_lightgray_bg"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+      
+          <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+        android:padding="5dp"
+         android:layout_margin="5dp"
+      
+         android:background="@drawable/corner_rectangle_white_bg">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal" 
+            >
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8" >
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="C"
+                    android:textColor="@color/color_red"
+                    android:textSize="@dimen/default_xxlarge_size"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+            
+                android:orientation="vertical" >
+
+                 <RelativeLayout 
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                   >
+
+                     <TextView
+                             android:id="@+id/element_c1"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:background="@drawable/corner_rectangle_lightgray_bg"
+                         android:gravity="center"
+                         android:text="CHECK\n-C" 
+                         android:layout_marginTop="20dp"
+                        />
+
+                </RelativeLayout>
+
+               <RelativeLayout 
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center">
+                     <TextView    
+                          android:id="@+id/element_c4"                                    
+                    android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="查看\n结果" 
+                    android:background="@drawable/corner_rectangle_lightgray_bg"
+                        android:layout_marginBottom="20dp"            
+                    />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical" >
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+             
+                android:gravity="center"
+                android:orientation="horizontal">
+                <TextView 
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="577"/>
+                  <TextView 
+                       android:id="@+id/element_c2"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="停信控"
+                    android:gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/corner_rectangle_lightgray_bg"/>
+                   <TextView 
+                        android:id="@+id/element_c3"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="启守护"
+                    android:gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/corner_rectangle_lightgray_bg"/>
+            </LinearLayout>
+             <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+             
+                android:gravity="center"
+                android:orientation="horizontal">
+                <TextView 
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="578"/>
+                  <TextView 
+                       android:id="@+id/element_c5"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="停信控"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/corner_rectangle_lightgray_bg"/>
+                   <TextView 
+                        android:id="@+id/element_c6"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:text="启守护"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/corner_rectangle_lightgray_bg"/>
+            </LinearLayout>
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+             
+                android:gravity="center"
+                android:orientation="horizontal">
+                <TextView 
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="580"/>
+                  <TextView 
+                       android:id="@+id/element_c7"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="停信控"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/corner_rectangle_lightgray_bg"/>
+                   <TextView 
+                        android:id="@+id/element_c8"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:text="启守护"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/corner_rectangle_lightgray_bg"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+        android:padding="5dp"
+         android:layout_margin="5dp"
+      
+         android:background="@drawable/corner_rectangle_white_bg">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8" >
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="D"
+                    android:textColor="@color/color_red"
+                    android:textSize="@dimen/default_xxlarge_size"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+            
+                android:orientation="vertical" >
+
+                 <RelativeLayout 
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                   >
+
+                     <TextView
+                          android:id="@+id/element_d1"   
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:background="@drawable/corner_rectangle_lightgray_bg"
+                         android:gravity="center"
+                         android:text="CHECK\n-D" 
+                         android:layout_marginTop="20dp"
+                        />
+
+                </RelativeLayout>
+
+               <RelativeLayout 
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center">
+                     <TextView   
+                          android:id="@+id/element_d4"                                     
+                    android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="查看\n结果" 
+                    android:background="@drawable/corner_rectangle_lightgray_bg"
+                        android:layout_marginBottom="20dp"            
+                    />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical" >
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+             
+                android:gravity="center"
+                android:orientation="horizontal">
+                <TextView 
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="573"/>
+                  <TextView 
+                       android:id="@+id/element_d2"   
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="停信控"
+                    android:gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/corner_rectangle_lightgray_bg"/>
+                   <TextView 
+                        android:id="@+id/element_d3"   
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="启守护"
+                    android:gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/corner_rectangle_lightgray_bg"/>
+            </LinearLayout>
+             <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+             
+                android:gravity="center"
+                android:orientation="horizontal">
+                <TextView 
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="575"/>
+                  <TextView 
+                       android:id="@+id/element_d5"   
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="停信控"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/corner_rectangle_lightgray_bg"/>
+                   <TextView 
+                        android:id="@+id/element_d6"   
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:text="启守护"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/corner_rectangle_lightgray_bg"/>
+            </LinearLayout>
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+             
+                android:gravity="center"
+                android:orientation="horizontal">
+                <TextView 
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="576"/>
+                  <TextView 
+                       android:id="@+id/element_d7"   
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="停信控"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/corner_rectangle_lightgray_bg"/>
+                   <TextView 
+                        android:id="@+id/element_d8"   
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:text="启守护"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/corner_rectangle_lightgray_bg"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+        
+
+</LinearLayout>

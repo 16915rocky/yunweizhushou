@@ -1,0 +1,99 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.chinamobile.yunweizhushou.view.MyRefreshLayout
+        android:id="@+id/dbConnectionRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_lightblue"
+                android:orientation="horizontal"
+                android:padding="3dp" >
+
+                <TextView
+                    android:id="@+id/ability_title_item1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:drawableRight="@mipmap/icon_down_white"
+                    android:gravity="center"
+                    android:text="所属\n名称"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/default_ssmall_size" />
+
+                <TextView
+                    android:id="@+id/ability_title_item2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableRight="@mipmap/icon_down_white"
+                    android:gravity="center"
+                    android:text="服务\n数量"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/default_ssmall_size" />
+
+                <TextView
+                    android:id="@+id/ability_title_item3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableRight="@mipmap/icon_down_white"
+                    android:gravity="center"
+                    android:text="访问\n次数"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/default_ssmall_size" />
+
+                <TextView
+                    android:id="@+id/ability_title_item4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableRight="@mipmap/icon_down_white"
+                    android:gravity="center"
+                    android:text="响应时长\n(ms)"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/default_ssmall_size" />
+
+                <TextView
+                    android:id="@+id/ability_title_item5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableRight="@mipmap/icon_down_white"
+                    android:gravity="center"
+                    android:text="失败\n数量"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/default_ssmall_size" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/ability_1_listview"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:dividerHeight="5dp" >
+            </ListView>
+
+            <TextView
+                android:id="@+id/ability_bottom_chooce"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/corner_rectangle_white_bg"
+                android:gravity="center"
+                android:padding="5dp" />
+        </LinearLayout>
+    </com.chinamobile.yunweizhushou.view.MyRefreshLayout>
+
+</LinearLayout>

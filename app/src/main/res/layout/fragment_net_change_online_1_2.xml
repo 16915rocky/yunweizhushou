@@ -1,0 +1,174 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_lightgray2"
+        android:orientation="vertical"
+        android:padding="5dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="测试\n缺陷数"
+                android:textColor="@color/color_lightblue"
+                android:textSize="@dimen/default_mini_size" />
+            
+                <TextView
+                android:id="@+id/net_change_detail_1_2_fault_num"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="@dimen/default_ssmall_size" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="有效\n缺陷数"
+                android:textColor="@color/color_lightblue"
+                android:textSize="@dimen/default_mini_size" />
+
+            <TextView
+                android:id="@+id/net_change_detail_1_2_fault_valid_num"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="@dimen/default_ssmall_size" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="无效\n缺陷数"
+                android:textColor="@color/color_lightblue"
+                android:textSize="@dimen/default_mini_size" />
+
+            <TextView
+                android:id="@+id/net_change_detail_1_2_fault_invalid_num"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="@dimen/default_ssmall_size" />
+            
+            <TextView             
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="遗留\n问题数"
+                android:textColor="@color/color_lightblue"
+                android:textSize="@dimen/default_mini_size" />
+            <TextView
+                android:id="@+id/net_change_detail_1_2_remain_num"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"          
+                android:textSize="@dimen/default_ssmall_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="功能验收\n总耗时"
+                android:textColor="@color/color_lightblue"
+                android:textSize="@dimen/default_mini_size" />
+
+            <TextView
+                android:id="@+id/net_change_detail_1_2_fun_check_duration"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="@dimen/default_ssmall_size" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="性能验收\n总耗时"
+                android:textColor="@color/color_lightblue"
+                android:textSize="@dimen/default_mini_size" />
+
+            <TextView
+                android:id="@+id/net_change_detail_1_2_pro_check_duration"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="@dimen/default_ssmall_size" />
+              <TextView            
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="BOSS验收\n总耗时"
+                android:gravity="center"
+                android:textColor="@color/color_lightblue"
+                android:textSize="@dimen/default_mini_size" />
+
+            <TextView
+                android:id="@+id/net_change_detail_1_2_boss_check_duration"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="@dimen/default_ssmall_size" />
+        </LinearLayout>
+         
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_gray" />
+
+    <ListView
+        android:id="@+id/net_change_detail_1_2_listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none" >
+    </ListView>
+    
+    <TextView
+        android:visibility="gone"
+        android:textSize="@dimen/default_middle_size"
+        android:textColor="@color/color_dark"
+        android:gravity="center"
+        android:text="当前没有数据"
+        android:id="@+id/nocontent_textview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
+    
+
+</LinearLayout>

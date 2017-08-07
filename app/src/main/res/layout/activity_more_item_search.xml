@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tb_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:background="@color/color_lightblue"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/img_search_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:src="@mipmap/ic_white_back"/>
+
+        <LinearLayout
+            android:id="@+id/lt_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/corner_rectangle_blue_stroke_bg"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/ic_glass"/>
+
+                <EditText
+                    android:id="@+id/searchView"
+                    android:layout_width="match_parent"
+                    android:hint="搜索内容"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:textSize="@dimen/default_small_size"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_search_true"
+                android:layout_width="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_height="match_parent"
+                android:text="搜索"
+                android:textColor="@color/color_white"
+                android:gravity="center"
+                android:background="@drawable/corner_rectangle_lightgray_bg"/>
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+    <TextView
+        android:id="@+id/tv_prompt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_lightgray"
+        android:textSize="@dimen/default_xlarge_size"
+        android:gravity="center"
+        android:layout_marginTop="150dp"
+        android:text="搜索你感兴趣的应用"/>
+    <ListView
+        android:id="@+id/lv_serach_module"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ListView>
+
+</LinearLayout>

@@ -1,0 +1,96 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_title" />
+
+    <com.chinamobile.yunweizhushou.view.MyRefreshLayout
+        android:id="@+id/cboss_detail_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/cboss_detail_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/widget_left_icon_large_blue"
+                android:gravity="start"
+                android:padding="3dp"
+                android:text="title"
+                android:textSize="@dimen/default_middle_size" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_lightblue"
+                android:orientation="horizontal"
+                android:padding="3dp" >
+
+                <TextView
+                    android:id="@+id/cboss_detail_item1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.6"
+                    android:gravity="center"
+                    android:text="业务\n名称"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/default_ssmall_size" />
+
+                <TextView
+                    android:id="@+id/cboss_detail_item2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="业务量\n(笔)"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/default_ssmall_size" />
+
+                <TextView
+                    android:id="@+id/cboss_detail_item3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="接口耗时\n(ms)"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/default_ssmall_size" />
+
+                <TextView
+                    android:id="@+id/cboss_detail_item4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="业务耗时\n(ms)"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/default_ssmall_size" />
+
+                <TextView
+                    android:id="@+id/cboss_detail_item5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="成功率\n(%)"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/default_ssmall_size" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/cboss_detail_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@null" >
+            </ListView>
+        </LinearLayout>
+    </com.chinamobile.yunweizhushou.view.MyRefreshLayout>
+
+</LinearLayout>

@@ -1,0 +1,129 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/produce_line_month_dates"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_lightgray2"
+        android:orientation="horizontal"
+        android:padding="8dp" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="月初月末" />
+
+        <TextView
+            android:id="@+id/produce_line_month_time"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.6"
+            android:gravity="start"
+            android:layout_gravity="center"
+            android:src="@mipmap/icon_xia" />
+        
+        <TextView 
+            android:id="@+id/produce_line_month_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="新增\n事件"
+            android:padding="2dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_margin="2dp"
+            android:textSize="@dimen/default_mini_size"
+            android:background="@drawable/corner_rectangle_blue_stroke_bg"
+            
+            />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <com.chinamobile.yunweizhushou.view.MyListView
+                android:id="@+id/produce_line_month_star_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:listSelector="@android:color/transparent"
+                android:scrollbars="none" >
+            </com.chinamobile.yunweizhushou.view.MyListView>
+            
+            <View 
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/color_gray"
+                />
+
+            <com.chinamobile.yunweizhushou.view.MyListView
+                android:id="@+id/produce_line_month_content_listview"
+                android:layout_width="match_parent"
+                android:divider="@null"
+                android:layout_height="wrap_content"
+                android:listSelector="@android:color/transparent"
+                android:scrollbars="none" >
+            </com.chinamobile.yunweizhushou.view.MyListView>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="3dp"
+        >
+    
+    <RelativeLayout
+        android:id="@+id/produce_line_month_items"
+        android:layout_width="0dp"
+        android:layout_weight="4"
+        android:layout_height="wrap_content"
+        android:background="@drawable/corner_rectangle_lightblue_bg" >
+
+        <TextView
+            android:id="@+id/produce_line_month_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableRight="@mipmap/icon_shang"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="全部"
+            android:textColor="@color/color_white" />
+    </RelativeLayout>
+    
+    <TextView 
+        android:id="@+id/produce_line_month_focus"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/corner_rectangle_orange_bg"
+        android:text="关注点"
+        android:textColor="@color/color_white"
+        android:gravity="center"
+        />
+    
+    </LinearLayout>
+
+</LinearLayout>

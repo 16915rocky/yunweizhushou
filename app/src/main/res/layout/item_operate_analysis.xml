@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/govern_operate_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="@dimen/default_ssmall_size"
+        android:paddingTop="5dp"
+        android:text="" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <View
+            android:id="@+id/govern_operate_ball"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/oval_green" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <View
+                android:id="@+id/govern_operate_leftline"
+                android:layout_width="1dp"
+                android:layout_height="18dp"
+                android:layout_marginLeft="16dp"
+                android:background="@color/color_deepgreen" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="2"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/govern_operate_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="bottom"
+                    android:textSize="@dimen/default_ssmall_size"
+                    android:text="" />
+
+                <View
+                    android:id="@+id/govern_operate_bottomline"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="bottom"
+                    android:background="@color/color_deepgreen" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/govern_operate_percent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/rect_green_bg"
+                android:gravity="center"
+                android:padding="3dp"
+                android:minLines="2"
+                android:maxLines="2"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/default_ssmall_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

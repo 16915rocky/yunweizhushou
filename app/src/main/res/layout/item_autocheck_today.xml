@@ -1,0 +1,289 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/corner_rectangle_white_bg"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="5dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/auto_unsolve_num"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/oval_blue"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/default_mini_size" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/auto_unsolve_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:gravity="center_vertical"
+                android:maxLines="2"
+                android:paddingRight="15dp"
+                android:text="关于渠道无法办理的问题"
+                android:textColor="@color/color_dark"
+                android:textSize="@dimen/default_small_size" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="3dp"
+            android:background="@color/color_lightgray2" />
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:orientation="vertical"
+            android:background="@drawable/corner_rectangle_lightgray2_bg2"
+            android:layout_marginBottom="10dp"
+            >
+            <TextView 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="问题描述:"
+                android:textSize="@dimen/default_mini_size"
+                android:textColor="@color/color_lightblue"
+                />
+            <TextView 
+                android:id="@+id/auto_unsolve_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="问题描述:问题描述:问题描述:问题描述:"
+                android:textSize="@dimen/default_mini_size"
+                />
+            
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/corner_rectangle_lightgray2_bg2"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="5dp"
+                    android:text="问题等级"
+                    android:textColor="@color/color_deepblue"
+                    android:textSize="@dimen/default_mini_size" />
+
+                <TextView
+                    android:id="@+id/auto_unsolve_level"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/oval_gray"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="五级"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/default_small_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/corner_rectangle_lightgray2_bg2"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="5dp"
+                    android:text="问题状态"
+                    android:textColor="@color/color_deepblue"
+                    android:textSize="@dimen/default_mini_size" />
+
+                <TextView
+                    android:id="@+id/auto_unsolve_state"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/oval_green"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="调度中"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/default_small_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/corner_rectangle_lightgray2_bg2"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="5dp"
+                    android:text="处理耗时"
+                    android:textColor="@color/color_deepblue"
+                    android:textSize="@dimen/default_mini_size" />
+
+                <TextView
+                    android:id="@+id/auto_unsolve_time"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/oval_violet"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="地市"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/default_small_size" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/corner_rectangle_lightgray2_bg2"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="5dp"
+                    android:text="巡检系统"
+                    android:textColor="@color/color_deepblue"
+                    android:textSize="@dimen/default_mini_size" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/auto_unsolve_system"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_weight="2"
+                android:background="@drawable/corner_rectangle_lightgray2_bg2"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text=""
+                android:textColor="@color/color_deepblue"
+                android:textSize="@dimen/default_mini_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/corner_rectangle_lightgray2_bg2"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="5dp"
+                    android:text="责任人组"
+                    android:textColor="@color/color_deepblue"
+                    android:textSize="@dimen/default_mini_size" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/auto_unsolve_group"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_weight="2"
+                android:background="@drawable/corner_rectangle_lightgray2_bg2"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text=""
+                android:textColor="@color/color_deepblue"
+                android:textSize="@dimen/default_mini_size" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/auto_unsolve_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/corner_rectangle_lightgray2_bg2"
+            android:padding="5dp"
+            android:text="处理进度：\n"
+            android:textColor="@color/color_dark"
+            android:textSize="@dimen/default_mini_size" />
+    </LinearLayout>
+
+</LinearLayout>

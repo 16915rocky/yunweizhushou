@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.chinamobile.yunweizhushou.view.MyRefreshLayout
+        android:id="@+id/rityaji2_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <com.chinamobile.yunweizhushou.view.MyListView
+                    android:id="@+id/rityaji2_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+                </com.chinamobile.yunweizhushou.view.MyListView>
+
+                <include
+                    android:id="@+id/rityaji_city2"
+                    layout="@layout/include_12city" />
+
+                <com.chinamobile.yunweizhushou.view.MyGridView
+                    android:id="@+id/rityaji2_gridview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:numColumns="4" >
+                </com.chinamobile.yunweizhushou.view.MyGridView>
+            </LinearLayout>
+        </ScrollView>
+    </com.chinamobile.yunweizhushou.view.MyRefreshLayout>
+
+</LinearLayout>

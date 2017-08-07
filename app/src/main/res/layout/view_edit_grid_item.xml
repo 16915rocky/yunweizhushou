@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/lightgray2"
+        android:layout_margin="5dp"
+        android:layout_height="55dp">
+    <ImageView
+        android:id="@+id/img_mainpage_grid_item"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/ic_launcher"/>
+
+    <TextView
+            android:id="@+id/tv_mainpage_grid_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_mainpage_grid_item"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/default_ssmall_size"
+            android:text="考核"/>
+    <ImageView
+        android:id="@+id/img_tag"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/ic_selector_del"
+        android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+</LinearLayout>

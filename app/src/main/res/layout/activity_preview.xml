@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/widget_left_icon_large_blue2"
+                android:padding="5dp"
+                android:text="PPT" />
+
+            <com.chinamobile.yunweizhushou.view.MyListView
+                android:id="@+id/preview_ppt_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </com.chinamobile.yunweizhushou.view.MyListView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/widget_left_icon_large_blue2"
+                android:padding="5dp"
+                android:text="Word" />
+
+            <com.chinamobile.yunweizhushou.view.MyListView
+                android:id="@+id/preview_word_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </com.chinamobile.yunweizhushou.view.MyListView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/widget_left_icon_large_blue2"
+                android:padding="5dp"
+                android:text="Excel" />
+
+            <com.chinamobile.yunweizhushou.view.MyListView
+                android:id="@+id/preview_excel_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </com.chinamobile.yunweizhushou.view.MyListView>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

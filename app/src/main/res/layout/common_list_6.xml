@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_title" 
+        android:id="@+id/common_list_6_title"/>
+
+    <com.chinamobile.yunweizhushou.view.MyRefreshLayout
+        android:id="@+id/common_list_6_refreshlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/common_list_6_extra"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+            </LinearLayout>
+
+            <include
+                android:id="@+id/common_list_title_6"
+                layout="@layout/head_list_blue_title_6" />
+
+            <ListView
+                android:id="@+id/common_list_6_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+            </ListView>
+        </LinearLayout>
+    </com.chinamobile.yunweizhushou.view.MyRefreshLayout>
+
+</LinearLayout>

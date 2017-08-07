@@ -1,0 +1,89 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app ="http://schemas.android.com/apk/res-auto" 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_title" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ccc" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/busi_item1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="业务受理量"
+                android:textSize="@dimen/default_ssmall_size"
+                 />
+            <TextView
+                android:id="@+id/busi_item2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="按中心"
+                android:textSize="@dimen/default_ssmall_size"
+                 />
+            <TextView
+                android:id="@+id/busi_item3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="接入渠道"
+                android:textSize="@dimen/default_ssmall_size"
+                 />
+
+            <TextView
+                android:id="@+id/busi_item4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="重点业务"
+                android:textSize="@dimen/default_ssmall_size"/>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/busi_bottom_bar"
+            android:layout_width="100dp"
+            android:layout_height="3dp"
+            android:background="@color/falut_item_color_s"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ccc" />
+
+    <com.chinamobile.yunweizhushou.view.MyViewPager
+        android:id="@+id/busi_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </com.chinamobile.yunweizhushou.view.MyViewPager>
+
+</LinearLayout>

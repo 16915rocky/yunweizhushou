@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="match_parent">
+              <TextView 
+                  android:id="@+id/tv_item1"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+             android:gravity="center"
+             android:textColor="@color/color_white"
+             android:textSize="@dimen/default_mini_size"
+            android:background="@drawable/oval_blue"
+            android:text="04月"/>
+        </LinearLayout>
+          <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_weight="3"
+        
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+              <TextView 
+                      android:id="@+id/tv_item2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+             android:gravity="center"
+             android:layout_marginTop="3dp"
+            android:text="黄色预警222323"/>
+                <TextView 
+                        android:id="@+id/tv_item3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+             android:gravity="center"
+               android:layout_marginTop="8dp"
+             android:textSize="@dimen/default_mini_size"
+            android:text="黄色预警222323"/>
+        </LinearLayout>
+       
+       
+            <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="match_parent">
+
+                <TextView
+                        android:id="@+id/tv_item4"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/oval_gray"
+                    android:gravity="center"
+                    android:text="解除"
+                      android:textSize="@dimen/default_mini_size"
+                    android:textColor="@color/color_white" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

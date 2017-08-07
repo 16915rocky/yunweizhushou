@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/textView_th1"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="3dp"
+        android:text="文件_1"
+        android:textSize="@dimen/default_ssmall_size" />
+
+    <TextView
+        android:id="@+id/textView_th2"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="文件数量"
+        android:textSize="@dimen/default_ssmall_size" />
+
+    <TextView
+        android:id="@+id/textView_th3"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="重复文件数量"
+        android:textSize="@dimen/default_ssmall_size" />
+
+    <TextView
+        android:id="@+id/textView_th4"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="总条数"
+        android:textSize="@dimen/default_ssmall_size" />
+
+    <TextView
+        android:id="@+id/textView_th5"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="正确条数"
+        android:textSize="@dimen/default_ssmall_size" />
+
+    <TextView
+        android:id="@+id/textView_th6"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="处理时间"
+        android:textSize="@dimen/default_ssmall_size" />
+
+</LinearLayout>

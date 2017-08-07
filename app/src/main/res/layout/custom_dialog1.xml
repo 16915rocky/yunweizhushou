@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+  	android:gravity="center"
+    android:orientation="vertical" >
+	<LinearLayout 
+	    android:layout_width="230dp"
+	    android:layout_height="wrap_content"
+	    android:background="@drawable/corner_rectangle_white_bg"
+	    android:gravity="center"
+	    android:orientation="vertical">
+	    <TextView 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:text="详情"
+	         android:gravity="center"
+	        android:textSize="@dimen/default_xxlarge_size"/>
+	    <TextView 
+	        android:id="@+id/dialog_tv1"
+	        android:layout_marginTop="5dp"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	         android:gravity="center"
+	        android:text="详情"
+	        />
+	     <TextView 
+	         android:id="@+id/dialog_tv2"
+	        android:layout_marginTop="5dp"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:text="确定"
+	         android:gravity="center"
+	        android:textSize="@dimen/default_xxlarge_size"
+	        android:textColor="@color/color_blue"
+	        
+	        />
+	</LinearLayout>
+
+</LinearLayout>

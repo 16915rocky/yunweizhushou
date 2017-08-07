@@ -1,0 +1,99 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+  	<LinearLayout 
+  	    android:layout_width="match_parent"
+  	    android:layout_height="wrap_content"
+  	    android:orientation="horizontal"
+  	   android:background="@color/color_lightgray2"
+  	    android:gravity="center"
+  	    android:paddingTop="10dp"
+  	    android:paddingBottom="10dp"
+  	    >
+  	    <RelativeLayout 
+  	        android:layout_width="0dp"
+  	        android:layout_height="wrap_content"
+  	        android:layout_weight="1">
+  	        <TextView 
+  	            
+  	             android:id="@+id/tv1"
+  	            android:layout_width="wrap_content"
+  	            android:layout_height="wrap_content"
+  	            android:gravity="center"
+  	            android:text="开通A\n网元积压"
+  	            android:textSize="@dimen/default_small_size"
+  	            android:layout_centerHorizontal="true"
+  	            android:layout_centerVertical="true"
+  	            android:textColor="@color/color_white"
+  	            android:background="@drawable/corner_rectangle_lightblue_bg"
+  	            android:padding="5dp"
+  	            />
+  	    </RelativeLayout>
+  	     <RelativeLayout 
+  	        android:layout_width="0dp"
+  	        android:layout_height="wrap_content"
+  	        android:layout_weight="1">
+  	       <TextView 
+  	           android:id="@+id/tv2"
+  	            android:layout_width="wrap_content"
+  	            android:layout_height="wrap_content"
+  	            android:gravity="center"
+  	            android:text="开通B\n网元积压"
+  	            android:textSize="@dimen/default_small_size"
+  	            android:layout_centerHorizontal="true"
+  	            android:layout_centerVertical="true"
+  	            android:textColor="@color/color_white"
+  	            android:background="@drawable/corner_rectangle_lightblue_bg"
+  	            android:padding="5dp"
+  	            />
+  	    </RelativeLayout>
+  	  
+  	</LinearLayout>
+  	
+  	<LinearLayout 
+  	    android:layout_width="match_parent"
+  	    android:layout_height="wrap_content"
+  	    android:background="@color/color_lightblue"
+  	    android:orientation="horizontal"
+  	    >
+  	    <TextView 
+  	        android:layout_width="0dp"
+  	        android:layout_weight="1"
+  	        android:layout_height="40dp"
+  	        android:text="地市"
+  	        android:gravity="center"
+  	        android:textColor="@color/color_white"/>
+  	     <TextView 
+  	        android:layout_width="0dp"
+  	        android:layout_weight="1"
+  	        android:layout_height="40dp"
+  	        android:text="服务类型"
+  	        android:gravity="center"
+  	        android:textColor="@color/color_white"/>
+  	      <TextView 
+  	        android:layout_width="0dp"
+  	        android:layout_weight="1"
+  	        android:layout_height="40dp"
+  	        android:text="网元"
+  	        android:gravity="center"
+  	        android:textColor="@color/color_white"/>
+  	       <TextView 
+  	        android:layout_width="0dp"
+  	        android:layout_weight="1"
+  	        android:layout_height="40dp"
+  	        android:text="积压量"
+  	        android:gravity="center"
+  	        android:textColor="@color/color_white"/>
+  	    
+  	</LinearLayout>
+  <ListView
+        android:id="@+id/myListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </ListView> 
+   
+
+</LinearLayout>

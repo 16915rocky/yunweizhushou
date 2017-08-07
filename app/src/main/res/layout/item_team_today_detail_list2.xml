@@ -1,0 +1,84 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/team2_today_detail_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/team_tv1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="11" />
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:background="@color/color_lightgray" />
+
+    <TextView
+        android:id="@+id/team_tv2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="11" />
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:background="@color/color_lightgray" />
+
+    <TextView
+        android:id="@+id/team_tv3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="11" />
+      <View
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:background="@color/color_lightgray" />
+
+    <TextView
+        android:id="@+id/team_tv4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="11" />
+      <View
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:background="@color/color_lightgray" />
+
+    <TextView
+        android:id="@+id/team_tv5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="11" />
+      <View
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:background="@color/color_lightgray" />
+
+    <TextView
+        android:id="@+id/team_tv6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="11" />
+
+</LinearLayout>

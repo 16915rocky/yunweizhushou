@@ -1,0 +1,78 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/common_list_5_head"
+        layout="@layout/common_title" />
+
+    
+
+
+ 
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" 
+            android:gravity="center">
+
+           <LinearLayout 
+               android:layout_width="match_parent"
+               android:layout_height="45dp"
+               android:background="@color/color_lightblue">
+               <TextView 
+                   android:layout_width="0dp"
+                  android:layout_weight="1"
+                  android:layout_height="match_parent"
+                  android:gravity="center"
+                  android:textColor="@color/color_white"
+                    android:textSize="@dimen/default_ssmall_size"
+                  android:text="地市"/>
+               <TextView 
+                   android:layout_width="0dp"
+                  android:layout_weight="1"
+                  android:layout_height="match_parent"
+                  android:gravity="center"
+                   android:textColor="@color/color_white"
+                    android:textSize="@dimen/default_ssmall_size"
+                  android:text="当天\n订单量"/>
+               <TextView 
+                   android:layout_width="0dp"
+                  android:layout_weight="1"
+                  android:layout_height="match_parent"
+                  android:gravity="center"
+                   android:textColor="@color/color_white"
+                    android:textSize="@dimen/default_ssmall_size"
+                  android:text="在途订单\n卡单量"/>
+               <TextView 
+                   android:layout_width="0dp"
+                  android:layout_weight="1"
+                  android:layout_height="match_parent"
+                  android:gravity="center"
+                   android:textColor="@color/color_white"
+                    android:textSize="@dimen/default_ssmall_size"
+                  android:text="在途订单\n卡单比例"/>
+               <TextView 
+                   android:layout_width="0dp"
+                  android:layout_weight="1"
+                  android:layout_height="match_parent"
+                  android:gravity="center"
+                   android:textColor="@color/color_white"
+                  android:textSize="@dimen/default_ssmall_size"
+                  android:text="近七天新受理宽带开户\n竣工订单卡单量"/>
+           </LinearLayout>
+
+        
+
+            <ListView
+                android:id="@+id/common_list_5_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+            </ListView>
+        </LinearLayout>
+   
+
+</LinearLayout>

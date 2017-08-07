@@ -1,0 +1,76 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/net_change_detail_1_3_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_lightgray2"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="异常事件数"
+            android:textColor="@color/color_lightblue"
+            android:textSize="@dimen/default_mini_size" />
+
+       
+        <TextView
+            android:id="@+id/net_change_detail_1_3_exception_num"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="@dimen/default_ssmall_size" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="次日故障数"
+            android:textColor="@color/color_lightblue"
+            android:textSize="@dimen/default_mini_size" />
+
+        <TextView
+            android:id="@+id/net_change_detail_1_3_bug_num"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="@dimen/default_ssmall_size" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_gray" />
+
+    <ListView
+        android:id="@+id/net_change_detail_1_3_listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none" >
+    </ListView>
+
+    <TextView
+        android:id="@+id/net_change_detail_1_3_nocontent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="当前没有数据"
+        android:textColor="@color/color_dark"
+        android:textSize="@dimen/default_middle_size"
+        android:visibility="gone" />
+
+</LinearLayout>

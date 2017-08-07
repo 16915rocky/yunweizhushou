@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tabLeft"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="菜单使用排名"
+            android:textSize="@dimen/default_large_size" />
+
+        <TextView
+            android:id="@+id/tabRight"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="用户使用排名"
+            android:textSize="@dimen/default_large_size" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/bottomBar"
+        android:layout_width="100dp"
+        android:layout_height="4px"
+        android:layout_marginLeft="25dp"
+        android:background="@android:color/holo_blue_bright" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="#40545454" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="最近30天排名"
+        android:background="@color/use_ranking_bg"
+        android:textColor="@color/use_ranking_text_bg"
+        android:textSize="@dimen/default_small_size" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/exerciseViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

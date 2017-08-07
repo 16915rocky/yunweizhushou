@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+        <GridView
+            android:id="@+id/chartLegendGridView"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:numColumns="4"
+            android:scrollbars="none" >
+        </GridView>
+    </LinearLayout>
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/performance_analysis_piechart"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+    <TextView
+        android:id="@+id/performance_analysis_decription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:textColor="#80545454"
+        android:text="常用接口最近5分钟实时接口性能，与基数数据比对波动情况展示"
+        android:textSize="@dimen/default_mini_size" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:text="接口波动Top展示"
+            android:textColor="#80545454"
+            android:textSize="@dimen/default_small_size" />
+    </LinearLayout>
+
+</LinearLayout>

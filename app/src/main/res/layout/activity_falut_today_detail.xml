@@ -1,0 +1,363 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white" >
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/common_title" />
+
+    <ScrollView
+        android:id="@+id/fault_today_detail_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/widget_left_icon_large"
+                    android:padding="5dp"
+                    android:text="保障内容"
+                    android:textSize="@dimen/default_middle_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/fault_today_detail_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:text=""
+                    android:textSize="@dimen/default_ssmall_size" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="6dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/color_lightgray" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/widget_left_icon_large"
+                    android:padding="5dp"
+                    android:text="故障现象"
+                    android:textSize="@dimen/default_middle_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/fault_today_detail_phenomenon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:text=""
+                    android:textSize="@dimen/default_ssmall_size" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="6dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/color_lightgray" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/widget_left_icon_large"
+                    android:padding="5dp"
+                    android:text="故障分析"
+                    android:textSize="@dimen/default_middle_size"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/color_lightgray"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/corner_rectangle_lightgray2_bg2"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="故障等级"
+                            android:textColor="@color/color_deepblue"
+                            android:textSize="@dimen/default_ssmall_size" />
+
+                        <TextView
+                            android:id="@+id/fault_today_new_level"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/oval_gray"
+                            android:gravity="center"
+                            android:padding="3dp"
+                            android:text=""
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/default_ssmall_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/corner_rectangle_lightgray2_bg2"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="故障状态"
+                            android:textColor="@color/color_deepblue"
+                            android:textSize="@dimen/default_ssmall_size" />
+
+                        <TextView
+                            android:id="@+id/fault_today_new_state"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/oval_green"
+                            android:gravity="center"
+                            android:padding="3dp"
+                            android:text=""
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/default_ssmall_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/corner_rectangle_lightgray2_bg2"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="故障来源"
+                            android:textColor="@color/color_deepblue"
+                            android:textSize="@dimen/default_ssmall_size" />
+
+                        <TextView
+                            android:id="@+id/fault_today_new_source"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/oval_violet"
+                            android:gravity="center"
+                            android:padding="3dp"
+                            android:text=""
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/default_ssmall_size" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/corner_rectangle_lightgray2_bg2"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="故障历时"
+                            android:textColor="@color/color_deepblue"
+                            android:textSize="@dimen/default_ssmall_size" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/fault_today_new_time"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="2"
+                        android:background="@drawable/corner_rectangle_lightgray2_bg2"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text=""
+                        android:textColor="@color/color_deepblue"
+                        android:textSize="@dimen/default_ssmall_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/corner_rectangle_lightgray2_bg2"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="故障标准"
+                            android:textColor="@color/color_deepblue"
+                            android:textSize="@dimen/default_ssmall_size" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/fault_today_new_standard"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="2"
+                        android:background="@drawable/corner_rectangle_lightgray2_bg2"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text=""
+                        android:textColor="@color/color_deepblue"
+                        android:textSize="@dimen/default_ssmall_size" />
+                </LinearLayout>
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/fault_today_new_progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/corner_rectangle_lightgray2_bg2"
+                    android:maxLines="3"
+                    android:padding="5dp"
+                    android:text="故障进度：\n"
+                    android:textColor="@color/color_dark"
+                    android:textSize="@dimen/default_ssmall_size" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="6dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/color_lightgray" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/widget_left_icon_large"
+                    android:padding="5dp"
+                    android:text="故障轨迹"
+                    android:textSize="@dimen/default_middle_size"
+                    android:textStyle="bold" />
+
+                <com.chinamobile.yunweizhushou.view.MyListView
+                    android:id="@+id/fault_today_trace_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@null" >
+                </com.chinamobile.yunweizhushou.view.MyListView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="6dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/color_lightgray" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/widget_left_icon_large"
+                    android:padding="5dp"
+                    android:text="留言板"
+                    android:textSize="@dimen/default_middle_size"
+                    android:textStyle="bold" />
+
+                <com.chinamobile.yunweizhushou.view.MyListView
+                    android:id="@+id/fault_today_board_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="50dp" >
+                </com.chinamobile.yunweizhushou.view.MyListView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_lightgray"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/fault_today_my_comment_content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_bg"
+                android:padding="3dp" />
+
+            <Button
+                android:id="@+id/fault_today_my_comment_send"
+                android:layout_width="45dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="8dp"
+                android:background="@drawable/sendmsg_selector"
+                android:text="发送"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/default_middle_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

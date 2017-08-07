@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app ="http://schemas.android.com/apk/res-auto"   
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_weight="1"
+       >
+          <com.chinamobile.yunweizhushou.view.DashView
+	        android:layout_width="10dp"
+	        android:layout_height="match_parent"
+	        app:dashWidth="2dp"
+	        app:lineWidth="4dp"	    
+	        app:lineColor="@color/color_blue"
+	        android:layout_marginLeft="20dp"
+	        app:dashOrientation="1"
+	        app:lineHeight="1dp"/>   
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:orientation="vertical">
+        <com.chinamobile.yunweizhushou.view.DashView
+	        android:layout_width="10dp"
+	        android:layout_height="match_parent"
+	        app:dashWidth="2dp"
+	        app:lineWidth="4dp"	    
+	        app:lineColor="@color/color_blue"
+	        android:layout_centerHorizontal="true"
+	        app:dashOrientation="1"
+	        app:lineHeight="1dp"/>   
+	        <ImageView 
+	            android:layout_width="8dp"
+	            android:layout_height="8dp"
+	            android:layout_marginTop="23dp"
+	             android:layout_centerHorizontal="true"
+	            android:src="@mipmap/icon_down_blue"/>
+    </RelativeLayout>
+      <RelativeLayout 
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="30dp"
+        >
+        	 
+        	
+          <com.chinamobile.yunweizhushou.view.DashView
+	        android:layout_width="10dp"
+	        android:layout_height="match_parent"
+	        app:dashWidth="2dp"
+	        app:lineWidth="4dp"	    
+	        app:lineColor="@color/color_blue"
+	        android:layout_marginRight="20dp"
+	        android:layout_alignParentRight="true"
+	        app:dashOrientation="1"
+	        app:lineHeight="1dp"/>      
+        
+    </RelativeLayout>
+
+</LinearLayout>

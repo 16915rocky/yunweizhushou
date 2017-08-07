@@ -1,0 +1,108 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/capes_1_today"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/corner_rectangle_white_bg"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="日指标"
+            android:textColor="@color/color_lightblue"
+            android:textSize="@dimen/default_ssmall_size" />
+
+        <TextView
+            android:id="@+id/capes_1_month"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/corner_rectangle_white_bg"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="月指标"
+            android:textColor="@color/color_lightblue"
+            android:textSize="@dimen/default_ssmall_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_lightblue"
+        android:orientation="horizontal"
+        android:padding="3dp" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="采集\n日期"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/default_ssmall_size" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.8"
+            android:gravity="center"
+            android:text="指标\n名称"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/default_ssmall_size" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="指标\n单位"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/default_ssmall_size" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="指标\n值"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/default_ssmall_size" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="全国\n均值"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/default_ssmall_size" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="全国\n排名"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/default_ssmall_size" />
+    </LinearLayout>
+
+    <ListView
+        android:divider="@null"
+        android:id="@+id/capes_1_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </ListView>
+
+</LinearLayout>

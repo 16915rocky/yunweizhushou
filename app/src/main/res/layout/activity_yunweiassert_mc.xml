@@ -1,0 +1,187 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_title" />
+
+    <LinearLayout
+        android:id="@+id/govern_analysis_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/fuwuqi"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="服务器"
+                android:textColor="@color/color_lightblue"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/jincheng"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="进程"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/titleContent2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+          android:background="@color/color_lightgray2"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingTop="5dp" >
+
+                 <TextView
+                     android:id="@+id/mc_title1"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:background="@color/color_lightgray2"
+                     android:gravity="center"
+                     android:text="服务器" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_lightgray2"
+                    android:gravity="center"
+                    android:text="资产总量" />
+                 <TextView
+                        android:id="@+id/mc_title2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_lightgray2"
+                    android:gravity="center"
+                    android:text="0" />
+                  <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_lightgray2"
+                    android:gravity="center"
+                    android:text="项" />
+            </LinearLayout>
+            
+
+            
+             <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/color_lightgray2"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingTop="5dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_lightgray2"
+                    android:gravity="center"
+                    android:text="未监控数量" />
+                 <TextView
+                        android:id="@+id/mc_title3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_lightgray2"
+                    android:gravity="center"
+                    android:text="0" />
+                  <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_lightgray2"
+                    android:gravity="center"
+                    android:text="项" />
+            </LinearLayout>         	          
+        </LinearLayout>
+      
+    </LinearLayout>
+    <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/color_lightgray2"
+            android:gravity="center">
+          <TextView 
+                 android:id="@+id/mc_title4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="服务器"/>
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="监控覆盖率"/>
+             <TextView 
+                    android:id="@+id/mc_title5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"/>
+              <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="%"/>
+        </LinearLayout>
+<LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="start"
+            android:padding="2dp">
+        
+              <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="覆盖率未到100%的"
+               android:textSize="@dimen/default_mini_size"/>
+              <TextView 
+                  android:id="@+id/mc_title6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"/>
+               <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="个系统列表如下:"
+                android:textSize="@dimen/default_mini_size"/>
+        </LinearLayout>
+   <ScrollView
+        android:id="@+id/capacity_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" > -->
+
+        <com.chinamobile.yunweizhushou.view.MyGridView
+            android:id="@+id/capacity_analysis_gridview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_white"
+            android:numColumns="2" >
+        </com.chinamobile.yunweizhushou.view.MyGridView>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,198 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_lightgray2"
+        android:orientation="vertical"
+        android:padding="5dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+               <TextView            
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="@dimen/default_middle_size" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="评审\n通过数"
+                android:textColor="@color/color_lightblue"
+                android:textSize="@dimen/default_mini_size" />
+
+            <TextView
+                android:id="@+id/net_change_detail_1_1_num1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="@dimen/default_ssmall_size" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="评审\n通过率"
+                android:textColor="@color/color_lightblue"
+                android:textSize="@dimen/default_mini_size" />
+
+            <TextView
+                android:id="@+id/net_change_detail_1_1_rate1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="@dimen/default_ssmall_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+             <LinearLayout 
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+                 android:layout_height="match_parent"
+                 android:orientation="horizontal"
+                 android:weightSum="2"
+                 >
+               <TextView                
+                android:layout_width="0dp"
+                android:layout_height="match_parent" 
+                android:layout_weight="1"            
+                android:gravity="center"
+                android:text="上线需求总数"
+                android:textColor="@color/color_lightblue"
+                android:textSize="@dimen/default_mini_size" />
+               <TextView
+                android:id="@+id/net_change_detail_1_1_sum"
+                 android:layout_width="0dp"
+                android:layout_height="match_parent" 
+                android:layout_weight="1"               
+                android:gravity="center"
+                android:textSize="@dimen/default_ssmall_size" 
+                />
+             </LinearLayout>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="上线\n通过数"
+                android:textColor="@color/color_lightblue"
+                android:textSize="@dimen/default_mini_size" />
+
+            <TextView
+                android:id="@+id/net_change_detail_1_1_num2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="@dimen/default_ssmall_size" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="上线\n通过率"
+                android:textColor="@color/color_lightblue"
+                android:textSize="@dimen/default_mini_size" />
+
+            <TextView
+                android:id="@+id/net_change_detail_1_1_rate2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="@dimen/default_ssmall_size" />
+        </LinearLayout>
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView            
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="@dimen/default_middle_size" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="发布时长\n总耗时"
+                android:textColor="@color/color_lightblue"
+                android:textSize="@dimen/default_mini_size" />
+
+            <TextView
+                android:id="@+id/net_change_detail_1_1_all_duration"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="@dimen/default_ssmall_size" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="生产验收\n总耗时"
+                android:textColor="@color/color_lightblue"
+                android:textSize="@dimen/default_mini_size" />
+
+            <TextView
+                android:id="@+id/net_change_detail_1_1_product_check_duration"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="@dimen/default_ssmall_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_gray" />
+
+    <ListView
+        android:id="@+id/net_change_detail_11_listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none" >
+    </ListView>
+
+    <TextView
+        android:id="@+id/net_change_detail_11_to_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_lightblue"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="全部需求清单"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/default_large_size" />
+
+</LinearLayout>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/rect_network_acceptance_bg"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="2016年\n8月"
+            android:textColor="#90545454"
+            android:textSize="@dimen/default_middle_size" />
+
+        <LinearLayout
+            android:id="@+id/totalLayout"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/rect_network_acceptance_bg"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center"
+                    android:padding="1dp"
+                    android:text="入网\n验收"
+                    android:textColor="@color/color_lightblue"
+                    android:textSize="@dimen/default_ssmall_size"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:id="@+id/networkConverage"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_vertical"
+                        android:padding="3dp"
+                        android:text=""
+                        android:textSize="@dimen/default_small_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/converage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toLeftOf="@id/networkConverage"
+                        android:gravity="center"
+                        android:text="自动化覆盖率"
+                        android:textSize="@dimen/default_ssmall_size" />
+
+                    <TextView
+                        android:id="@+id/totalAcceptance"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@id/converage"
+                        android:gravity="center_vertical"
+                        android:maxLines="2"
+                        android:padding="3dp"
+                        android:text=""
+                        android:textSize="@dimen/default_small_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toLeftOf="@id/totalAcceptance"
+                        android:gravity="center"
+                        android:text="用例\n合计"
+                        android:textSize="@dimen/default_ssmall_size" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/network_shengchanyanzheng_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center"
+                    android:padding="1dp"
+                    android:text="生产\n验证"
+                    android:textColor="@color/color_lightblue"
+                    android:textSize="@dimen/default_ssmall_size"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:id="@+id/productionCoverage"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_vertical"
+                        android:padding="3dp"
+                        android:text=""
+                        android:textSize="@dimen/default_small_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/zong3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toLeftOf="@id/productionCoverage"
+                        android:gravity="center"
+                        android:text="自动化覆盖率"
+                        android:textSize="@dimen/default_ssmall_size" />
+
+                    <TextView
+                        android:id="@+id/productionTotal"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@id/zong3"
+                        android:gravity="center_vertical"
+                        android:maxLines="2"
+                        android:padding="3dp"
+                        android:text=""
+                        android:textSize="@dimen/default_small_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toLeftOf="@id/productionTotal"
+                        android:gravity="center"
+                        android:text="用例\n合计"
+                        android:textSize="@dimen/default_ssmall_size" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="3dp" >
+
+        <LinearLayout
+            android:id="@+id/LinearLayout02"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/falut_item_color_s"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/networkAcceptanceListView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:divider="#10545454"
+                android:dividerHeight="5dp"
+                android:scrollbars="none" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</LinearLayout>

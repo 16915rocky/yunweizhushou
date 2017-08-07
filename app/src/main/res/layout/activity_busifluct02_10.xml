@@ -1,0 +1,67 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2.3" >
+        <View
+            android:id="@+id/vi12"
+            android:layout_width="20dp"
+            android:layout_height="2dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:background="@color/color_lightblue"/>
+        <TextView
+            android:id="@+id/tt2"
+                android:layout_toLeftOf="@+id/vi12"                             
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/rect_green_bg"
+                android:gravity="center"
+                android:text="历史表"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/default_mini_size" 
+                />
+        <TextView
+            android:id="@+id/tv888"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/tt2"   
+            android:gravity="center"
+            android:text="积压量:666"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/default_mini_size"
+            android:textColor="@color/color_lightblue" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" >
+
+        <TextView
+                
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/rect_green_bg"
+                android:gravity="center"
+                android:text="计费系统处理"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/default_mini_size" 
+                />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.5" >
+    </RelativeLayout>
+
+</LinearLayout>

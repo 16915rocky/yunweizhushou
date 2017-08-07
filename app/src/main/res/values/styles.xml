@@ -1,0 +1,88 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="BaseAppTheme">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/color_lightblue</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="BaseAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimaryDark">@color/transparence</item>
+    </style>
+
+    <style name="AppTheme.NoBar">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <style name="ThemeDialog" parent="@android:style/Theme.Dialog">
+
+        <!-- 设置背景是否透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 设置窗口框架 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 设置dialog是否浮在activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 设置是否半透明 -->
+        <item name="android:windowIsTranslucent">false</item>
+        <!-- 设置背景是否模糊显示(即背景是否变暗) -->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <style name="ShareDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+
+    </style>
+
+
+    <!--日历-->
+    <style name="TextAppearance.MaterialCalendarWidget.Header"
+        parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.MaterialCalendarWidget.Date"
+        parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@drawable/mcv_text_date_light</item>
+    </style>
+
+    <style name="TextAppearance.MaterialCalendarWidget.WeekDay"
+        parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="text_bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="text_normal">
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="popwin_anim_style">
+        <item name="android:windowEnterAnimation">@anim/charge_function_popup_show</item>
+        <item name="android:windowExitAnimation">@anim/charge_function_popup_hide</item>
+    </style>
+
+
+
+
+
+
+
+
+</resources>

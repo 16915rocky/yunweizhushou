@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+  	<LinearLayout 
+  	    android:layout_width="match_parent"
+  	    android:layout_height="wrap_content"
+  	    android:orientation="horizontal"
+  	   android:background="@color/color_lightgray2"
+  	    android:gravity="center"
+  	    android:paddingTop="10dp"
+  	    android:paddingBottom="10dp"
+  	    >
+  	    <RelativeLayout 
+  	        android:layout_width="0dp"
+  	        android:layout_height="wrap_content"
+  	        android:layout_weight="1">
+  	        <TextView 
+  	             android:id="@+id/tv1"
+  	            android:layout_width="wrap_content"
+  	            android:layout_height="wrap_content"
+  	            android:gravity="center"
+  	            android:text="宽带新装\n(订单中心)"
+  	            android:textSize="@dimen/default_small_size"
+  	            android:layout_centerHorizontal="true"
+  	            android:layout_centerVertical="true"
+  	            android:textColor="@color/color_white"
+  	            android:background="@drawable/corner_rectangle_lightblue_bg"
+  	            />
+  	    </RelativeLayout>
+  	     <RelativeLayout 
+  	        android:layout_width="0dp"
+  	        android:layout_height="wrap_content"
+  	        android:layout_weight="1">
+  	       <TextView 
+  	           android:id="@+id/tv2"
+  	            android:layout_width="wrap_content"
+  	            android:layout_height="wrap_content"
+  	            android:gravity="center"
+  	            android:text="宽带移机\n(订单中心)"
+  	            android:textSize="@dimen/default_small_size"
+  	            android:layout_centerHorizontal="true"
+  	            android:layout_centerVertical="true"
+  	            android:textColor="@color/color_white"
+  	            android:background="@drawable/corner_rectangle_lightblue_bg"
+  	            />
+  	    </RelativeLayout>
+  	  
+  	</LinearLayout>
+  <ListView
+        android:id="@+id/myListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </ListView> 
+   
+
+</LinearLayout>

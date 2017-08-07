@@ -1,0 +1,40 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/corner_rectangle_white_bg"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/widget_left_icon_greenblue"
+        android:text="投诉标题"
+        android:gravity="center_vertical"
+        android:textColor="@color/color_lightblue"
+        android:textSize="@dimen/default_ssmall_size" />
+
+    <TextView
+        android:id="@+id/unfinish_complaint_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/default_ssmall_size" />
+    
+    <TextView
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/widget_left_icon_greenblue"
+        android:text="投诉内容"
+        android:textColor="@color/color_lightblue"
+        android:textSize="@dimen/default_ssmall_size" />
+
+    <TextView
+        android:id="@+id/unfinish_complaint_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/default_ssmall_size" />
+
+</LinearLayout>

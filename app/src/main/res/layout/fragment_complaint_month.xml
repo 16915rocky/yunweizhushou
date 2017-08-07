@@ -1,0 +1,98 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/corner_rectangle_lightgray2_bg2"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="10dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="当月累计投诉工单"
+                    android:textSize="@dimen/default_mini_size"
+                     />
+
+                <TextView
+                    android:id="@+id/complaint_month_item1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/default_middle_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="环比上月同期"
+                    android:textSize="@dimen/default_mini_size" />
+
+                <ImageView
+                    android:id="@+id/complaint_month_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/icon_arrow_down" />
+
+                <TextView
+                    android:textStyle="bold"
+                    android:id="@+id/complaint_month_item2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/default_middle_size" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/corner_rectangle_lightblue_bg"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="当月累计投诉量TOP10"
+                android:textColor="@color/color_white" />
+
+            <com.chinamobile.yunweizhushou.view.MyGridView
+                android:id="@+id/complait_month_gridview1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="2" >
+            </com.chinamobile.yunweizhushou.view.MyGridView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/corner_rectangle_lightblue_bg"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="当月累计投诉增长量TOP10"
+                android:textColor="@color/color_white" />
+
+            <com.chinamobile.yunweizhushou.view.MyGridView
+                android:id="@+id/complait_month_gridview2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:numColumns="2" >
+            </com.chinamobile.yunweizhushou.view.MyGridView>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

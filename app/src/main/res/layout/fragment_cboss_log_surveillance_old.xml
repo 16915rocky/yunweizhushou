@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app ="http://schemas.android.com/apk/res-auto"   
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+     <com.chinamobile.yunweizhushou.view.MyRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    <ScrollView 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+    
+    <include layout="@layout/fragment_cboss_log_surveillance_old1"
+        android:visibility="visible"
+       />
+    <include layout="@layout/fragment_cboss_log_surveillance_old2"
+        android:visibility="visible"/>
+    <include layout="@layout/fragment_cboss_log_surveillance_old3"
+        android:visibility="visible"/>
+    <include layout="@layout/fragment_cboss_log_surveillance_old4"
+         android:visibility="visible"/>
+    <include layout="@layout/fragment_cboss_log_surveillance_old5"
+         android:visibility="visible"/>
+    <include layout="@layout/fragment_cboss_log_surveillance_old6"/>
+    <include layout="@layout/fragment_cboss_log_surveillance_old7"/>
+    <include layout="@layout/fragment_cboss_log_surveillance_old8"/>
+
+    <include layout="@layout/fragment_cboss_log_surveillance_old9" />
+
+    <include layout="@layout/fragment_cboss_log_surveillance_old10"/>
+    <include layout="@layout/fragment_cboss_log_surveillance_old11"/>
+    <include layout="@layout/fragment_cboss_log_surveillance_old12"/>
+    <include layout="@layout/fragment_cboss_log_surveillance_old14"/>
+    </LinearLayout>
+</ScrollView>
+   </com.chinamobile.yunweizhushou.view.MyRefreshLayout>
+	
+</LinearLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <include layout="@layout/common_title" />
+    
+	<ScrollView 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:scrollbars="none">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/lt_name"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="" />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/lt_common"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" >
+        </com.github.mikephil.charting.charts.LineChart>
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/color_blue"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/color_white" />
+          <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/color_gray"
+            android:orientation="horizontal">
+            <TextView 
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="名称"/>
+             <TextView 
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="总量"/>
+              <TextView 
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="失败量"/>
+              <TextView 
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="成功量"/>
+        </LinearLayout>
+        <com.chinamobile.yunweizhushou.view.MyListView
+            android:id="@+id/lv_wlwzb"
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            
+        </com.chinamobile.yunweizhushou.view.MyListView>
+        </LinearLayout>
+     </ScrollView>
+</LinearLayout>

@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_lightblue"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/list_title_4_item1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="111"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/default_ssmall_size" />
+    <TextView
+        android:id="@+id/list_title_4_item2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="111"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/default_ssmall_size" />
+    <TextView
+        android:id="@+id/list_title_4_item3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="111"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/default_ssmall_size" />
+    <TextView
+        android:id="@+id/list_title_4_item4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="111"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/default_ssmall_size" />
+
+</LinearLayout>

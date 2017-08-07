@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app ="http://schemas.android.com/apk/res-auto"   
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+    
+    
+      <RelativeLayout 
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+          >
+       
+         
+	         <com.chinamobile.yunweizhushou.view.DashView
+	        android:layout_width="10dp"
+	        android:layout_height="match_parent"
+	        app:dashWidth="2dp"
+	        app:lineWidth="4dp"	    
+	        app:lineColor="@color/color_blue"
+	        app:dashOrientation="1"
+	        
+	        app:lineHeight="1dp"
+	        android:layout_marginLeft="20dp"/>   
+	       
+          <RelativeLayout 
+               android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+              <TextView 
+                  android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="落地上发\nweb"
+            android:textSize="@dimen/default_mini_size"
+               android:layout_centerHorizontal="true"
+               android:gravity="center"
+               android:layout_marginTop="5dp"
+            /> 
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10.78.129.136"
+                android:textSize="@dimen/default_mini_size"
+               android:layout_centerHorizontal="true"
+                android:layout_below="@+id/tv1"/>
+             
+            
+          </RelativeLayout>
+       
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="50dp">
+            
+        	
+	         
+	      <com.chinamobile.yunweizhushou.view.DashView
+	          android:id="@+id/old5_dashview1"
+	        android:layout_width="40dp"
+	        android:layout_height="10dp"
+	        app:dashWidth="2dp"
+	        app:lineWidth="4dp"	
+	       android:layout_marginTop="35dp"
+	       android:layout_alignParentRight="true"
+	        app:lineColor="@color/color_white"
+	        app:dashOrientation="0"
+	        app:lineHeight="1dp"
+	       />"
+	        <com.chinamobile.yunweizhushou.view.DashView
+	        android:layout_width="10dp"
+	        android:layout_height="match_parent"
+	        app:dashWidth="2dp"
+	        app:lineWidth="4dp"	
+	        app:lineColor="@color/color_blue"
+	        app:dashOrientation="1"
+	        android:layout_toLeftOf="@+id/old5_dashview1"
+	        app:lineHeight="1dp"/>  
+	          	
+    </RelativeLayout>
+      <RelativeLayout 
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+         >
+	          <RelativeLayout 
+	              android:layout_width="70dp"
+	            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true">
+	              <TextView 
+	                  android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="落地上发\nweb"
+             android:textSize="@dimen/default_mini_size"
+               android:layout_centerHorizontal="true"
+               android:layout_marginTop="5dp"
+               android:gravity="center"/>
+	               <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10.70.250.228"
+               android:layout_centerHorizontal="true"
+               android:textSize="@dimen/default_mini_size"
+                android:layout_below="@+id/tv2"
+                android:gravity="center"/>
+	             
+	          </RelativeLayout>
+	        
+          
+	        <com.chinamobile.yunweizhushou.view.DashView
+	        android:layout_width="10dp"
+	        android:layout_height="match_parent"
+	        app:dashWidth="2dp"
+	        app:lineWidth="4dp"	    
+	        app:lineColor="@color/color_blue"
+	        android:layout_marginLeft="90dp"
+	  
+	        app:dashOrientation="1"
+	        app:lineHeight="1dp"/>   
+    </RelativeLayout>
+
+</LinearLayout>

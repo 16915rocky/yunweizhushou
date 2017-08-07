@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@android:color/white"
+        android:layout_height="wrap_content" >
+        <ImageView
+            android:layout_marginLeft="15dp"
+            android:id="@+id/pic1"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+           	android:layout_centerVertical="true"
+            android:src="@mipmap/icon_panoramic_direction" />
+
+        <TextView
+            android:id="@+id/direction"
+            android:layout_toRightOf="@id/pic1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="30dp"
+            android:paddingTop="10dp"
+            android:text="按专业方向"
+            android:textSize="16sp" />
+    </RelativeLayout>
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#30545454"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@android:color/white"
+        android:layout_height="wrap_content" >
+        <ImageView
+            android:layout_marginLeft="15dp"
+            android:id="@+id/pic2"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+           	android:layout_centerVertical="true"
+            android:src="@mipmap/icon_panoramic_state" />
+
+        <TextView
+            android:id="@+id/state"
+            android:layout_toRightOf="@id/pic2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="30dp"
+            android:paddingTop="10dp"
+            android:text="按状态"
+            android:textSize="16sp" />
+    </RelativeLayout>
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#30545454"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@android:color/white"
+        android:layout_height="wrap_content" >
+        <ImageView
+            android:layout_marginLeft="15dp"
+            android:id="@+id/pic3"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+           	android:layout_centerVertical="true"
+            android:src="@mipmap/icon_panoramic_duty" />
+
+        <TextView
+            android:id="@+id/duty"
+            android:layout_toRightOf="@id/pic3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="30dp"
+            android:paddingTop="10dp"
+            android:text="按责任人"
+            android:textSize="16sp" />
+    </RelativeLayout>
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#30545454"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@android:color/white"
+        android:layout_height="wrap_content" >
+        <ImageView
+            android:layout_marginLeft="15dp"
+            android:id="@+id/pic4"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+           	android:layout_centerVertical="true"
+            android:src="@mipmap/icon_panoramic_priority" />
+
+        <TextView
+            android:id="@+id/priority"
+            android:layout_toRightOf="@id/pic4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="30dp"
+            android:paddingTop="10dp"
+            android:text="按优先级"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,232 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/busi_city_1"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/oval_blue"
+                    android:gravity="center"
+                    android:tag="570,571,572,573,574,575,576,577,578,579,580"
+                    android:text="全部"
+                    android:textColor="@color/color_white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/busi_city_2"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/oval_blue"
+                    android:gravity="center"
+                    android:tag="571"
+                    android:text="杭州"
+                    android:textColor="@color/color_white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/busi_city_3"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/oval_blue"
+                    android:gravity="center"
+                    android:tag="574"
+                    android:text="宁波"
+                    android:textColor="@color/color_white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/busi_city_4"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/oval_blue"
+                    android:gravity="center"
+                    android:tag="577"
+                    android:text="温州"
+                    android:textColor="@color/color_white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/busi_city_5"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/oval_blue"
+                    android:gravity="center"
+                    android:tag="576"
+                    android:text="台州"
+                    android:textColor="@color/color_white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/busi_city_6"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/oval_blue"
+                    android:gravity="center"
+                    android:tag="579"
+                    android:text="金华"
+                    android:textColor="@color/color_white" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/busi_city_7"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/oval_blue"
+                    android:gravity="center"
+                    android:tag="575"
+                    android:text="绍兴"
+                    android:textColor="@color/color_white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/busi_city_8"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/oval_blue"
+                    android:gravity="center"
+                    android:tag="573"
+                    android:text="嘉兴"
+                    android:textColor="@color/color_white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/busi_city_9"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/oval_blue"
+                    android:gravity="center"
+                    android:tag="578"
+                    android:text="丽水"
+                    android:textColor="@color/color_white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/busi_city_10"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/oval_blue"
+                    android:gravity="center"
+                    android:tag="572"
+                    android:text="湖州"
+                    android:textColor="@color/color_white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/busi_city_11"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/oval_blue"
+                    android:gravity="center"
+                    android:tag="570"
+                    android:text="衢州"
+                    android:textColor="@color/color_white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/busi_city_12"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/oval_blue"
+                    android:gravity="center"
+                    android:tag="580"
+                    android:text="舟山"
+                    android:textColor="@color/color_white" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

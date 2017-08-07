@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_lightgray2"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_title" />
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/color_white"
+        >
+        <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/duizhangdan_cMonth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="当月" />
+
+            <View 
+                android:layout_gravity="center"
+                android:id="@+id/duizhangdan_cMonth_line"
+                android:layout_width="50dp"
+                android:layout_height="3dp"
+                android:background="@color/color_lightblue"
+                />
+            
+        </LinearLayout>
+        <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+            <TextView 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="上月"
+                android:gravity="center"
+                android:padding="5dp"
+                android:id="@+id/duizhangdan_lMonth"
+                />
+            <View 
+                android:layout_gravity="center"
+                android:id="@+id/duizhangdan_lMonth_line"
+                android:layout_width="50dp"
+                android:layout_height="3dp"
+                android:background="@color/color_lightblue"
+                />
+            
+        </LinearLayout>
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="@color/color_lightgray2"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="8dp"
+            android:layout_height="20dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/rect_red_bg" />
+        <TextView
+            android:id="@+id/proNum"
+            android:layout_width="wrap_content"
+            android:padding="5dp"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:layout_height="match_parent" 
+            android:textSize="@dimen/default_large_size"
+            android:textStyle="bold"
+            android:text="571"/>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/scheduleListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/color_lightgray2"
+        android:dividerHeight="10dp"
+        android:scrollbars="none" />
+
+</LinearLayout>
