@@ -40,7 +40,6 @@ public class CommonBarCharListFragment extends BaseFragment {
         View view = inflater.inflate(R.layout.common_listview_notitle, container, false);
         unbinder = ButterKnife.bind(this, view);
         initRequest();
-
         return view;
     }
     private void initRequest() {

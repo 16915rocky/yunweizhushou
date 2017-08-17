@@ -53,6 +53,7 @@ public class FaultServiceFragment extends BaseFragment implements OnClickListene
 		((FaultManageActivity) getActivity()).setOnSwicthToServiceListener(this);
 		initEvent();
 		initChart();
+		initChartRequest("10906");
 		return view;
 
 	}

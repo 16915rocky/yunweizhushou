@@ -239,6 +239,16 @@
                 android:text="重点\n故障"
                 android:textSize="@dimen/default_ssmall_size"
                 android:textStyle="normal" />
+            <TextView
+                android:id="@+id/fault_item_operation"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="故障\n运营"
+                android:textSize="@dimen/default_ssmall_size"
+                android:textStyle="normal" />
         </LinearLayout>
 
         <View

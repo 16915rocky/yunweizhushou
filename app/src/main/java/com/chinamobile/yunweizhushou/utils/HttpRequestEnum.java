@@ -73,6 +73,8 @@ public enum HttpRequestEnum {
 	enum_fault_faultkey,
 	// 故障 风险预警列表下一层
 	enum_fault_faultkey_next,
+	//故障运营
+	enum_fault_operation,
 
 	/**
 	 * 故障保障
@@ -503,7 +505,7 @@ public enum HttpRequestEnum {
 	 *
 	 * 人脸识别
 	 */
-	enum_face_recognition,
+	enum_face_recognition,enum_crm_app_Detail,
 
 	/**
 	 *
@@ -625,5 +627,13 @@ public enum HttpRequestEnum {
 	enum_office_collecting,enum_office_release,enum_group_increment_check,enum_file_receiving,
 	/*服务查询
 	* */
-	enum_service_log_query
+	enum_service_log_query,
+	/*
+	* 新宽带专区
+	* */
+	enum_new_band_service_linechart1,enum_new_band_service_linechart2,
+	/*
+	* 统一查询
+	* */
+	enum_month_data_tab
 }

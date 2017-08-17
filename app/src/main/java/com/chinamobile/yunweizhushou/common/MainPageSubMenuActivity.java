@@ -17,7 +17,6 @@ import com.chinamobile.yunweizhushou.ui.GJTarget.GJTargetActivity;
 import com.chinamobile.yunweizhushou.ui.PayMoreGetShit.PayMoreActivity;
 import com.chinamobile.yunweizhushou.ui.assessmentOfTheZone.AssessmentOfTheZoneActivity;
 import com.chinamobile.yunweizhushou.ui.autoCheck.AutoCheckActivity;
-import com.chinamobile.yunweizhushou.ui.bandService.BandServiceActivity2;
 import com.chinamobile.yunweizhushou.ui.bdConnectionPool.DBConnectionPoolActivity;
 import com.chinamobile.yunweizhushou.ui.capabilityPlatform.AbilityManageActivity;
 import com.chinamobile.yunweizhushou.ui.capes.CapesManageActivity;
@@ -32,6 +31,7 @@ import com.chinamobile.yunweizhushou.ui.mqTo3.MQTo3Activity;
 import com.chinamobile.yunweizhushou.ui.netChange.NetChangeActivity2;
 import com.chinamobile.yunweizhushou.ui.networkAcceptance.NetworkAcceptanceActivity;
 import com.chinamobile.yunweizhushou.ui.networkFlowPay.EnetTrafficSysActivity;
+import com.chinamobile.yunweizhushou.ui.newBandService.GraphListActivity;
 import com.chinamobile.yunweizhushou.ui.reconciliationSchedule.ReconciliationScheduleActivity;
 import com.chinamobile.yunweizhushou.ui.threadCapacity.ThreadCapacityManagementActivity;
 import com.chinamobile.yunweizhushou.view.MyGridView;
@@ -140,8 +140,9 @@ public class MainPageSubMenuActivity extends BaseActivity {
 					case "HotZoneWLWZBActivity"://物联网指标
 						intent.setClass(MainPageSubMenuActivity.this, HotZoneWLWZBActivity.class);
 						break;
-					case "BandServiceActivity2"://宽带专区
-						intent.setClass(MainPageSubMenuActivity.this, BandServiceActivity2.class);
+					case "GraphListActivity"://宽带专区
+						intent.setClass(MainPageSubMenuActivity.this, GraphListActivity.class);
+						intent.putExtra("action","findBroadbandWave");
 						break;
 					case "GJTargetActivity"://告警专区
 						intent.setClass(MainPageSubMenuActivity.this, GJTargetActivity.class);

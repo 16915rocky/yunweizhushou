@@ -69,7 +69,6 @@ public class BusiCenterFragment extends BaseFragment implements OnClickListener,
 				adapter = new RechargeFunctionListAdapter(getActivity(), beans.getItemsList());
 				listview.setAdapter(adapter);
 				break;
-
 			default:
 				break;
 			}

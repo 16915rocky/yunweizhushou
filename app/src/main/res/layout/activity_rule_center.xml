@@ -5,7 +5,7 @@
     android:orientation="vertical" >
 
     <include layout="@layout/common_title" />
-
+    <include layout="@layout/item_charge_people"/>
 
     <View
         android:layout_width="match_parent"
@@ -30,7 +30,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="宽带专区"
+                android:text="规则中心CSF"
                 android:textSize="@dimen/default_ssmall_size"
                  />
             <TextView
@@ -40,7 +40,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="宽带指标"
+                android:text="规则中心ESB"
                 android:textSize="@dimen/default_ssmall_size"
                  />
 

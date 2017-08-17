@@ -12,7 +12,6 @@ import com.chinamobile.yunweizhushou.ui.AccountCenter.IntegrationServiceActivity
 import com.chinamobile.yunweizhushou.ui.abnormalZone.AbnormalZoneActivity;
 import com.chinamobile.yunweizhushou.ui.accountingArea.AccountingAareActivity;
 import com.chinamobile.yunweizhushou.ui.backlogZone.BacklogZoneActivity;
-import com.chinamobile.yunweizhushou.ui.bandService.BandServiceActivity2;
 import com.chinamobile.yunweizhushou.ui.billFlow.GGPRSActivity;
 import com.chinamobile.yunweizhushou.ui.braceBroadcast.BraceBroadcastActivity;
 import com.chinamobile.yunweizhushou.ui.busifluct.BusifluctActivity2;
@@ -24,12 +23,13 @@ import com.chinamobile.yunweizhushou.ui.demandPanoramic.DemandPanoramicActivity;
 import com.chinamobile.yunweizhushou.ui.dutyChart.DutyChartActivity;
 import com.chinamobile.yunweizhushou.ui.emergencyExercise.EmergencyExerciseActivity;
 import com.chinamobile.yunweizhushou.ui.esbInterface.GovernAnalysisActivity;
-import com.chinamobile.yunweizhushou.ui.faceRecognititon.face_recognititonActivity;
 import com.chinamobile.yunweizhushou.ui.flowProvince.FlowProvinceActivity;
 import com.chinamobile.yunweizhushou.ui.functionAnalysis.FunctionAnalysisActivity;
 import com.chinamobile.yunweizhushou.ui.levelStandar.LevelStandardActivity;
 import com.chinamobile.yunweizhushou.ui.main.MoreItemActivity;
 import com.chinamobile.yunweizhushou.ui.moneyoutCheck.MoneyoutCheckActivity;
+import com.chinamobile.yunweizhushou.ui.newBandService.GraphListActivity;
+import com.chinamobile.yunweizhushou.ui.newFaceRecognititon.FaceRecognititonManageActivity;
 import com.chinamobile.yunweizhushou.ui.nextCycle.NextActivity;
 import com.chinamobile.yunweizhushou.ui.officeDataZone.OfficeDataZoneActivity;
 import com.chinamobile.yunweizhushou.ui.onLinePreview.OnlinePreviewActivity;
@@ -46,6 +46,7 @@ import com.chinamobile.yunweizhushou.ui.serviceLogQuery.ServiceLogQueryActivity;
 import com.chinamobile.yunweizhushou.ui.systemTree.SystemTreeActivity;
 import com.chinamobile.yunweizhushou.ui.teamcheck.AssessmentActivity;
 import com.chinamobile.yunweizhushou.ui.ubstantivehall.EntityHallIndexActivity;
+import com.chinamobile.yunweizhushou.ui.unifiedQuery.UnifiedQueryActivity;
 import com.chinamobile.yunweizhushou.ui.useRank.UseRankingActivity;
 import com.chinamobile.yunweizhushou.ui.userPerceptionIndex.UserPerceptionIndexActivity;
 import com.chinamobile.yunweizhushou.ui.userperception.UserPerceptionActivity2;
@@ -225,11 +226,12 @@ public class SelectorModules {
                     context.startActivity(intent);
                     break;
                 case "21":
-                    intent.setClass(context, face_recognititonActivity.class);//人脸识别
+                    intent.setClass(context, FaceRecognititonManageActivity.class);//人脸识别
                     context.startActivity(intent);
                     break;
                 case "52":
-                    intent.setClass(context, BandServiceActivity2.class);//宽带专区
+                    intent.setClass(context, GraphListActivity.class);//宽带专区
+                    intent.putExtra("action","findBroadbandWave");
                     context.startActivity(intent);
                     break;
                 case "22":
@@ -359,6 +361,10 @@ public class SelectorModules {
                     intent.putExtra("title", "智维热点排名");
                     context.startActivity(intent);
                     break;
+                case "47":
+                    intent.setClass(context, UnifiedQueryActivity.class);// 统一查询
+                    context.startActivity(intent);
+                    break;
                 case "54":
                     ArrayList<MainPageFragmentBean> hotzoneList = new ArrayList<>();
                     MainPageFragmentBean hotzoneBean1 = new MainPageFragmentBean("开通网元失败专区", "开通网元失败专区", R.mipmap.ic_ktwy,
@@ -370,7 +376,7 @@ public class SelectorModules {
                     MainPageFragmentBean hotzoneBean4 = new MainPageFragmentBean("物联网指标", "物联网指标专区", R.mipmap.ic_wlwzq,
                             "HotZoneWLWZBActivity");
                     MainPageFragmentBean hotzoneBean5 = new MainPageFragmentBean("宽带专区", "宽带专区", R.mipmap.ic_kdzq,
-                            "BandServiceActivity2");
+                            "GraphListActivity");
                     MainPageFragmentBean hotzoneBean6 = new MainPageFragmentBean("告警专区", "告警专区", R.mipmap.ic_gaojing,
                             "GJTargetActivity");
                     hotzoneList.add(hotzoneBean1);

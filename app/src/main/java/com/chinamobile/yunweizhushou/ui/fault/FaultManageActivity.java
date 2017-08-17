@@ -20,6 +20,7 @@ import com.chinamobile.yunweizhushou.bean.ResponseBean;
 import com.chinamobile.yunweizhushou.common.BaseActivity;
 import com.chinamobile.yunweizhushou.common.MainApplication;
 import com.chinamobile.yunweizhushou.ui.fault.fragment.FaultKeyFaultFragment;
+import com.chinamobile.yunweizhushou.ui.fault.fragment.FaultOperationFragment;
 import com.chinamobile.yunweizhushou.ui.fault.fragment.FaultRecentFragment;
 import com.chinamobile.yunweizhushou.ui.fault.fragment.FaultRiskWarningFragment;
 import com.chinamobile.yunweizhushou.ui.fault.fragment.FaultServiceFragment;
@@ -39,7 +40,7 @@ import java.util.List;
 
 public class FaultManageActivity extends BaseActivity implements OnClickListener {
 
-	private TextView item_today, item_unsolve, item_typical, item_follow, item_recent, item_service;
+	private TextView item_today, item_unsolve, item_typical, item_follow, item_recent, item_service,item_operation;
 	private TextView tvThisMouth, tvThisYear, tvStMouth, tvStYear;
 	private ViewPager faultViewPager;
 	private View bottomBar;
@@ -141,6 +142,7 @@ public class FaultManageActivity extends BaseActivity implements OnClickListener
 		item_follow.setOnClickListener(this);
 		item_recent.setOnClickListener(this);
 		item_service.setOnClickListener(this);
+		item_operation.setOnClickListener(this);
 
 		LayoutParams params = bottomBar.getLayoutParams();
 		bottomBarWidth = ConstantValueUtil.WINDOW_WIDTH / fragmentList.size();
@@ -169,6 +171,8 @@ public class FaultManageActivity extends BaseActivity implements OnClickListener
 				} else if (arg0 == 5) {
 					item_follow.setTextColor(getResources().getColor(R.color.falut_item_color_s));
 					followListener.switchToFollow();
+				}else if (arg0 == 6) {
+					item_operation.setTextColor(getResources().getColor(R.color.falut_item_color_s));
 				}
 			}
 
@@ -198,6 +202,7 @@ public class FaultManageActivity extends BaseActivity implements OnClickListener
 		//fragmentList.add(new FaultTypicalFragment());
 		//fragmentList.add(new FaultFollowFragment());
 		fragmentList.add(new FaultKeyFaultFragment());
+		fragmentList.add(new FaultOperationFragment());
 
 		mAdapter = new FragmentPagerAdapter(getSupportFragmentManager()) {
 
@@ -222,6 +227,7 @@ public class FaultManageActivity extends BaseActivity implements OnClickListener
 		item_follow = (TextView) findViewById(R.id.fault_item_follow);
 		item_recent = (TextView) findViewById(R.id.fault_item_recent);
 		item_service = (TextView) findViewById(R.id.fault_item_service);
+		item_operation = (TextView) findViewById(R.id.fault_item_operation);
 		item_today.setTextColor(getResources().getColor(R.color.falut_item_color_s));
 		faultViewPager = (ViewPager) findViewById(R.id.fault_viewpager);
 		bottomBar = findViewById(R.id.fault_bottom_bar);
@@ -242,6 +248,9 @@ public class FaultManageActivity extends BaseActivity implements OnClickListener
 		item_follow.setTextColor(getResources().getColor(R.color.falut_item_color_us));
 		item_recent.setTextColor(getResources().getColor(R.color.falut_item_color_us));
 		item_service.setTextColor(getResources().getColor(R.color.falut_item_color_us));
+		item_operation.setTextColor(getResources().getColor(R.color.falut_item_color_us));
+
+
 	}
 
 	@Override
@@ -271,6 +280,10 @@ public class FaultManageActivity extends BaseActivity implements OnClickListener
 		case R.id.fault_item_follow:
 			faultViewPager.setCurrentItem(5);
 			item_follow.setTextColor(getResources().getColor(R.color.falut_item_color_s));
+			break;
+			case R.id.fault_item_operation:
+			faultViewPager.setCurrentItem(6);
+				item_operation.setTextColor(getResources().getColor(R.color.falut_item_color_s));
 			break;
 
 		default:

@@ -271,6 +271,17 @@
         <!--账管专区-->
         <activity android:name=".ui.accountingArea.AccountingAareActivity"/>
         <activity android:name=".ui.contentsOfTheFirstIssue.ProcessInspectionActivity"/>
+        <!--统一查询-->
+        <activity android:name=".ui.unifiedQuery.UnifiedQueryActivity"/>
+        <activity android:name=".ui.newBandService.GraphListWithShadowActivity"/>
+        <activity android:name=".ui.newBandService.NewBandServiceActivity"/>
+        <activity android:name=".ui.newBandService.GraphListActivity"/>
+        <activity android:name=".ui.unifiedQuery.MonthDataManageActivity"/>
+        <!--新的人脸识别-->
+        <activity android:name=".ui.newFaceRecognititon.NewFaceRecognititonActivity"/>
+        <activity android:name=".ui.newFaceRecognititon.FILEIDDetailActivity"/>
+        <activity android:name=".ui.newFaceRecognititon.CRMAPPDetailActivity"/>
+        <activity android:name=".ui.newFaceRecognititon.FaceRecognititonManageActivity"/>
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />

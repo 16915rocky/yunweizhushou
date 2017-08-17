@@ -8,7 +8,7 @@ android {
         minSdkVersion 17
         targetSdkVersion 24
         versionCode 10
-        versionName "2.1.39"
+        versionName "2.1.40"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         // Enabling multidex support.
         multiDexEnabled true
@@ -48,7 +48,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:24.2.1'
     compile 'com.android.support:design:24.2.1'
     compile 'com.ashokvarma.android:bottom-navigation-bar:1.2.0'
-
     compile 'com.tamic.novate:novate:1.3.0'
     compile 'com.jakewharton:butterknife:8.6.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
@@ -65,12 +64,15 @@ dependencies {
     compile files('libs/BASE64.jar')
     compile 'com.android.support:multidex:1.0.1'
     compile 'com.prolificinteractive:material-calendarview:1.4.3'
-    compile 'com.android.support:support-v4:24.0.0-alpha1'
     compile files('libs/hellocharts-library-1.5.8.jar')
     compile 'com.jwenfeng.pulltorefresh:library:1.0.3'
     compile project(':libraries:SlidingMenu/library')
     compile 'cn.fanrunqi:waveprogress:1.0.1'
     compile files('libs/ahutil_release.jar')
- /*   compile 'com.jaeger.statusbarutil:library:1.4.0'*/
+    /*   compile 'com.jaeger.statusbarutil:library:1.4.0'*/
     compile 'com.feezu.liuli:timeselector:1.0.8+'
+    compile 'com.android.support:support-v4:24.0.0-alpha1'
+    compile 'com.android.support:design:24.0.0-alpha1'
+
+
 }
