@@ -4,7 +4,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <include layout="@layout/common_title" />
+    <include layout="@layout/common_title"
+        android:id="@+id/lt_title" />
     
     <LinearLayout
         android:id="@+id/common_list_3_layout"

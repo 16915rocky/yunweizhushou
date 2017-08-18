@@ -206,6 +206,8 @@
         <!--业务启示录-->
         <activity android:name=".ui.serviceChain.ServiceChainActivity"/>
         <activity android:name=".ui.serviceChain.ServiceChainNextActivity"/>
+        <activity android:name=".ui.serviceChain.ServiceChainManageActivity"/>
+        <activity android:name=".ui.serviceChain.BusinessHealthNextActivity"/>
         <!--支撑播报-->
         <activity android:name=".ui.braceBroadcast.BraceBroadcastActivity"/>
         <activity android:name=".common.GraphListActivity3"/>

@@ -41,12 +41,11 @@ import com.chinamobile.yunweizhushou.ui.produceLine.ProduceLineManageActivity;
 import com.chinamobile.yunweizhushou.ui.realNameSystem.RealNameSystemActivity;
 import com.chinamobile.yunweizhushou.ui.ruleCenter.RuleManageActivity;
 import com.chinamobile.yunweizhushou.ui.selfRepair.SelfRepairActivity;
-import com.chinamobile.yunweizhushou.ui.serviceChain.ServiceChainActivity;
+import com.chinamobile.yunweizhushou.ui.serviceChain.ServiceChainManageActivity;
 import com.chinamobile.yunweizhushou.ui.serviceLogQuery.ServiceLogQueryActivity;
 import com.chinamobile.yunweizhushou.ui.systemTree.SystemTreeActivity;
 import com.chinamobile.yunweizhushou.ui.teamcheck.AssessmentActivity;
 import com.chinamobile.yunweizhushou.ui.ubstantivehall.EntityHallIndexActivity;
-import com.chinamobile.yunweizhushou.ui.unifiedQuery.UnifiedQueryActivity;
 import com.chinamobile.yunweizhushou.ui.useRank.UseRankingActivity;
 import com.chinamobile.yunweizhushou.ui.userPerceptionIndex.UserPerceptionIndexActivity;
 import com.chinamobile.yunweizhushou.ui.userperception.UserPerceptionActivity2;
@@ -295,7 +294,7 @@ public class SelectorModules {
                     context.startActivity(intent);
                     break;
                 case "35":
-                    intent.setClass(context, ServiceChainActivity.class);// 业务启示录
+                    intent.setClass(context, ServiceChainManageActivity.class);// 业务启示录
                     context.startActivity(intent);
                     break;
                 case "36":
@@ -362,8 +361,8 @@ public class SelectorModules {
                     context.startActivity(intent);
                     break;
                 case "47":
-                    intent.setClass(context, UnifiedQueryActivity.class);// 统一查询
-                    context.startActivity(intent);
+                   /* intent.setClass(context, UnifiedQueryActivity.class);// 统一查询
+                    context.startActivity(intent);*/
                     break;
                 case "54":
                     ArrayList<MainPageFragmentBean> hotzoneList = new ArrayList<>();
