@@ -61,6 +61,28 @@
             android:textSize="@dimen/default_middle_size"
             android:text="版本更新"/>
     </LinearLayout>
+    <LinearLayout
+        android:id="@+id/lt_monitor"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_monitor"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:textSize="@dimen/default_middle_size"
+            android:text="监控"/>
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/lt_sign_out"

@@ -15,6 +15,7 @@ import com.chinamobile.yunweizhushou.bean.ResponseBean;
 import com.chinamobile.yunweizhushou.common.BaseActivity;
 import com.chinamobile.yunweizhushou.common.MainApplication;
 import com.chinamobile.yunweizhushou.logZone.fragments.GraphListFragment2;
+import com.chinamobile.yunweizhushou.ui.customerCenter.fragment.CustomerCenterESBFragment;
 import com.chinamobile.yunweizhushou.ui.orderCenter.adapter.ViewPagerAdapter;
 import com.chinamobile.yunweizhushou.ui.orderCenter.fragments.OrderCenterBroadbandFragment;
 import com.chinamobile.yunweizhushou.ui.orderCenter.fragments.OrderMQFragment;
@@ -92,8 +93,13 @@ public class OrderCenterActivity extends BaseActivity implements OnClickListener
 
 	private void initFragment() {
 		fragments = new ArrayList<>();
+		CustomerCenterESBFragment customerCenterESBFragment = new CustomerCenterESBFragment();
+		Bundle esbBundle = new Bundle();
+		esbBundle.putString("csf_server_code","ord");
+		customerCenterESBFragment.setArguments(esbBundle);
+		fragments.add(customerCenterESBFragment);
 
-		fragments.add(new OrderMQFragment());
+
 
 		// for (int i = 0; i < tabs.size(); i++) {
 		//RechargeFunctionFragment fragment = new RechargeFunctionFragment();
@@ -106,6 +112,7 @@ public class OrderCenterActivity extends BaseActivity implements OnClickListener
 		graphListFragment2.setArguments(bundle);
 		fragments.add(graphListFragment2);
 		fragments.add(new OrderCenterBroadbandFragment());
+		fragments.add(new OrderMQFragment());
 		ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager(), this, fragments);
 		mViewPager.setAdapter(adapter);
 		mViewPager.setOnPageChangeListener(new PageChangeListener());
@@ -131,9 +138,11 @@ public class OrderCenterActivity extends BaseActivity implements OnClickListener
 		tab1BottomView = findViewById(R.id.tab1BottomView);
 		tab2BottomView = findViewById(R.id.tab2BottomView);
 		tab3BottomView = findViewById(R.id.tab3BottomView);
+		tab4BottomView = findViewById(R.id.tab4BottomView);
 		tabs.add(tab1);
 		tabs.add(tab2);
 		tabs.add(tab3);
+		tabs.add(tab4);
 		img_charge_people=(ImageView) findViewById(R.id.img_charge_people);
 		tv_name=(TextView) findViewById(R.id.tv_name);
 		tv_phone=(TextView) findViewById(R.id.tv_phone);
@@ -143,6 +152,7 @@ public class OrderCenterActivity extends BaseActivity implements OnClickListener
 		tab1.setOnClickListener(this);
 		tab2.setOnClickListener(this);
 		tab3.setOnClickListener(this);
+		tab4.setOnClickListener(this);
 	}
 
 	private class PageChangeListener implements MyViewPager.OnPageChangeListener {
@@ -167,23 +177,38 @@ public class OrderCenterActivity extends BaseActivity implements OnClickListener
 			tab1.setTextColor(getResources().getColor(R.color.color_lightblue));
 			tab2.setTextColor(Color.BLACK);
 			tab3.setTextColor(Color.BLACK);
+			tab4.setTextColor(Color.BLACK);
 			tab1BottomView.setVisibility(View.VISIBLE);
 			tab2BottomView.setVisibility(View.GONE);
 			tab3BottomView.setVisibility(View.GONE);
+			tab4BottomView.setVisibility(View.GONE);
 		} else if (position == 1) {
 			tab1.setTextColor(Color.BLACK);
 			tab3.setTextColor(Color.BLACK);
+			tab4.setTextColor(Color.BLACK);
 			tab2.setTextColor(getResources().getColor(R.color.color_lightblue));
 			tab1BottomView.setVisibility(View.GONE);
 			tab3BottomView.setVisibility(View.GONE);
+			tab4BottomView.setVisibility(View.GONE);
 			tab2BottomView.setVisibility(View.VISIBLE);
-		} else {
+		} else if (position == 2)  {
 			tab1.setTextColor(Color.BLACK);
 			tab2.setTextColor(Color.BLACK);
+			tab4.setTextColor(Color.BLACK);
 			tab3.setTextColor(getResources().getColor(R.color.color_lightblue));
 			tab1BottomView.setVisibility(View.GONE);
 			tab2BottomView.setVisibility(View.GONE);
+			tab4BottomView.setVisibility(View.GONE);
 			tab3BottomView.setVisibility(View.VISIBLE);
+		} else {
+			tab1.setTextColor(Color.BLACK);
+			tab2.setTextColor(Color.BLACK);
+			tab3.setTextColor(Color.BLACK);
+			tab4.setTextColor(getResources().getColor(R.color.color_lightblue));
+			tab1BottomView.setVisibility(View.GONE);
+			tab2BottomView.setVisibility(View.GONE);
+			tab3BottomView.setVisibility(View.GONE);
+			tab4BottomView.setVisibility(View.VISIBLE);
 		}
 	}
 
@@ -191,6 +216,7 @@ public class OrderCenterActivity extends BaseActivity implements OnClickListener
 		tab1.setSelected(position == 0 ? true : false);
 		tab2.setSelected(position == 1 ? true : false);
 		tab3.setSelected(position == 2 ? true : false);
+		tab4.setSelected(position == 3 ? true : false);
 	}
 
 	@Override
@@ -211,6 +237,12 @@ public class OrderCenterActivity extends BaseActivity implements OnClickListener
 			changeSelectedTab(2);
 			mViewPager.setCurrentItem(2);
 			break;
+		case R.id.tab4:
+			changeTabTextBG(3);
+			changeSelectedTab(3);
+			mViewPager.setCurrentItem(3);
+			break;
+
 		}
 	}
 

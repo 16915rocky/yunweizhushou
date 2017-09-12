@@ -3,7 +3,6 @@ package com.chinamobile.yunweizhushou.ui.ruleCenter;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,10 +14,12 @@ import com.chinamobile.yunweizhushou.R;
 import com.chinamobile.yunweizhushou.bean.ResponseBean;
 import com.chinamobile.yunweizhushou.common.BaseActivity;
 import com.chinamobile.yunweizhushou.common.MainApplication;
+import com.chinamobile.yunweizhushou.ui.customerCenter.fragment.CustomerCenterESBFragment;
 import com.chinamobile.yunweizhushou.ui.ruleCenter.fragments.RuleFragment;
 import com.chinamobile.yunweizhushou.utils.ConstantValueUtil;
 import com.chinamobile.yunweizhushou.utils.HttpRequestEnum;
 import com.chinamobile.yunweizhushou.utils.Utils;
+import com.chinamobile.yunweizhushou.view.MyViewPager;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -30,7 +31,7 @@ import java.util.List;
 public class RuleManageActivity extends BaseActivity implements View.OnClickListener {
     private TextView item1, item2;
     private View bottomBar;
-    private ViewPager viewPager;
+    private MyViewPager viewPager;
     private List<Fragment> fragmentList;
     private FragmentPagerAdapter mAdapter;
     private int bottomBarWidth;
@@ -85,21 +86,18 @@ public class RuleManageActivity extends BaseActivity implements View.OnClickList
     }
 
     private void initViewPager() {
-
         fragmentList = new ArrayList<>();
+        CustomerCenterESBFragment customerCenterESBFragment = new CustomerCenterESBFragment();
+        Bundle esbBundle = new Bundle();
+        esbBundle.putString("csf_server_code","rule");
+        customerCenterESBFragment.setArguments(esbBundle);
+        fragmentList.add(customerCenterESBFragment);
+
         RuleFragment ruleFragment1= new RuleFragment();
         Bundle bundle = new Bundle();
         bundle.putInt("tag",RuleFragment.RULE_CSF);
         ruleFragment1.setArguments(bundle);
         fragmentList.add(ruleFragment1);
-
-        RuleFragment ruleFragment2= new RuleFragment();
-        Bundle bundle2 = new Bundle();
-        bundle2.putInt("tag",RuleFragment.RULE_ESB);
-        ruleFragment2.setArguments(bundle2);
-        fragmentList.add(ruleFragment2);
-
-
 
 
         mAdapter = new FragmentPagerAdapter(getSupportFragmentManager()) {
@@ -137,7 +135,7 @@ public class RuleManageActivity extends BaseActivity implements View.OnClickList
         params.width = bottomBarWidth;
         bottomBar.setLayoutParams(params);
 
-        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+        viewPager.setOnPageChangeListener(new MyViewPager.OnPageChangeListener() {
 
             @Override
             public void onPageSelected(int arg0) {
@@ -166,7 +164,7 @@ public class RuleManageActivity extends BaseActivity implements View.OnClickList
     private void initView() {
         item1 = (TextView) findViewById(R.id.rule_item1);
         item2 = (TextView) findViewById(R.id.rule_item2);
-        viewPager = (ViewPager) findViewById(R.id.rule_viewpager);
+        viewPager = (MyViewPager) findViewById(R.id.rule_viewpager);
         bottomBar = findViewById(R.id.rule_bottom_bar);
         item1.setTextColor(getResources().getColor(R.color.color_lightblue));
         img_charge_people=(ImageView) findViewById(R.id.img_charge_people);

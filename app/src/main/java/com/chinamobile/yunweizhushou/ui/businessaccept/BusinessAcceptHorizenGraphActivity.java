@@ -55,11 +55,16 @@ public class BusinessAcceptHorizenGraphActivity extends BaseActivity implements 
 	private String extraValue2;
 	// private Bundle bundle;
 	private int position = 0;
+	private String action="waveGraph";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.common_graph_detail);
+		action = getIntent().getStringExtra("action");
+		if(action==null){
+			action="waveGraph";
+		}
 		fkId = getIntent().getStringExtra("fkId");
 		extraKey = getIntent().getStringExtra("extraKey");
 		extraValue = getIntent().getStringExtra("extraValue");
@@ -94,7 +99,7 @@ public class BusinessAcceptHorizenGraphActivity extends BaseActivity implements 
 
 	private void initRequest() {
 		HashMap<String, String> map = new HashMap<>();
-		map.put("action", "waveGraph");
+		map.put("action", action);
 		map.put("fkId", fkId);
 		map.put("time", time);
 		if (extraKey != null && !TextUtils.isEmpty(extraKey)) {

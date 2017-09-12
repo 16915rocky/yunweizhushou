@@ -38,12 +38,15 @@ public class BusinessHealthAdapter extends AbsBaseAdapter<BusinessHealthBean> {
 		holder.final_score.setText(mList.get(position).getFinal_score());
 		if("ill".equals(mList.get(position).getType())){
 			holder.final_score.setBackground(mContext.getResources().getDrawable(R.drawable.corner_rectangle_red_bg));
-		}else if("little_empty".equals(mList.get(position).getType())){
+		}
+		if("little_empty".equals(mList.get(position).getType())){
 			holder.final_score.setBackground(mContext.getResources().getDrawable(R.drawable.corner_rectangle_orange_bg));
-		}else if("sub-health".equals(mList.get(position).getType())){
-			holder.final_score.setBackground(mContext.getResources().getDrawable(R.drawable.corner_rectangle_lightgreen_bg));
-		}else if("good".equals(mList.get(position).getType())){
+		}
+		if("good".equals(mList.get(position).getType())){
 			holder.final_score.setBackground(mContext.getResources().getDrawable(R.drawable.corner_rectangle_deepgreen_bg));
+		}
+		if("sub_health".equals(mList.get(position).getType())){
+			holder.final_score.setBackground(mContext.getResources().getDrawable(R.drawable.corner_rectangle_lightgreen_bg));
 		}
 		return convertView;
 	}

@@ -3,8 +3,6 @@ package com.chinamobile.yunweizhushou.ui.capabilityPlatform;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -22,6 +20,7 @@ import com.chinamobile.yunweizhushou.ui.capabilityPlatform.fragments.AbilityFram
 import com.chinamobile.yunweizhushou.utils.ConstantValueUtil;
 import com.chinamobile.yunweizhushou.utils.HttpRequestEnum;
 import com.chinamobile.yunweizhushou.utils.Utils;
+import com.chinamobile.yunweizhushou.view.MyViewPager;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -34,7 +33,7 @@ public class AbilityManageActivity extends BaseActivity implements OnClickListen
 
 	private TextView item1, item2, item3, item4;
 	private View bottomBar;
-	private ViewPager viewPager;
+	private MyViewPager viewPager;
 	private List<Fragment> fragmentList;
 	private FragmentPagerAdapter mAdapter;
 	private int bottomBarWidth;
@@ -127,7 +126,6 @@ public class AbilityManageActivity extends BaseActivity implements OnClickListen
 			}
 		};
 
-		viewPager.setOffscreenPageLimit(0);
 		viewPager.setAdapter(mAdapter);
 	}
 
@@ -151,7 +149,7 @@ public class AbilityManageActivity extends BaseActivity implements OnClickListen
 		params.width = bottomBarWidth;
 		bottomBar.setLayoutParams(params);
 
-		viewPager.addOnPageChangeListener(new OnPageChangeListener() {
+		viewPager.setOnPageChangeListener(new MyViewPager.OnPageChangeListener() {
 
 			@Override
 			public void onPageSelected(int arg0) {
@@ -186,7 +184,7 @@ public class AbilityManageActivity extends BaseActivity implements OnClickListen
 		item2 = (TextView) findViewById(R.id.ability_item2);
 		item3 = (TextView) findViewById(R.id.ability_item3);
 		item4 = (TextView) findViewById(R.id.ability_item4);
-		viewPager = (ViewPager) findViewById(R.id.ability_viewpager);
+		viewPager = (MyViewPager) findViewById(R.id.ability_viewpager);
 		bottomBar = findViewById(R.id.ability_bottom_bar);
 
 		item1.setTextColor(getResources().getColor(R.color.color_lightblue));

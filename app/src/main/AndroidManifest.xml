@@ -71,6 +71,8 @@
         <activity android:name=".ui.fault.FaultTodayDetailActivity"/>
         <activity android:name=".ui.fault.NetChangeDetailActivity"/>
         <activity android:name=".ui.fault.SearchActivity"/>
+        <activity android:name=".ui.fault.HorizenGraphActivity"/>
+        <activity android:name=".ui.fault.FaultServiceNextActivity"/>
         <!--监控-->
         <activity android:name=".ui.monitoring.DashBoard2Activity"/>
         <activity android:name=".ui.monitoring.MonitoringAlarmActivity"/>
@@ -270,6 +272,7 @@
         <activity android:name=".ui.serviceLogQuery.ServiceLogQueryActivity"/>
         <!--平台登录量监控-->
         <activity android:name=".ui.platformLogin.PlatformLoginActivity"/>
+        <activity android:name=".ui.platformLogin.PLBusinessAcceptHorizenGraphActivity"/>
         <!--账管专区-->
         <activity android:name=".ui.accountingArea.AccountingAareActivity"/>
         <activity android:name=".ui.contentsOfTheFirstIssue.ProcessInspectionActivity"/>
@@ -279,11 +282,18 @@
         <activity android:name=".ui.newBandService.NewBandServiceActivity"/>
         <activity android:name=".ui.newBandService.GraphListActivity"/>
         <activity android:name=".ui.unifiedQuery.MonthDataManageActivity"/>
+        <activity android:name=".ui.unifiedQuery.SearchActivity"/>
         <!--新的人脸识别-->
         <activity android:name=".ui.newFaceRecognititon.NewFaceRecognititonActivity"/>
         <activity android:name=".ui.newFaceRecognititon.FILEIDDetailActivity"/>
         <activity android:name=".ui.newFaceRecognititon.CRMAPPDetailActivity"/>
         <activity android:name=".ui.newFaceRecognititon.FaceRecognititonManageActivity"/>
+        <!--用户注册-->
+        <activity android:name=".ui.addUser.AddUserActivity"/>
+        <!--客户中心-->
+        <activity android:name=".ui.customerCenter.CustomerCenterManagerActivity"/>
+        <!--监控-->
+        <activity android:name=".ui.monitor.MonitorActivity"/>
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />

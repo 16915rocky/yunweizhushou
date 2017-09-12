@@ -1,0 +1,139 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        android:layout_marginTop="40dp">
+
+       <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+        android:padding="5dp">
+			<TextView 
+			   android:layout_width="0dp"
+			   android:layout_height="wrap_content"
+			   android:layout_weight="1" 
+			   android:text="姓名:"
+			   android:gravity="end"
+			   android:paddingRight="10dp"
+			   android:textSize="@dimen/default_middle_size"/>
+			<EditText 
+			    android:id="@+id/et1"
+			    android:layout_width="0dp"
+			    android:layout_height="wrap_content"
+			    android:layout_weight="2.5"
+			     android:gravity="start"
+			     android:hint="请输入姓名"			     
+			    android:layout_marginRight="20dp"
+			    android:textSize="@dimen/default_middle_size"/>
+       </LinearLayout>
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+        android:padding="5dp">
+			<TextView 
+			   android:layout_width="0dp"
+			   android:layout_height="wrap_content"
+			   android:layout_weight="1" 
+			   android:text="用户名:"
+			   android:gravity="end"
+			   android:paddingRight="10dp"
+			   android:textSize="@dimen/default_middle_size"/>
+			<EditText 
+			    android:id="@+id/et2"
+			    android:layout_width="0dp"
+			    android:layout_height="wrap_content"
+			    android:layout_weight="2.5"
+			     android:gravity="start"
+			     android:hint="请输入英文加数字" 
+			     android:layout_marginRight="20dp"
+			     android:textSize="@dimen/default_middle_size"/>
+       </LinearLayout>
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+        android:padding="5dp">
+			<TextView 
+			   android:layout_width="0dp"
+			   android:layout_height="wrap_content"
+			   android:layout_weight="1"
+			   android:text="电话:"
+			   android:gravity="end"
+			   android:paddingRight="10dp" 
+			   android:textSize="@dimen/default_middle_size"/>
+			<EditText 
+			    android:id="@+id/et3"
+			    android:layout_width="0dp"
+			    android:layout_height="wrap_content"
+			    android:layout_weight="2.5"
+			     android:gravity="start"
+			     android:hint="请输入11位电话" 
+			     android:layout_marginRight="20dp"
+			     android:textSize="@dimen/default_middle_size"/>
+       </LinearLayout>
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+        android:padding="5dp">
+			<TextView 
+			   android:layout_width="0dp"
+			   android:layout_height="wrap_content"
+			   android:layout_weight="1" 
+			   android:text="所属单位:"
+			   android:gravity="end"
+			   android:paddingRight="10dp"
+			   android:textSize="@dimen/default_middle_size"/>
+			<EditText 
+			    android:id="@+id/et4"
+			    android:layout_width="0dp"
+			    android:layout_height="wrap_content"
+			    android:layout_weight="2.5"
+			      android:gravity="start"
+			     android:hint="请输入所属单位" 
+			     android:layout_marginRight="20dp"
+			     android:textSize="@dimen/default_middle_size"/>
+       </LinearLayout>
+       
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="提交" 
+            android:background="@drawable/demand_deepblue_bg"
+            android:textSize="@dimen/default_middle_size"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -117,10 +117,10 @@
         android:layout_height="1dp"
         android:background="@color/color_gray" />
 
-    <android.support.v4.view.ViewPager
+    <com.chinamobile.yunweizhushou.view.MyViewPager
         android:id="@+id/function_analysis_viewpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
-    </android.support.v4.view.ViewPager>
+    </com.chinamobile.yunweizhushou.view.MyViewPager>
 
 </LinearLayout>

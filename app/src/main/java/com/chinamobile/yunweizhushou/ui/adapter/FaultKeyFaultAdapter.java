@@ -34,6 +34,17 @@ public class FaultKeyFaultAdapter extends AbsBaseAdapter<FaultKeyBean> {
 		}
 		holder.date.setText(mList.get(position).getDate());
 		holder.key_level.setText(mList.get(position).getKey_level());
+		if (mList.get(position).getKey_level().equals("一级")) {
+			holder.key_level.setBackgroundResource(R.drawable.oval_red);
+		} else if (mList.get(position).getKey_level().equals("二级")) {
+			holder.key_level.setBackgroundResource(R.drawable.oval_orange);
+		} else if (mList.get(position).getKey_level().equals("三级")) {
+			holder.key_level.setBackgroundResource(R.drawable.oval_yellow);
+		} else if (mList.get(position).getKey_level().equals("四级")) {
+			holder.key_level.setBackgroundResource(R.drawable.oval_blue);
+		} else if (mList.get(position).getKey_level().equals("五级")) {
+			holder.key_level.setBackgroundResource(R.drawable.oval_gray);
+		}
 		holder.title.setText(mList.get(position).getTitle());
 		holder.status.setText(mList.get(position).getStatus());
 		if("处理中".equals(mList.get(position).getStatus())){

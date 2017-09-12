@@ -75,6 +75,8 @@ public enum HttpRequestEnum {
 	enum_fault_faultkey_next,
 	//故障运营
 	enum_fault_operation,
+	//热点服务下一级
+	enum_service_next,
 
 	/**
 	 * 故障保障
@@ -635,5 +637,5 @@ public enum HttpRequestEnum {
 	/*
 	* 统一查询
 	* */
-	enum_month_data_tab
+	enum_month_data_tab,enum_uq_search
 }

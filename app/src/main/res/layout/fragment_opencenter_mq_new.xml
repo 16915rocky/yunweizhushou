@@ -1,0 +1,138 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_margin="5dp"
+        android:textColor="@color/color_lightgray4"/>
+
+    <com.chinamobile.yunweizhushou.view.MyRefreshLayout
+        android:id="@+id/rule_swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_lightgray2"
+                android:orientation="horizontal"
+                android:padding="3dp" >
+
+                <EditText
+                    android:id="@+id/rule_search_edittext"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="4"
+                    android:background="@drawable/corner_rectangle_white_bg2"
+                    android:drawableLeft="@mipmap/icon_search"
+                    android:gravity="center_vertical"
+                    android:hint="请输入服务关键字"
+                    android:padding="3dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/default_ssmall_size" />
+
+                <TextView
+                    android:id="@+id/rule_search_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/corner_rectangle_lightgray_bg"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="搜索"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/default_ssmall_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_lightblue"
+                android:orientation="horizontal"
+                android:padding="3dp" >
+
+                <TextView
+                    android:id="@+id/ruleTitle1"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"             
+                    android:gravity="center"
+                    android:text="集群"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/default_ssmall_size" />
+
+                <TextView
+                    android:id="@+id/ruleTitle2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="通道"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/default_ssmall_size" />
+
+                <TextView
+                    android:id="@+id/ruleTitle3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.3"
+                    android:gravity="center"
+                    android:text="服务"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/default_ssmall_size" />
+
+                <TextView
+                    android:id="@+id/ruleTitle4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="积压量"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/default_ssmall_size" />
+                <TextView
+                    android:id="@+id/ruleTitle5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="队列入"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/default_ssmall_size" />
+                <TextView
+                    android:id="@+id/ruleTitle6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="队列出"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/default_ssmall_size" />
+         
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/rule_listview"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:dividerHeight="5dp" >
+            </ListView>
+
+         
+        </LinearLayout>
+    </com.chinamobile.yunweizhushou.view.MyRefreshLayout>
+
+</LinearLayout>

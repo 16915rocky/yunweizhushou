@@ -94,7 +94,7 @@ public class GraphListFragment2 extends BaseFragment {
 		if (!TextUtils.isEmpty(extraKey2)) {
 			map.put(extraKey2, extraValue2);
 		}
-		map.put("time", "6h");
+		map.put("time", "2h");
 		startTask(HttpRequestEnum.enum_govern_analysis_successrate_graph_list, ConstantValueUtil.URL + "BusiFluct?",
 				map, true);
 

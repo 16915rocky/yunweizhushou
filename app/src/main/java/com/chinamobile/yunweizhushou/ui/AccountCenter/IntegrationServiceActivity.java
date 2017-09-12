@@ -4,8 +4,6 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -20,10 +18,12 @@ import com.chinamobile.yunweizhushou.common.BaseActivity;
 import com.chinamobile.yunweizhushou.common.MainApplication;
 import com.chinamobile.yunweizhushou.ui.AccountCenter.fragments.AccountMQFragment;
 import com.chinamobile.yunweizhushou.ui.AccountCenter.fragments.IntegrationServiceFragment;
+import com.chinamobile.yunweizhushou.ui.customerCenter.fragment.CustomerCenterESBFragment;
 import com.chinamobile.yunweizhushou.ui.ruleCenter.fragments.RuleFragment;
 import com.chinamobile.yunweizhushou.utils.ConstantValueUtil;
 import com.chinamobile.yunweizhushou.utils.HttpRequestEnum;
 import com.chinamobile.yunweizhushou.utils.Utils;
+import com.chinamobile.yunweizhushou.view.MyViewPager;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -34,7 +34,7 @@ import java.util.List;
 
 public class IntegrationServiceActivity extends BaseActivity implements OnClickListener {
 
-	private ViewPager mViewPager;
+	private MyViewPager mViewPager;
 	private View bottomBar;
 	private TextView tab1, tab2, tab3, tab4, tabmq;
 	private List<Fragment> fragments = new ArrayList<>();
@@ -88,7 +88,7 @@ public class IntegrationServiceActivity extends BaseActivity implements OnClickL
 	}
 
 	private void initView() {
-		mViewPager = (ViewPager) findViewById(R.id.business_detection_pager);
+		mViewPager = (MyViewPager) findViewById(R.id.business_detection_pager);
 		tab1 = (TextView) findViewById(R.id.jifen_tab1);
 		tabmq = (TextView) findViewById(R.id.jifen_tabmq);
 		tab2 = (TextView) findViewById(R.id.jifen_tab2);
@@ -116,6 +116,12 @@ public class IntegrationServiceActivity extends BaseActivity implements OnClickL
 		tab3.setOnClickListener(this);
 		tab4.setOnClickListener(this);
 
+		CustomerCenterESBFragment customerCenterESBFragment = new CustomerCenterESBFragment();
+		Bundle esbBundle = new Bundle();
+		esbBundle.putString("csf_server_code","ams");
+		customerCenterESBFragment.setArguments(esbBundle);
+		fragments.add(customerCenterESBFragment);
+
 		RuleFragment fragment = new RuleFragment();// 账户中心 CSF
 		Bundle bundle = new Bundle();
 		bundle.putInt("fkId",1041);
@@ -128,6 +134,7 @@ public class IntegrationServiceActivity extends BaseActivity implements OnClickL
 		bundle1.putString("fkId","1015");
 		integrationServiceFragment.setArguments(bundle1);
 		fragments.add(integrationServiceFragment);// 积分业务量
+
 		//fragments.add(new BusinessDetectionFragment("1042"));// 积分兑换平衡性检查
 
 //		BusinessDetectionFragment2 fragment2 = new BusinessDetectionFragment2();
@@ -201,7 +208,7 @@ public class IntegrationServiceActivity extends BaseActivity implements OnClickL
 		}
 	}
 
-	private class PageChangeListener implements OnPageChangeListener {
+	private class PageChangeListener implements MyViewPager.OnPageChangeListener {
 		@Override
 		public void onPageSelected(int arg0) {
 			changeTextColor(arg0);

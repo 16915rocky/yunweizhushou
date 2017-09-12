@@ -16,7 +16,7 @@ import com.chinamobile.yunweizhushou.bean.RechargeFunctionGraphBean;
 import com.chinamobile.yunweizhushou.bean.ResponseBean;
 import com.chinamobile.yunweizhushou.common.BaseFragment;
 import com.chinamobile.yunweizhushou.ui.adapter.RechargeFunctionListAdapter;
-import com.chinamobile.yunweizhushou.ui.businessaccept.BusinessAcceptHorizenGraphActivity;
+import com.chinamobile.yunweizhushou.ui.platformLogin.PLBusinessAcceptHorizenGraphActivity;
 import com.chinamobile.yunweizhushou.utils.ConstantValueUtil;
 import com.chinamobile.yunweizhushou.utils.HttpRequestEnum;
 import com.chinamobile.yunweizhushou.utils.Utils;
@@ -71,7 +71,7 @@ public class PLGraphListFragment extends BaseFragment {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 				Intent intent = new Intent();
-				intent.setClass(getActivity(), BusinessAcceptHorizenGraphActivity.class);
+				intent.setClass(getActivity(), PLBusinessAcceptHorizenGraphActivity.class);
 				intent.putExtra("extraKey", extraKey);
 				intent.putExtra("extraValue", extraValue);
 				intent.putExtra("extraKey2", extraKey2);

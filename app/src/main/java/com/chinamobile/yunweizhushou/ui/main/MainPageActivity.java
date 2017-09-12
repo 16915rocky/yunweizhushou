@@ -31,6 +31,7 @@ import com.chinamobile.yunweizhushou.ui.adapter.MainPageGridAdapter;
 import com.chinamobile.yunweizhushou.ui.complaint.ComplainManageActivity;
 import com.chinamobile.yunweizhushou.ui.fault.FaultManageActivity;
 import com.chinamobile.yunweizhushou.ui.login.LoginActivity;
+import com.chinamobile.yunweizhushou.ui.monitor.MonitorActivity;
 import com.chinamobile.yunweizhushou.ui.monitoring.DashBoard2Activity;
 import com.chinamobile.yunweizhushou.ui.teamcheck.TeamcheckManageActivity;
 import com.chinamobile.yunweizhushou.utils.ConstantValueUtil;
@@ -109,7 +110,7 @@ public class MainPageActivity extends TopBarBaseActivity implements View.OnClick
     private ActionBarDrawerToggle mDrawerToggle;
     private TextView nickName;
     private ImageView img_qr_code;
-    private LinearLayout lt_sign_out;
+    private LinearLayout lt_sign_out,lt_monitor;
     private SlidingMenu menu;
 
     @Override
@@ -244,11 +245,10 @@ public class MainPageActivity extends TopBarBaseActivity implements View.OnClick
         EventBus.getDefault().register(this);
         userBean = getMyApplication().getUser();
         myHandler = new MyHandler(this);
+        getDataOfMunFromBackground();
         initGirdView();
         initSlidingMenu();
-        getDataOfMunFromBackground();
         initEvent();
-
     }
 
     private void initSlidingMenu() {
@@ -261,6 +261,7 @@ public class MainPageActivity extends TopBarBaseActivity implements View.OnClick
         menu.setMenu(R.layout.layout_slidingmenu);
         nickName = (TextView) menu.findViewById(R.id.nickName);
         lt_sign_out = (LinearLayout) menu.findViewById(R.id.lt_sign_out);
+        lt_monitor = (LinearLayout) menu.findViewById(R.id.lt_monitor);
         img_qr_code = (ImageView) menu.findViewById(R.id.img_qr_code);
         setSlidingMenuButtonOnclick();
     }
@@ -268,6 +269,7 @@ public class MainPageActivity extends TopBarBaseActivity implements View.OnClick
     private void setSlidingMenuButtonOnclick() {
         nickName.setText(userBean.getNickName());
         lt_sign_out.setOnClickListener(this);
+        lt_monitor.setOnClickListener(this);
         img_qr_code.setOnClickListener(this);
     }
 
@@ -364,6 +366,8 @@ public class MainPageActivity extends TopBarBaseActivity implements View.OnClick
             case R.id.img_qr_code:
                 intent.setClass(this, QrCodeActivity.class);
                 break;
+            case R.id.lt_monitor:
+                intent.setClass(this, MonitorActivity.class);
             default:
                 break;
         }

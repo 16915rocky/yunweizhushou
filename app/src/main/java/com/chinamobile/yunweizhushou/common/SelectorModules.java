@@ -11,6 +11,7 @@ import com.chinamobile.yunweizhushou.logZone.LogZoneActivity;
 import com.chinamobile.yunweizhushou.ui.AccountCenter.IntegrationServiceActivity;
 import com.chinamobile.yunweizhushou.ui.abnormalZone.AbnormalZoneActivity;
 import com.chinamobile.yunweizhushou.ui.accountingArea.AccountingAareActivity;
+import com.chinamobile.yunweizhushou.ui.addUser.AddUserActivity;
 import com.chinamobile.yunweizhushou.ui.backlogZone.BacklogZoneActivity;
 import com.chinamobile.yunweizhushou.ui.billFlow.GGPRSActivity;
 import com.chinamobile.yunweizhushou.ui.braceBroadcast.BraceBroadcastActivity;
@@ -19,6 +20,7 @@ import com.chinamobile.yunweizhushou.ui.businessaccept.BusinessAcceptManageActiv
 import com.chinamobile.yunweizhushou.ui.capabilityPlatform.AbilityManageActivity;
 import com.chinamobile.yunweizhushou.ui.capitalrecorded.RityajiManageActivity;
 import com.chinamobile.yunweizhushou.ui.creditControl.CreditControl3Activity;
+import com.chinamobile.yunweizhushou.ui.customerCenter.CustomerCenterManagerActivity;
 import com.chinamobile.yunweizhushou.ui.demandPanoramic.DemandPanoramicActivity;
 import com.chinamobile.yunweizhushou.ui.dutyChart.DutyChartActivity;
 import com.chinamobile.yunweizhushou.ui.emergencyExercise.EmergencyExerciseActivity;
@@ -46,6 +48,7 @@ import com.chinamobile.yunweizhushou.ui.serviceLogQuery.ServiceLogQueryActivity;
 import com.chinamobile.yunweizhushou.ui.systemTree.SystemTreeActivity;
 import com.chinamobile.yunweizhushou.ui.teamcheck.AssessmentActivity;
 import com.chinamobile.yunweizhushou.ui.ubstantivehall.EntityHallIndexActivity;
+import com.chinamobile.yunweizhushou.ui.unifiedQuery.UnifiedQueryActivity;
 import com.chinamobile.yunweizhushou.ui.useRank.UseRankingActivity;
 import com.chinamobile.yunweizhushou.ui.userPerceptionIndex.UserPerceptionIndexActivity;
 import com.chinamobile.yunweizhushou.ui.userperception.UserPerceptionActivity2;
@@ -361,8 +364,12 @@ public class SelectorModules {
                     context.startActivity(intent);
                     break;
                 case "47":
-                   /* intent.setClass(context, UnifiedQueryActivity.class);// 统一查询
-                    context.startActivity(intent);*/
+                    intent.setClass(context, UnifiedQueryActivity.class);// 统一查询
+                    context.startActivity(intent);
+                    break;
+                case "51":
+                    intent.setClass(context, AddUserActivity.class);// 用户注册
+                    context.startActivity(intent);
                     break;
                 case "54":
                     ArrayList<MainPageFragmentBean> hotzoneList = new ArrayList<>();
@@ -395,6 +402,10 @@ public class SelectorModules {
                     break;
                 case "56":
                     intent.setClass(context, OfficeDataZoneActivity.class);// 局数据专区
+                    context.startActivity(intent);
+                    break;
+                case "57":
+                    intent.setClass(context, CustomerCenterManagerActivity.class);// 客户中心
                     context.startActivity(intent);
                     break;
                 case "53":

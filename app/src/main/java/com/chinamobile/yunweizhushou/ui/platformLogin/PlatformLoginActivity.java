@@ -112,6 +112,10 @@ public class PlatformLoginActivity extends BaseActivity implements View.OnClickL
         });
         item1.setOnClickListener(this);
         item2.setOnClickListener(this);
+        item3.setOnClickListener(this);
+        item4.setOnClickListener(this);
+        item5.setOnClickListener(this);
+        item6.setOnClickListener(this);
 
         ViewGroup.LayoutParams params = bottomBar.getLayoutParams();
         bottomBarWidth = ConstantValueUtil.WINDOW_WIDTH / fragmentList.size();
@@ -127,6 +131,12 @@ public class PlatformLoginActivity extends BaseActivity implements View.OnClickL
                     item1.setTextColor(getResources().getColor(R.color.color_lightblue));
                 } else if (arg0 == 1) {
                     item2.setTextColor(getResources().getColor(R.color.color_lightblue));
+                }else if (arg0 == 2) {
+                    item3.setTextColor(getResources().getColor(R.color.color_lightblue));
+                }else if (arg0 == 4) {
+                    item5.setTextColor(getResources().getColor(R.color.color_lightblue));
+                }else if (arg0 == 5) {
+                    item6.setTextColor(getResources().getColor(R.color.color_lightblue));
                 }
             }
 

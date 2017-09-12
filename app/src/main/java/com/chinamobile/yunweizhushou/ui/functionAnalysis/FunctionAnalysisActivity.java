@@ -18,7 +18,6 @@ import com.chinamobile.yunweizhushou.bean.ResponseBean;
 import com.chinamobile.yunweizhushou.common.BaseActivity;
 import com.chinamobile.yunweizhushou.common.MainApplication;
 import com.chinamobile.yunweizhushou.ui.functionAnalysis.fragments.FunctionAnalysisTotalFragment;
-import com.chinamobile.yunweizhushou.ui.functionAnalysis.fragments.FunctionPerformanceAnalysisFragment;
 import com.chinamobile.yunweizhushou.utils.ConstantValueUtil;
 import com.chinamobile.yunweizhushou.utils.HttpRequestEnum;
 import com.chinamobile.yunweizhushou.utils.Utils;
@@ -128,7 +127,7 @@ public class FunctionAnalysisActivity extends BaseActivity implements OnClickLis
 
 	private void initFragment() {
 		fragmentList = new ArrayList<>();
-		fragmentList.add(new FunctionPerformanceAnalysisFragment());
+		//fragmentList.add(new FunctionPerformanceAnalysisFragment());
 		fragmentList.add(new FunctionAnalysisTotalFragment());
 		mAdapter = new FragmentPagerAdapter(getSupportFragmentManager()) {
 

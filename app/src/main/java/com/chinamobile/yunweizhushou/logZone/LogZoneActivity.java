@@ -200,6 +200,7 @@ public class LogZoneActivity extends BaseActivity implements OnClickListener {
 		title_right_text=(TextView) findViewById(R.id.title_right_text);
 		title_right_text.setVisibility(View.VISIBLE);
 		title_right_text.setText("日志\n拓扑图");
+		title_right_text.setVisibility(View.GONE);
 		mListview = (ListView) findViewById(R.id.rule_listview);
 		searchEdittext = (EditText) findViewById(R.id.rule_search_edittext);
 		searchBtn = (TextView) findViewById(R.id.rule_search_btn);

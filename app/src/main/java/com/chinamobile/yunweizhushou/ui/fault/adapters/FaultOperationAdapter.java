@@ -33,7 +33,7 @@ public class FaultOperationAdapter extends AbsBaseAdapter<NameValueBean> {
 
 		}
 		holder.item1.setText(mList.get(position).getName());
-		holder.item1.setText(mList.get(position).getValue());
+		holder.item2.setText(mList.get(position).getValue());
 		return convertView;
 	}
 

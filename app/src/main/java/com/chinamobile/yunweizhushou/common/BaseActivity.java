@@ -4,6 +4,7 @@ import android.app.Dialog;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
+import android.view.LayoutInflater;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
@@ -15,6 +16,7 @@ import com.android.volley.Response.Listener;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.HttpHeaderParser;
 import com.android.volley.toolbox.StringRequest;
+import com.chinamobile.yunweizhushou.R;
 import com.chinamobile.yunweizhushou.bean.ResponseBean;
 import com.chinamobile.yunweizhushou.bean.UserBean;
 import com.chinamobile.yunweizhushou.utils.HttpRequestEnum;
@@ -60,7 +62,7 @@ public class BaseActivity extends FragmentActivity {
 	protected void startTask(final HttpRequestEnum e, String url, final HashMap<String, String> map,
 							 boolean showDialog) {
 		if (showDialog) {
-//			showDialog();
+			showDialog();
 		}
 		if (map != null) {
 			UserBean ub = getMyApplication().getUser();
@@ -134,14 +136,14 @@ public class BaseActivity extends FragmentActivity {
 		}
 	}
 
-//	private void showDialog() {
-//		if (mDialog == null) {
-//			mDialog = new Dialog(this, R.style.ThemeDialog);
-//			mDialog.setCancelable(false);
-//			mDialog.setContentView(LayoutInflater.from(this).inflate(R.layout.dialog, null));
-//		}
-//		mDialog.show();
-//	}
+	private void showDialog() {
+		if (mDialog == null) {
+			mDialog = new Dialog(this, R.style.ThemeDialog);
+			mDialog.setCancelable(false);
+			mDialog.setContentView(LayoutInflater.from(this).inflate(R.layout.dialog, null));
+		}
+		mDialog.show();
+	}
 
 	private void dismissDialog() {
 		if (mDialog != null && mDialog.isShowing()) {

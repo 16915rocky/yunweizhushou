@@ -36,7 +36,7 @@
                 android:padding="5dp"
                 android:textSize="@dimen/default_ssmall_size"
                 android:textColor="@color/color_lightblue"
-                android:text="订单中心MQ" >
+                android:text="ESB" >
             </TextView>
 
             <View
@@ -99,6 +99,32 @@
                 android:layout_gravity="center_horizontal"
                 android:background="@color/color_lightblue" />
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tab4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="订单中心MQ"
+                android:textSize="@dimen/default_ssmall_size" >
+
+            </TextView>
+
+            <View
+                android:id="@+id/tab4BottomView"
+                android:layout_width="75dp"
+                android:layout_height="2dp"
+                android:visibility="gone"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/color_lightblue" />
+        </LinearLayout>
 
         <View
             android:layout_width="0dp"
@@ -107,15 +133,15 @@
             android:visibility="visible" />
     </LinearLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/color_gray" />
-
     <com.chinamobile.yunweizhushou.view.MyViewPager
         android:id="@+id/function_analysis_viewpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
     </com.chinamobile.yunweizhushou.view.MyViewPager>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_gray" />
 
 </LinearLayout>

@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ExpandableListView;
+import android.widget.LinearLayout;
 
 import com.chinamobile.yunweizhushou.R;
 import com.chinamobile.yunweizhushou.bean.ResponseBean;
@@ -76,7 +77,7 @@ public class UserPerceptionIndexNextActivity  extends BaseActivity {
 				finish();
 			}
 		});
-		
+
 
 		expandListview.setOnGroupClickListener(new MyexpanableListView.OnGroupClickListener() {
 
@@ -281,6 +282,8 @@ public class UserPerceptionIndexNextActivity  extends BaseActivity {
 }
 
 	private void initView() {
+		LinearLayout titleid = (LinearLayout) findViewById(R.id.titleid);
+		titleid.setVisibility(View.VISIBLE);
 		barChart = (BarChart)findViewById(R.id.bt_user_perception_index);
 		expandListview=(MyexpanableListView) findViewById(R.id.expandablelistview);
 		view_line=findViewById(R.id.view_line);

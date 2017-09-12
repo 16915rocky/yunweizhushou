@@ -67,7 +67,12 @@ public class UserPerceptionIndexActivity  extends BaseActivity {
 					intent.putExtra("KEIName", mlist.get(position).getClass_name());
 					intent.putExtra("position", position+"");
 					intent.putExtra("classId", mlist.get(position).getClass_id());
-					intent.setClass(UserPerceptionIndexActivity.this, UserPerceptionIndexNext2Activity.class);
+				    if(position==0){
+						intent.setClass(UserPerceptionIndexActivity.this, UserPerceptionIndexNext2Activity.class);
+					}else{
+						intent.setClass(UserPerceptionIndexActivity.this, UserPerceptionIndexNextActivity.class);
+					}
+
 					startActivity(intent);
 				
 				

@@ -17,7 +17,6 @@ import com.chinamobile.yunweizhushou.R;
 import com.chinamobile.yunweizhushou.bean.ResponseBean;
 import com.chinamobile.yunweizhushou.common.BaseActivity;
 import com.chinamobile.yunweizhushou.common.MainApplication;
-import com.chinamobile.yunweizhushou.ui.flowProvince.fragments.FlowProvinceCurrentFragment;
 import com.chinamobile.yunweizhushou.ui.flowProvince.fragments.ProvinceFlowTrendFragment;
 import com.chinamobile.yunweizhushou.utils.ConstantValueUtil;
 import com.chinamobile.yunweizhushou.utils.HttpRequestEnum;
@@ -137,7 +136,7 @@ public class FlowProvinceActivity extends BaseActivity implements OnClickListene
 
 	private void initData() {
 		fragments = new ArrayList<>();
-		fragments.add(new FlowProvinceCurrentFragment());
+		//fragments.add(new FlowProvinceCurrentFragment());
 		fragments.add(new ProvinceFlowTrendFragment());
 		mAdapter = new FragmentPagerAdapter(getSupportFragmentManager()) {
 

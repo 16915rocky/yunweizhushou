@@ -197,6 +197,7 @@ public class OpenCenterCSFFragment extends BaseFragment implements OnClickListen
 		title4.setTag("time");
 		title5.setTag("failNum");
 
+
 	}
 
 	@Override

@@ -5,7 +5,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.text.TextUtils;
 import android.view.View;
@@ -20,14 +19,15 @@ import com.chinamobile.yunweizhushou.common.BaseActivity;
 import com.chinamobile.yunweizhushou.common.MainApplication;
 import com.chinamobile.yunweizhushou.ui.openCenter.fragments.OpenCenterBacklogFragment;
 import com.chinamobile.yunweizhushou.ui.openCenter.fragments.OpenCenterCSFFragment;
-import com.chinamobile.yunweizhushou.ui.openCenter.fragments.OpenCenterFQFragment;
 import com.chinamobile.yunweizhushou.ui.openCenter.fragments.OpenCenterFailureFragment;
 import com.chinamobile.yunweizhushou.ui.openCenter.fragments.OpenCenterGraphFragment;
 import com.chinamobile.yunweizhushou.ui.openCenter.fragments.OpenCenterNetYuanBacklogFragment;
+import com.chinamobile.yunweizhushou.ui.openCenter.fragments.OpenCenterNewMQFragment;
 import com.chinamobile.yunweizhushou.ui.openCenter.fragments.OpenTheProcessBacklogFragment;
 import com.chinamobile.yunweizhushou.utils.ConstantValueUtil;
 import com.chinamobile.yunweizhushou.utils.HttpRequestEnum;
 import com.chinamobile.yunweizhushou.utils.Utils;
+import com.chinamobile.yunweizhushou.view.MyViewPager;
 import com.chinamobile.yunweizhushou.view.OperationTextView;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
@@ -43,7 +43,7 @@ import java.util.List;
 
 public class OpenCenterActivity extends BaseActivity implements OnClickListener {
 
-	private ViewPager mViewPager;
+	private MyViewPager mViewPager;
 	private List<Fragment> fragments = new ArrayList<>();
 	private FragmentPagerAdapter mAdapter;
 	// private View bottomBar;
@@ -116,7 +116,11 @@ public class OpenCenterActivity extends BaseActivity implements OnClickListener 
 		bundle1.putInt("tag",OpenCenterCSFFragment.CSF);
 		openCenterCSFFragment1.setArguments(bundle1);
 		fragments.add(openCenterCSFFragment1);
-		fragments.add(new OpenCenterFQFragment());
+		OpenCenterNewMQFragment openCenterNewMQFragment = new OpenCenterNewMQFragment();
+		Bundle mqBundle=new Bundle();
+		mqBundle.putString("id","3");
+		openCenterNewMQFragment.setArguments(mqBundle);
+		fragments.add(openCenterNewMQFragment);
 		OpenCenterBacklogFragment openCenterBacklogFragment = new OpenCenterBacklogFragment();
 		Bundle bundle2=new Bundle();
 		bundle2.putInt("tag",OpenCenterBacklogFragment.BACKLOG);
@@ -157,7 +161,7 @@ public class OpenCenterActivity extends BaseActivity implements OnClickListener 
 
 	private void initView() {
 		tabs = new ArrayList<>();
-		mViewPager = (ViewPager) findViewById(R.id.function_analysis_viewpager);
+		mViewPager = (MyViewPager) findViewById(R.id.function_analysis_viewpager);
 		tab = (OperationTextView) findViewById(R.id.tab);
 		tab0 = (OperationTextView) findViewById(R.id.tab0);
 		tab1 = (OperationTextView) findViewById(R.id.tab1);
@@ -303,7 +307,7 @@ public class OpenCenterActivity extends BaseActivity implements OnClickListener 
 		client.disconnect();
 	}
 
-	private class PageChangeListener implements OnPageChangeListener {
+	private class PageChangeListener implements OnPageChangeListener, MyViewPager.OnPageChangeListener {
 		@Override
 		public void onPageSelected(int position) {
 			changeSelectedTab(position);

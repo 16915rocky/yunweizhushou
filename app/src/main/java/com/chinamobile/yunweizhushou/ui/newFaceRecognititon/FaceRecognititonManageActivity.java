@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import com.chinamobile.yunweizhushou.R;
 import com.chinamobile.yunweizhushou.common.BaseActivity;
-import com.chinamobile.yunweizhushou.common.GraphListFragment2;
+import com.chinamobile.yunweizhushou.common.GraphListDoubleYFragment;
 import com.chinamobile.yunweizhushou.utils.ConstantValueUtil;
 
 import java.util.ArrayList;
@@ -44,11 +44,11 @@ public class FaceRecognititonManageActivity extends BaseActivity implements View
         fragmentList = new ArrayList<>();
         NewFaceRecognititonFragment newFaceRecognititonFragment = new NewFaceRecognititonFragment();
         fragmentList.add(newFaceRecognititonFragment);
-        GraphListFragment2 graphListFragment2= new GraphListFragment2();
+        GraphListDoubleYFragment graphListDoubleYFragment= new GraphListDoubleYFragment();
         Bundle bundle2 = new Bundle();
         bundle2.putString("fkId","1167");
-        graphListFragment2.setArguments(bundle2);
-        fragmentList.add(graphListFragment2);
+        graphListDoubleYFragment.setArguments(bundle2);
+        fragmentList.add(graphListDoubleYFragment);
 
 
 
@@ -72,7 +72,7 @@ public class FaceRecognititonManageActivity extends BaseActivity implements View
 
     @SuppressWarnings("deprecation")
     private void initEvent() {
-        getTitleBar().setMiddleText("规则中心");
+        getTitleBar().setMiddleText("人脸识别");
         getTitleBar().setLeftButton(new View.OnClickListener() {
 
             @Override

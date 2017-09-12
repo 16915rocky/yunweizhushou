@@ -1,17 +1,21 @@
 package com.chinamobile.yunweizhushou.ui.fault.fragment;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.chinamobile.yunweizhushou.R;
 import com.chinamobile.yunweizhushou.bean.ResponseBean;
 import com.chinamobile.yunweizhushou.common.BaseFragment;
 import com.chinamobile.yunweizhushou.ui.fault.FaultManageActivity;
+import com.chinamobile.yunweizhushou.ui.fault.FaultServiceNextActivity;
+import com.chinamobile.yunweizhushou.ui.fault.HorizenGraphActivity;
 import com.chinamobile.yunweizhushou.utils.ConstantValueUtil;
 import com.chinamobile.yunweizhushou.utils.HttpRequestEnum;
 import com.chinamobile.yunweizhushou.utils.Utils;
@@ -37,9 +41,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import static com.chinamobile.yunweizhushou.R.id.lt_extra;
+
 public class FaultServiceFragment extends BaseFragment implements OnClickListener, FaultManageActivity.SwitchToServicePagerListener {
 
 	private LineChart mLineChart;
+	private LinearLayout ltExtra;
 	private TextView leftBtn, rightBtn, title;
 	private String doubleY;
 	private boolean isFirst = true;
@@ -73,12 +80,12 @@ public class FaultServiceFragment extends BaseFragment implements OnClickListene
 
 	private void initView(View view) {
 
+		ltExtra = (LinearLayout) view.findViewById(lt_extra);
 		title = (TextView) view.findViewById(R.id.fault_service_chart_title);
 		leftBtn = (TextView) view.findViewById(R.id.fault_service_chart_btn1);
 		rightBtn = (TextView) view.findViewById(R.id.fault_service_chart_btn2);
 		mLineChart = (LineChart) view.findViewById(R.id.fault_service_chart);
-		leftBtn.setBackgroundResource(R.drawable.corner_rectangle_lightblue_bg);
-		rightBtn.setBackgroundResource(R.drawable.corner_rectangle_lightgray2_bg3);
+		rightBtn.setBackgroundResource(R.drawable.corner_rectangle_lightblue_bg);
 	}
 
 	private void initChartRequest(String id) {
@@ -86,7 +93,7 @@ public class FaultServiceFragment extends BaseFragment implements OnClickListene
 		map.put("action", "graph");
 		map.put("id", id);
 		map.put("time", "");
-		startTask(HttpRequestEnum.enum_complain_chart, "http://m360.zj.chinamobile.com/360webapp/BusiFluct?", map,
+		startTask(HttpRequestEnum.enum_complain_chart, ConstantValueUtil.URL +"BusiFluct?", map,
 				true);
 	}
 
@@ -116,6 +123,27 @@ public class FaultServiceFragment extends BaseFragment implements OnClickListene
 					JSONArray array = jsonObject.getJSONArray("COLUMNS");
 					for (int i = 0; i < array.length(); i++) {
 						type.add(array.getString(i));
+					}
+				}
+				//添加波动线描述
+				if(type.size()>1){
+					for(int i=1;i<type.size();i++) {
+						View view = LayoutInflater.from(getActivity()).inflate(R.layout.item_fault_cshs, null);
+						View vLine = view.findViewById(R.id.v_line);
+						TextView tvDesc = (TextView) view.findViewById(R.id.tv_desc);
+						vLine.setBackgroundResource(ConstantValueUtil.colors[i-1]);
+						tvDesc.setText(type.get(i));
+						ltExtra.addView(view);
+						view.setTag(type.get(i));
+						view.setOnClickListener(new OnClickListener() {
+							@Override
+							public void onClick(View view) {
+								Intent intent = new Intent();
+								intent.putExtra("title",view.getTag().toString());
+								intent.setClass(getActivity(), FaultServiceNextActivity.class);
+								startActivity(intent);
+							}
+						});
 					}
 				}
 				List<List<String>> yLists = new ArrayList<>();
@@ -169,8 +197,8 @@ public class FaultServiceFragment extends BaseFragment implements OnClickListene
 					mLineChart.animateXY(100, 100);
 					mLineChart.setData(datas);
 				}
-				if (jsonObject.has("TITLE")) {
-					String str = jsonObject.getString("TITLE");
+				if (jsonObject.has("NAME")) {
+					String str = jsonObject.getString("NAME");
 					title.setText(str);
 				}
 			
@@ -198,11 +226,15 @@ public class FaultServiceFragment extends BaseFragment implements OnClickListene
 			rightBtn.setBackgroundResource(R.drawable.corner_rectangle_lightgray2_bg3);
 			break;
 		case R.id.fault_service_chart_btn2:
-			initChartRequest("10907");
+		/*	initChartRequest("10907");
 			leftBtn.setBackgroundResource(R.drawable.corner_rectangle_lightgray2_bg3);
-			rightBtn.setBackgroundResource(R.drawable.corner_rectangle_lightblue_bg);
+			rightBtn.setBackgroundResource(R.drawable.corner_rectangle_lightblue_bg);*/
+			Intent intent = new Intent();
+			intent.setClass(getActivity(), HorizenGraphActivity.class);
+			intent.putExtra("action", "graph");
+			intent.putExtra("id", "10907");
+			startActivity(intent);
 			break;
-
 		default:
 			break;
 		}
@@ -215,13 +247,14 @@ public class FaultServiceFragment extends BaseFragment implements OnClickListene
 		mLineChart.setDragEnabled(false);
 		mLineChart.setScaleEnabled(false);
 		mLineChart.setPinchZoom(false);
-		mLineChart.setNoDataText("暂无数据");
+		mLineChart.setNoDataText("当前无公告内容");
 		Legend l = mLineChart.getLegend();
 		l.setForm(LegendForm.LINE);
 		l.setTextColor(Color.GRAY);
 		l.setWordWrapEnabled(true);
 		l.setDirection(LegendDirection.LEFT_TO_RIGHT);
 		l.setPosition(LegendPosition.BELOW_CHART_LEFT);
+		l.setEnabled(false);
 		XAxis xAxis = mLineChart.getXAxis();
 		xAxis.setTextColor(Color.GRAY);
 		xAxis.setTextSize(4f);
@@ -238,6 +271,16 @@ public class FaultServiceFragment extends BaseFragment implements OnClickListene
 		leftAxis.setDrawLimitLinesBehindData(true);
 		YAxis rightAxis = mLineChart.getAxisRight();
 		rightAxis.setEnabled(false);
+		mLineChart.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				Intent intent = new Intent();
+				intent.setClass(getActivity(), HorizenGraphActivity.class);
+				intent.putExtra("action", "graph");
+				intent.putExtra("id", "10906");
+				startActivity(intent);
+			}
+		});
 	}
 
 }

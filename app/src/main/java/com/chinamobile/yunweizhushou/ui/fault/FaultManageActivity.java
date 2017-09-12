@@ -1,6 +1,5 @@
 package com.chinamobile.yunweizhushou.ui.fault;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -125,7 +124,7 @@ public class FaultManageActivity extends BaseActivity implements OnClickListener
 			}
 		});
 
-		getTitleBar().setRightButton1(R.mipmap.ic_brace_timeasix, new OnClickListener() {
+	/*	getTitleBar().setRightButton1(R.mipmap.ic_brace_timeasix, new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
@@ -134,7 +133,7 @@ public class FaultManageActivity extends BaseActivity implements OnClickListener
 				intent.putExtra("type", CalendarActivity.TYPE_FAULT);
 				startActivity(intent);
 			}
-		});
+		});*/
 
 		item_today.setOnClickListener(this);
 		item_unsolve.setOnClickListener(this);

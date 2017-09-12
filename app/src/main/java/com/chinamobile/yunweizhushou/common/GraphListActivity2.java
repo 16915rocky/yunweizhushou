@@ -29,6 +29,7 @@ public class GraphListActivity2 extends BaseActivity {
 	private String fkId;
 	private RechargeFunctionListAdapter adapter;
 	private RechargeFunctionGraphBean beans;
+	private String time="2h";
 
 	private String extraKey = "", extraValue = "";
 	private String extraKey2 = "", extraValue2 = "";
@@ -42,6 +43,10 @@ public class GraphListActivity2 extends BaseActivity {
 		extraValue = getIntent().getStringExtra("extraValue");
 		extraKey2 = getIntent().getStringExtra("extraKey2");
 		extraValue2 = getIntent().getStringExtra("extraValue2");
+		if(getIntent().getStringExtra("time")!=null){
+			time=getIntent().getStringExtra("time");
+		}
+
 
 		initView();
 		initEvent();
@@ -87,9 +92,9 @@ public class GraphListActivity2 extends BaseActivity {
 		if (!TextUtils.isEmpty(extraKey2)) {
 			map.put(extraKey2, extraValue2);
 		}
-		map.put("time", "6h");
+		map.put("time",time);
 		startTask(HttpRequestEnum.enum_govern_analysis_successrate_graph_lists, ConstantValueUtil.URL + "BusiFluct?",
-				map, true);
+				map,true);
 
 	}
 

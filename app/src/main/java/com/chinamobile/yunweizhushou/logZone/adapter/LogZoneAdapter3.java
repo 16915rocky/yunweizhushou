@@ -77,8 +77,12 @@ public class LogZoneAdapter3 extends BaseExpandableListAdapter {
 			g = (ViewHolderGroup) convertView.getTag();
 		}
 		g.tv1.setText(groupList.get(groupPosition).getName());
-		g.tv2.setText(groupList.get(groupPosition).getDoc_count());
-		
+		String tempStr=groupList.get(groupPosition).getDoc_count();
+		if(tempStr.length()>5) {
+			g.tv2.setText(tempStr.substring(0,5)+"..");
+		}else{
+			g.tv2.setText(tempStr);
+		}
 		g.oval.setText(groupPosition + 1 + "");
 		if (groupPosition == 0) {
 			// g.oval.setBackgroundColor(mContext.getResources().getColor(R.color.color_orange));
@@ -108,7 +112,12 @@ public class LogZoneAdapter3 extends BaseExpandableListAdapter {
 			c = (ViewHolderChild) convertView.getTag();
 		}
 		c.name.setText(childList.get(groupPosition).get(childPosition).getName());
-		c.doc_count.setText(childList.get(groupPosition).get(childPosition).getDoc_count());
+		String tempStr2=childList.get(groupPosition).get(childPosition).getDoc_count();
+		if(tempStr2.length()>5) {
+			c.doc_count.setText(tempStr2.substring(0,5)+"..");
+		}else{
+			c.doc_count.setText(tempStr2);
+		}
 		c.tv11.setText("实例进程");
 		
 		

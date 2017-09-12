@@ -4,6 +4,13 @@
     android:layout_height="match_parent"
     android:background="@color/color_white"
     android:orientation="vertical" >
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
     <TextView
         android:id="@+id/fault_service_chart_title"
@@ -16,10 +23,16 @@
     <com.github.mikephil.charting.charts.LineChart
         android:id="@+id/fault_service_chart"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="250dp"
         android:visibility="visible" >
     </com.github.mikephil.charting.charts.LineChart>
+    <LinearLayout
+        android:id="@+id/lt_extra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -29,25 +42,27 @@
 
         <TextView
             android:id="@+id/fault_service_chart_btn1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="300dp"
+            android:layout_height="100dp"
             android:layout_margin="10dp"
             android:background="@drawable/corner_rectangle_lightblue_bg"
             android:gravity="center"
             android:padding="5dp"
             android:text="当日客服TOP10公告的咨询量趋势"
-            android:textColor="@color/color_white" />
+            android:textColor="@color/color_white"
+            android:visibility="gone"/>
 
         <TextView
             android:id="@+id/fault_service_chart_btn2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
             android:background="@drawable/corner_rectangle_lightblue_bg"
             android:gravity="center"
-            android:padding="5dp"
-            android:text="7日客服TOP10公告的咨询量趋势"
+            android:layout_gravity="end"
+            android:layout_margin="10dp"
+            android:text="3日内客服Top5"
             android:textColor="@color/color_white" />
     </LinearLayout>
-
+    </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
 </LinearLayout>

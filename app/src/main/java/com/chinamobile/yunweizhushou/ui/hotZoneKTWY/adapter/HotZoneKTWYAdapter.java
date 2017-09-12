@@ -107,12 +107,14 @@ public class HotZoneKTWYAdapter extends  BaseExpandableListAdapter{
 			convertView=LayoutInflater.from(mContext).inflate(R.layout.item_parent_hotzone_ktwy, null);
 			viewHodlerGroup.tv_group_item1=(TextView) convertView.findViewById(R.id.tv_item1);
 			viewHodlerGroup.tv_group_item2=(TextView) convertView.findViewById(R.id.tv_item2);
+			viewHodlerGroup.tv_group_item3=(TextView) convertView.findViewById(R.id.tv_item3);
 			convertView.setTag(viewHodlerGroup);
 		}else{
 			viewHodlerGroup=(ViewHodlerGroup) convertView.getTag();
 		}
 		viewHodlerGroup.tv_group_item1.setText(groupList.get(groupPosition).getDescription());
-		viewHodlerGroup.tv_group_item2.setText(groupList.get(groupPosition).getNum());
+		viewHodlerGroup.tv_group_item2.setText(groupList.get(groupPosition).getOrder_desc());
+		viewHodlerGroup.tv_group_item3.setText(groupList.get(groupPosition).getNum());
 		return convertView ;
 	}
 
@@ -129,7 +131,7 @@ public class HotZoneKTWYAdapter extends  BaseExpandableListAdapter{
 	}
 	
 	public class ViewHodlerGroup{
-		private TextView tv_group_item1,tv_group_item2;
+		private TextView tv_group_item1,tv_group_item2,tv_group_item3;
 		
 	}
 	public class ViewHodlerChild{

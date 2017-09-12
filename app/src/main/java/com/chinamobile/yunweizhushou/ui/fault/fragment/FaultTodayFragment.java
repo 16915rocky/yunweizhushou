@@ -119,8 +119,9 @@ public class FaultTodayFragment extends BaseFragment {
 					View head = LayoutInflater.from(getActivity()).inflate(R.layout.head_of_viewpager_fragment, null);
 					TextView tv = (TextView) head.findViewById(R.id.head_text);
 					tv.setText(content);
+					mListView.setAdapter(null);
 					mListView.addHeaderView(head);
-					if (mAdapter == null) {
+					if (mAdapter == null){
 						mAdapter = new FaultTodayNewAdapter(getActivity(), dataList, R.layout.item_fault_today_new);
 						mListView.setAdapter(mAdapter);
 					}

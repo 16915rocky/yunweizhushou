@@ -2,11 +2,11 @@ package com.chinamobile.yunweizhushou.ui.serviceChain;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import com.chinamobile.yunweizhushou.R;
@@ -17,6 +17,8 @@ import com.chinamobile.yunweizhushou.ui.serviceChain.bean.BusinessHealthBean;
 import com.chinamobile.yunweizhushou.utils.ConstantValueUtil;
 import com.chinamobile.yunweizhushou.utils.HttpRequestEnum;
 import com.chinamobile.yunweizhushou.utils.Utils;
+import com.chinamobile.yunweizhushou.view.MyListView;
+import com.chinamobile.yunweizhushou.view.MyRefreshLayout;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -52,8 +54,10 @@ public class BusinessHealthFragment extends BaseFragment {
     @BindView(R.id.tv_title_num4)
     TextView tvTitleNum4;
     @BindView(R.id.lv_bh)
-    ListView lvBh;
+    MyListView lvBh;
     Unbinder unbinder;
+    @BindView(R.id.rt_bh)
+    MyRefreshLayout rtBh;
     private List<BusinessHealthBean> mList;
     private BusinessHealthAdapter mAdapter;
 
@@ -70,25 +74,34 @@ public class BusinessHealthFragment extends BaseFragment {
         lvBh.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                 Intent intent = new Intent();
-                 intent.setClass(getActivity(),BusinessHealthNextActivity.class);
-                intent.putExtra("title",mList.get(i).getSys_name()+""+mList.get(i).getBusi_name()+"得分明细");
-                intent.putExtra("id",mList.get(i).getId());
+                Intent intent = new Intent();
+                intent.setClass(getActivity(), BusinessHealthNextActivity.class);
+                intent.putExtra("title", mList.get(i).getSys_name() + "" + mList.get(i).getBusi_name() + "得分明细");
+                intent.putExtra("id", mList.get(i).getId());
                 startActivity(intent);
+            }
+        });
+        rtBh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                initRequest();
             }
         });
     }
 
     private void initRequest() {
-        HashMap map=new HashMap<String,String>();
+        HashMap map = new HashMap<String, String>();
         map.put("action", "getScoreSummary");
-        startTask(HttpRequestEnum.enum_serviceChain_next, ConstantValueUtil.URL + "HealthManager?", map,false);
+        startTask(HttpRequestEnum.enum_serviceChain_next, ConstantValueUtil.URL + "HealthManager?", map, false);
 
     }
+
     @Override
     protected void onTaskFinish(HttpRequestEnum e, ResponseBean responseBean) {
         super.onTaskFinish(e, responseBean);
-
+        if(rtBh.isShown()){
+            rtBh.setRefreshing(false);
+        }
         if (responseBean == null) {
             Utils.ShowErrorMsg(getActivity(), Utils.ERROR_MSG);
             return;
@@ -102,7 +115,7 @@ public class BusinessHealthFragment extends BaseFragment {
                 }
                 if (responseBean.isSuccess()) {
                     try {
-                        JSONObject jo=new JSONObject(responseBean.getDATA());
+                        JSONObject jo = new JSONObject(responseBean.getDATA());
                         JSONObject summary = jo.getJSONObject("summary");
                         String sub_health = summary.getString("sub_health");
                         String ill = summary.getString("ill");
@@ -114,8 +127,8 @@ public class BusinessHealthFragment extends BaseFragment {
                         tvTitleNum4.setText(ill);
                         Type type = new TypeToken<List<BusinessHealthBean>>() {
                         }.getType();
-                        mList=new Gson().fromJson(jo.getString("scoreList"),type);
-                        mAdapter = new BusinessHealthAdapter(getActivity(),mList,R.layout.item_lv_bh);
+                        mList = new Gson().fromJson(jo.getString("scoreList"), type);
+                        mAdapter = new BusinessHealthAdapter(getActivity(), mList, R.layout.item_lv_bh);
                         lvBh.setAdapter(mAdapter);
                     } catch (Exception e1) {
                         e1.printStackTrace();
@@ -130,6 +143,7 @@ public class BusinessHealthFragment extends BaseFragment {
                 break;
         }
     }
+
     @Override
     public void onDestroyView() {
         super.onDestroyView();

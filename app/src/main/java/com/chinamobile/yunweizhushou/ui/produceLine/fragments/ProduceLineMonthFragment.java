@@ -314,6 +314,7 @@ public class ProduceLineMonthFragment extends BaseFragment implements OnClickLis
 							);
 					Bundle bundle1 = new Bundle();
 					bundle1.putSerializable("contentBean",list.get(position));
+					bundle1.putInt("tag",1);
 					fragment.setArguments(bundle1);
 					fragment.setOnClickCommitListener(ProduceLineMonthFragment.this);
 					fragment.show(getFragmentManager(), "1");
@@ -360,6 +361,7 @@ public class ProduceLineMonthFragment extends BaseFragment implements OnClickLis
 							);
 					Bundle bundle2=new Bundle();
 					bundle2.putSerializable("starBean",list.get(position));
+					bundle2.putInt("tag",2);
 					fragment.setArguments(bundle2);
 					fragment.setOnClickCommitListener(ProduceLineMonthFragment.this);
 					fragment.show(getFragmentManager(), "1");
@@ -413,6 +415,10 @@ public class ProduceLineMonthFragment extends BaseFragment implements OnClickLis
 				break;
 			case R.id.produce_line_month_add:
 				ProduceLineMonthChangeContentDialogFragment fragment = new ProduceLineMonthChangeContentDialogFragment();
+				Bundle bundle2=new Bundle();
+
+				bundle2.putInt("tag",3);
+				fragment.setArguments(bundle2);
 				fragment.setOnClickCommitListener(ProduceLineMonthFragment.this);
 				fragment.show(getFragmentManager(), "1");
 				break;
