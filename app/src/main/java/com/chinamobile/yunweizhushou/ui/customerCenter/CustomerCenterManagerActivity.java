@@ -55,6 +55,8 @@ public class CustomerCenterManagerActivity extends BaseActivity {
     private void initVP() {
         fList=new ArrayList<Fragment>();
         String[] arr=new String[]{"ESB","CSF","MQ"};
+
+
         CustomerCenterESBFragment customerCenterESBFragment = new CustomerCenterESBFragment();
         Bundle esbBundle = new Bundle();
         esbBundle.putString("csf_server_code","cust");
@@ -67,11 +69,16 @@ public class CustomerCenterManagerActivity extends BaseActivity {
         openCenterCSFFragment1.setArguments(bundle1);
         fList.add(openCenterCSFFragment1);
 
+
+
         OpenCenterNewMQFragment openCenterNewMQFragment = new OpenCenterNewMQFragment();
         Bundle mqBundle=new Bundle();
         mqBundle.putString("id","5");
         openCenterNewMQFragment.setArguments(mqBundle);
         fList.add(openCenterNewMQFragment);
+
+
+
 
         MyFragmentPagerAdapter myFragmentPagerAdapter = new MyFragmentPagerAdapter(getSupportFragmentManager(), fList, arr);
         vpCcm.setAdapter(myFragmentPagerAdapter);

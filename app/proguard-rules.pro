@@ -15,3 +15,10 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+-dontwarn com.ai.appframe2.**
+-dontwarn com.ai.frame.**
+-dontwarn com.blueware.**
+-dontwarn com.github.**
+-dontwarn okio.**
+-dontwarn retrofit2.**
+-dontwarn rx.internal.**

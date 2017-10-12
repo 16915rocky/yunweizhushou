@@ -5,6 +5,6 @@ package com.chinamobile.yunweizhushou.common;
  */
 
 public class Contants {
-    public static final String BASE_URL="http://m360.zj.chinamobile.com/ywapp/";
-    public static final String BASE_URL2="http://192.168.1.106:8898/ywapp/";
+   // public static final String BASE_URL="http://m360.zj.chinamobile.com/ywapp/";
+    public static final String BASE_URL="http://192.168.1.106:8898/ywapp/";
 }

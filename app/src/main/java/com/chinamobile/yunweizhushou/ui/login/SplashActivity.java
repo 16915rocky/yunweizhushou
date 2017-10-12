@@ -34,6 +34,7 @@ import com.chinamobile.yunweizhushou.utils.HttpRequestEnum;
 import com.chinamobile.yunweizhushou.utils.Utils;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.oneapm.agent.android.OneApmAgent;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -90,6 +91,8 @@ public class SplashActivity  extends BaseActivity {
         super.onCreate(savedInstanceState);
         BangcleViewHelper.onCreate(this, savedInstanceState);
         setContentView(R.layout.activity_splash);
+        //启动 ONEAPM Agent
+        OneApmAgent.init(this.getApplicationContext()).setToken("24D693AF8F62ACB6EA2A97E1F46DE14501").setUseSsl(false).setHost("20.26.33.154:8081").start();
 
 //        new Handler().postDelayed(new Runnable() {
 //            @Override

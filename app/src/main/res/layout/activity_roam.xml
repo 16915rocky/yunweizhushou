@@ -1,0 +1,163 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_title" />
+    <TextView 
+        android:id="@+id/titlecontent"
+        android:visibility="gone"
+         android:background="@color/color_lightgray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="经和运维资产自动采集数据进行比对,DBM平台"
+        android:paddingTop="5dp"
+        />
+      <TextView 
+        android:id="@+id/titlecontent2"
+        android:visibility="gone"
+         android:background="@color/color_lightgray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="经和运维资产自动采集数据进行比对,Weblogic平台"
+        android:paddingTop="5dp"
+        />
+  	<LinearLayout 
+  	    android:id="@+id/DBM_LinearLayout"
+  	    android:layout_width="match_parent"
+  	    android:layout_height="wrap_content"
+  	    android:orientation="horizontal"
+  	    android:background="@color/color_lightgray2"
+  	    android:padding="10dp"
+  	     android:visibility="gone"
+  	  
+  	    >
+  	  <LinearLayout 
+  	      android:layout_width="0dp"
+  	      android:layout_weight="1"
+  	      android:layout_height="match_parent"
+  	        android:background="@color/color_lightgray2"
+  	      android:gravity="center"
+  	      >
+  	      <TextView 
+  	          android:layout_width="wrap_content"
+  	          android:layout_height="wrap_content"
+  	          android:text="需新增"
+  	          />
+  	      <TextView 
+  	          android:id="@+id/DBM_tv1"
+  	          android:layout_width="wrap_content"
+  	          android:layout_height="wrap_content"
+  	          android:layout_marginLeft="3dp"
+  	          android:layout_marginRight="3dp"
+  	          android:text="0"/>
+  	      <TextView 
+  	          android:layout_width="wrap_content"
+  	          android:layout_height="wrap_content"
+  	          android:text="项"/>
+  	      
+  	  </LinearLayout>  
+  	  <LinearLayout 
+  	      android:layout_width="0dp"
+  	      android:layout_weight="1"
+  	      android:layout_height="match_parent"
+  	      android:gravity="center"
+  	      >
+  	      <TextView 
+  	          android:layout_width="wrap_content"
+  	          android:layout_height="wrap_content"
+  	          android:text="需删除"/>
+  	      <TextView 
+  	          android:id="@+id/DBM_tv2"
+  	          android:layout_width="wrap_content"
+  	          android:layout_height="wrap_content"
+  	            android:layout_marginLeft="3dp"
+  	          android:layout_marginRight="3dp"
+  	          android:text="0"/>
+  	      <TextView 
+  	          android:layout_width="wrap_content"
+  	          android:layout_height="wrap_content"
+  	          android:text="项"/>
+  	      
+  	  </LinearLayout>
+  	  <LinearLayout 
+  	      android:layout_width="0dp"
+  	      android:layout_weight="1"
+  	      android:layout_height="match_parent"
+  	      android:gravity="center"
+  	      >
+  	      <TextView 
+  	          android:layout_width="wrap_content"
+  	          android:layout_height="wrap_content"
+  	          android:text="需调整"/>
+  	      <TextView 
+  	           android:id="@+id/DBM_tv3"
+  	          android:layout_width="wrap_content"
+  	          android:layout_height="wrap_content"
+  	            android:layout_marginLeft="3dp"
+  	          android:layout_marginRight="3dp"
+  	          android:text="0"/>
+  	      <TextView 
+  	          android:layout_width="wrap_content"
+  	          android:layout_height="wrap_content"
+  	          android:text="项"/>
+  	      
+  	  </LinearLayout>
+  	    
+  	</LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/common_list_3_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_lightgray2"
+        android:orientation="horizontal"
+        android:padding="3dp" >
+
+        <EditText
+            android:id="@+id/search_edittext"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="4"
+            android:background="@drawable/corner_rectangle_white_bg2"
+            android:drawableLeft="@mipmap/icon_search"
+            android:gravity="center_vertical"
+            android:hint="请输入服务关键字"
+            android:padding="3dp"
+            android:singleLine="true"
+            android:textSize="@dimen/default_ssmall_size" />
+
+        <TextView
+            android:id="@+id/search_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/corner_rectangle_lightgray_bg"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="搜索"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/default_ssmall_size" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/common_list_title_3"
+        layout="@layout/head_list_blue_title_3" />
+	<com.chinamobile.yunweizhushou.view.MyRefreshLayout
+		android:id="@+id/myRefreshLayout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+    <com.chinamobile.yunweizhushou.view.MyListView
+        android:id="@+id/common_list_3_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </com.chinamobile.yunweizhushou.view.MyListView>
+	</com.chinamobile.yunweizhushou.view.MyRefreshLayout>
+
+</LinearLayout>

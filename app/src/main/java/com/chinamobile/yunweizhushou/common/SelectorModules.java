@@ -27,6 +27,7 @@ import com.chinamobile.yunweizhushou.ui.emergencyExercise.EmergencyExerciseActiv
 import com.chinamobile.yunweizhushou.ui.esbInterface.GovernAnalysisActivity;
 import com.chinamobile.yunweizhushou.ui.flowProvince.FlowProvinceActivity;
 import com.chinamobile.yunweizhushou.ui.functionAnalysis.FunctionAnalysisActivity;
+import com.chinamobile.yunweizhushou.ui.interfaceOver.InterfaceOverActivity;
 import com.chinamobile.yunweizhushou.ui.levelStandar.LevelStandardActivity;
 import com.chinamobile.yunweizhushou.ui.main.MoreItemActivity;
 import com.chinamobile.yunweizhushou.ui.moneyoutCheck.MoneyoutCheckActivity;
@@ -385,12 +386,15 @@ public class SelectorModules {
                             "GraphListActivity");
                     MainPageFragmentBean hotzoneBean6 = new MainPageFragmentBean("告警专区", "告警专区", R.mipmap.ic_gaojing,
                             "GJTargetActivity");
+                    MainPageFragmentBean hotzoneBean7 = new MainPageFragmentBean("漫游专区", "漫游专区", R.mipmap.ic_roam,
+                                "RoamActivity");
                     hotzoneList.add(hotzoneBean1);
                     hotzoneList.add(hotzoneBean2);
                     hotzoneList.add(hotzoneBean3);
                     hotzoneList.add(hotzoneBean4);
                     hotzoneList.add(hotzoneBean5);
                     hotzoneList.add(hotzoneBean6);
+                    hotzoneList.add(hotzoneBean7);
                     intent.setClass(context, MainPageSubMenuActivity.class);
                     intent.putExtra("list", hotzoneList);
                     intent.putExtra("name", "热点专区");
@@ -410,6 +414,10 @@ public class SelectorModules {
                     break;
                 case "53":
                     intent.setClass(context, PlatformLoginActivity.class);// 平台登录
+                    context.startActivity(intent);
+                    break;
+                case "58":
+                    intent.setClass(context, InterfaceOverActivity.class);// 超时接口
                     context.startActivity(intent);
                     break;
 

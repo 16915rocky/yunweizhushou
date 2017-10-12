@@ -72,14 +72,16 @@ public class CustomerCenterESBFragment extends BaseFragment {
         }
         View view = inflater.inflate(R.layout.fragment_esb, container, false);
         unbinder = ButterKnife.bind(this, view);
+        initRequest();
+        initEvent();
         titleid.setVisibility(View.GONE);
         listTitle3Item1.setText("接口名称");
         listTitle3Item2.setText("调用量");
         listTitle3Item3.setText("成功率");
-        initRequest();
-        initEvent();
+
         return view;
     }
+
 
     private void initEvent() {
         searchBtn.setOnClickListener(new View.OnClickListener() {

@@ -97,6 +97,7 @@ public class RechargeFunctionListAdapter extends BaseAdapter {
 			x.setPosition(XAxisPosition.BOTTOM);// 显示x位置 下方
 			x.setDrawGridLines(false);// x轴九宫格
 			x.setTextSize(6f);
+
 			x.resetLabelsToSkip();
 
 			if (bean.getPOINTS() != null) {
@@ -111,6 +112,7 @@ public class RechargeFunctionListAdapter extends BaseAdapter {
 
 				YAxis yl = lineChart.getAxisLeft();
 				yl.setDrawGridLines(true);
+				yl.setAxisMinValue(0);
 				yl.setTextSize(10f);
 
 				YAxis yr = lineChart.getAxisRight();

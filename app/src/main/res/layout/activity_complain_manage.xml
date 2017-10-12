@@ -178,17 +178,18 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="今日"
+                android:text="支撑投诉"
                 android:textSize="@dimen/default_ssmall_size"
                 android:textStyle="bold" />
-            <TextView
+
+            <TextView
                 android:id="@+id/complain_item_month"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="月度"
+                android:text="客服广义投诉"
                 android:textSize="@dimen/default_ssmall_size"
                 android:textStyle="bold" />
 
@@ -212,7 +213,8 @@
                 android:padding="5dp"
                 android:text="未结投诉单"
                 android:textSize="@dimen/default_ssmall_size"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:visibility="gone"/>
 
             <TextView
                 android:id="@+id/complain_item_hot"
@@ -221,9 +223,10 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="热点"
+                android:text="未结投诉单"
                 android:textSize="@dimen/default_ssmall_size"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:visibility="visible"/>
         </LinearLayout>
 
         <View

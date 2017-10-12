@@ -18,10 +18,9 @@ import com.chinamobile.yunweizhushou.bean.ResponseBean;
 import com.chinamobile.yunweizhushou.common.BaseActivity;
 import com.chinamobile.yunweizhushou.common.MainApplication;
 import com.chinamobile.yunweizhushou.ui.complaint.bean.ComplainTotalBean;
-import com.chinamobile.yunweizhushou.ui.complaint.fragment.ComplainHotFragment;
-import com.chinamobile.yunweizhushou.ui.complaint.fragment.ComplainTodayFragment;
-import com.chinamobile.yunweizhushou.ui.complaint.fragment.ComplaintMonthFragment;
+import com.chinamobile.yunweizhushou.ui.complaint.fragment.NewSupportComplaintsFragment;
 import com.chinamobile.yunweizhushou.ui.complaint.fragment.ReportFormFragment;
+import com.chinamobile.yunweizhushou.ui.complaint.fragment.SupportComplaintsFragment;
 import com.chinamobile.yunweizhushou.ui.complaint.fragment.UnfinishComplaintFragment;
 import com.chinamobile.yunweizhushou.utils.ConstantValueUtil;
 import com.chinamobile.yunweizhushou.utils.HttpRequestEnum;
@@ -143,7 +142,7 @@ public class ComplainManageActivity extends BaseActivity implements OnClickListe
 					item_today.setTextColor(getResources().getColor(R.color.falut_item_color_s));
 				} else if (arg0 == 1) {
 					item_month.setTextColor(getResources().getColor(R.color.falut_item_color_s));
-					monthListener.switch2month();
+					//monthListener.switch2month();
 				} else if (arg0 == 2) {
 					item_report.setTextColor(getResources().getColor(R.color.falut_item_color_s));
 					chartListener.switch2chart();
@@ -174,11 +173,17 @@ public class ComplainManageActivity extends BaseActivity implements OnClickListe
 		getTitleBar().setMiddleText("投诉");
 
 		fragmentList = new ArrayList<Fragment>();
-		fragmentList.add(new ComplainTodayFragment());
-		fragmentList.add(new ComplaintMonthFragment());
+
+		fragmentList.add(new NewSupportComplaintsFragment());
+		SupportComplaintsFragment supportComplaintsFragment2 = new SupportComplaintsFragment();
+		Bundle bundle2 = new Bundle();
+		bundle2.putBoolean("isGuangyi",true);
+		supportComplaintsFragment2.setArguments(bundle2);
+		fragmentList.add(supportComplaintsFragment2);
+		//fragmentList.add(new ComplaintMonthFragment());
 		fragmentList.add(new ReportFormFragment());
 		fragmentList.add(new UnfinishComplaintFragment());
-		fragmentList.add(new ComplainHotFragment());
+		//fragmentList.add(new ComplainHotFragment());
 
 		mAdapter = new FragmentPagerAdapter(getSupportFragmentManager()) {
 
@@ -189,6 +194,7 @@ public class ComplainManageActivity extends BaseActivity implements OnClickListe
 
 			@Override
 			public Fragment getItem(int arg0) {
+
 				return fragmentList.get(arg0);
 			}
 		};

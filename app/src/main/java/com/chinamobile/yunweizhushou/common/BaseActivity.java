@@ -3,7 +3,6 @@ package com.chinamobile.yunweizhushou.common;
 import android.app.Dialog;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
-import android.util.Log;
 import android.view.LayoutInflater;
 
 import com.android.volley.AuthFailureError;
@@ -79,15 +78,15 @@ public class BaseActivity extends FragmentActivity {
 					public void onResponse(String response) {
 						try {
 							if (null != response) {
-								Log.e("TAG", e.toString());
+								//Log.e("TAG", e.toString());
 								JSONObject jsonObj = new JSONObject(response);
 								if (jsonObj.has(MSG)) {
 									responseBean.setMSG(jsonObj.getString(MSG));
-									Log.i("TAG", "msg >>>>>" + responseBean.getMSG());
+									//Log.i("TAG", "msg >>>>>" + responseBean.getMSG());
 								}
 								if (jsonObj.has(DATA)) {
 									responseBean.setDATA(jsonObj.getString(DATA));
-									Log.i("TAG", "data>>>>>" + responseBean.getDATA());
+									//Log.i("TAG", "data>>>>>" + responseBean.getDATA());
 								}
 								onTaskFinish(e, responseBean);
 							} else {
@@ -102,8 +101,8 @@ public class BaseActivity extends FragmentActivity {
 
 					@Override
 					public void onErrorResponse(VolleyError error) {
-						Log.i("TAG", "ERROR");
-						Log.e("TAG", error.getMessage() + ":" + error.toString());
+					//	Log.i("TAG", "ERROR");
+					//	Log.e("TAG", error.getMessage() + ":" + error.toString());
 						onTaskFinish(e, null);
 					}
 				}) {

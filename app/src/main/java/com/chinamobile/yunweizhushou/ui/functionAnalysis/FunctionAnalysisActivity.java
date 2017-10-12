@@ -4,8 +4,6 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -17,10 +15,12 @@ import com.chinamobile.yunweizhushou.R;
 import com.chinamobile.yunweizhushou.bean.ResponseBean;
 import com.chinamobile.yunweizhushou.common.BaseActivity;
 import com.chinamobile.yunweizhushou.common.MainApplication;
+import com.chinamobile.yunweizhushou.ui.functionAnalysis.fragments.ESBInterfaceAnalysisFragment;
 import com.chinamobile.yunweizhushou.ui.functionAnalysis.fragments.FunctionAnalysisTotalFragment;
 import com.chinamobile.yunweizhushou.utils.ConstantValueUtil;
 import com.chinamobile.yunweizhushou.utils.HttpRequestEnum;
 import com.chinamobile.yunweizhushou.utils.Utils;
+import com.chinamobile.yunweizhushou.view.MyViewPager;
 import com.chinamobile.yunweizhushou.view.OperationTextView;
 
 import org.json.JSONException;
@@ -32,7 +32,7 @@ import java.util.List;
 
 public class FunctionAnalysisActivity extends BaseActivity implements OnClickListener {
 
-	private ViewPager mViewPager;
+	private MyViewPager mViewPager;
 	private List<Fragment> fragmentList;
 	private FragmentPagerAdapter mAdapter;
 	// private View bottomBar;
@@ -88,7 +88,7 @@ public class FunctionAnalysisActivity extends BaseActivity implements OnClickLis
 	}
 
 	private void initView() {
-		mViewPager = (ViewPager) findViewById(R.id.function_analysis_viewpager);
+		mViewPager = (MyViewPager) findViewById(R.id.function_analysis_viewpager);
 		tab1 = (OperationTextView) findViewById(R.id.function_performance);
 		tab2 = (OperationTextView) findViewById(R.id.function_total);
 
@@ -98,8 +98,8 @@ public class FunctionAnalysisActivity extends BaseActivity implements OnClickLis
 		tab2.setTextColor(getResources().getColor(R.color.color_black));
 		tab1.setSelected(true);
 		tab2.setSelected(false);
-		tab1.setText("实时性能检测");
-		tab2.setText("恶化接口分析");
+		tab1.setText("恶化接口分析");
+		tab2.setText("ESB接口分析");
 		tab1.setTextAlign(
 				OperationTextView.TEXT_ALIGN_CENTER_HORIZONTAL | OperationTextView.TEXT_ALIGN_CENTER_VERTICAL);
 		tab2.setTextAlign(
@@ -129,6 +129,7 @@ public class FunctionAnalysisActivity extends BaseActivity implements OnClickLis
 		fragmentList = new ArrayList<>();
 		//fragmentList.add(new FunctionPerformanceAnalysisFragment());
 		fragmentList.add(new FunctionAnalysisTotalFragment());
+		fragmentList.add(new ESBInterfaceAnalysisFragment());
 		mAdapter = new FragmentPagerAdapter(getSupportFragmentManager()) {
 
 			@Override
@@ -157,7 +158,7 @@ public class FunctionAnalysisActivity extends BaseActivity implements OnClickLis
 		tab2.setSelected(position == 1 ? true : false);
 	}
 
-	private class PageChangeListener implements OnPageChangeListener {
+	private class PageChangeListener implements MyViewPager.OnPageChangeListener {
 		@Override
 		public void onPageSelected(int position) {
 			changeSelectedTab(position);

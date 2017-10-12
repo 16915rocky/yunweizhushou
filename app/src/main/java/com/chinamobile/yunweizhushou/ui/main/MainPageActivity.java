@@ -24,7 +24,6 @@ import com.chinamobile.yunweizhushou.bean.MainPageGridBean;
 import com.chinamobile.yunweizhushou.bean.MainPageNumBean;
 import com.chinamobile.yunweizhushou.bean.ResponseBean;
 import com.chinamobile.yunweizhushou.bean.UserBean;
-import com.chinamobile.yunweizhushou.common.Contants;
 import com.chinamobile.yunweizhushou.common.TopBarBaseActivity;
 import com.chinamobile.yunweizhushou.db.DBUserManager;
 import com.chinamobile.yunweizhushou.ui.adapter.MainPageGridAdapter;
@@ -281,7 +280,7 @@ public class MainPageActivity extends TopBarBaseActivity implements View.OnClick
         parameters.put("sessionId", userBean.getSessionId());
         Novate novate = new Novate.Builder(this)
                 .connectTimeout(8)
-                .baseUrl(Contants.BASE_URL)
+                .baseUrl(ConstantValueUtil.URL)
                 .addLog(true)
                 .build();
         novate.post("DirectoryManager", parameters, new BaseSubscriber<ResponseBody>(this) {

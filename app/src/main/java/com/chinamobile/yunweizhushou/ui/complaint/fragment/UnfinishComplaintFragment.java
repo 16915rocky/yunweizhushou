@@ -63,7 +63,7 @@ public class UnfinishComplaintFragment extends BaseFragment implements ComplainM
 	private void initRequest() {
 		HashMap<String, String> map = new HashMap<>();
 		map.put("action", "summaryList");
-		startTask(HttpRequestEnum.enum_complain_unfinish, ConstantValueUtil.URL + "ComplaintsBulletin?", map);
+		startTask(HttpRequestEnum.enum_complain_unfinish, ConstantValueUtil.URL + "ComplaintsBulletin?", map,true);
 	}
 
 	@Override

@@ -61,6 +61,8 @@ public class OpenCenterNewMQFragment extends BaseFragment implements OnClickList
 	private String time = "1";
 	private TextView tv_date;
 	private String id;
+	protected boolean isInit = false;
+	protected boolean isLoad = false;
 
 	private TextView title1, title2, title3, title4,title5,title6;
 
@@ -76,9 +78,10 @@ public class OpenCenterNewMQFragment extends BaseFragment implements OnClickList
 			id=arguments.getString("id");
 		}
 		View view = inflater.inflate(R.layout.fragment_opencenter_mq_new, container, false);
+		isInit=true;
 		initView(view);
-		initEvent();
-		initRequest();
+		/**初始化的时候去加载数据**/
+		isCanLoadData();
 		return view;
 	}
 
@@ -88,6 +91,35 @@ public class OpenCenterNewMQFragment extends BaseFragment implements OnClickList
 		map.put("id", id);
 		map.put("code", cond);
 		startTask(HttpRequestEnum.enum_opencenter_mq, ConstantValueUtil.URL + "MessageQueue?", map, true);
+	}
+	@Override
+	public void setUserVisibleHint(boolean isVisibleToUser) {
+		super.setUserVisibleHint(isVisibleToUser);
+		isCanLoadData();
+	}
+
+	/**
+	 * 是否可以加载数据
+	 * 可以加载数据的条件：
+	 * 1.视图已经初始化
+	 * 2.视图对用户可见
+	 */
+	private void isCanLoadData() {
+		if (!isInit) {
+			return;
+		}
+
+		if (getUserVisibleHint()) {
+			if(isInit){
+				initEvent();
+				initRequest();
+			}
+			isLoad = true;
+		} else {
+			if (isLoad) {
+
+			}
+		}
 	}
 
 	@Override
@@ -241,5 +273,11 @@ public class OpenCenterNewMQFragment extends BaseFragment implements OnClickList
 		poWindow.setOutsideTouchable(true);
 		poWindow.setBackgroundDrawable(new ColorDrawable(0x000000000));
 		poWindow.showAtLocation(bottomChooce, Gravity.BOTTOM, 0, 0);
+	}
+	@Override
+	public void onDestroyView() {
+		super.onDestroyView();
+		isInit = false;
+		isLoad = false;
 	}
 }

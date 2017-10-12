@@ -53,6 +53,8 @@ public class OpenCenterCSFFragment extends BaseFragment implements OnClickListen
 	private PopupWindow poWindow;
 	private View popView;
 	private String time = "1";
+	protected boolean isInit = false;
+	protected boolean isLoad = false;
 
 	private TextView title1, title2, title3, title4, title5;
 
@@ -63,10 +65,42 @@ public class OpenCenterCSFFragment extends BaseFragment implements OnClickListen
 		Bundle arguments = getArguments();
 		tag=arguments.getInt("tag");
 		View view = inflater.inflate(R.layout.fragment_rule, container, false);
+		isInit=true;
 		initView(view);
-		initEvent();
-		initRequest();
+		/**初始化的时候去加载数据**/
+		isCanLoadData();
+
 		return view;
+	}
+	@Override
+	public void setUserVisibleHint(boolean isVisibleToUser) {
+		super.setUserVisibleHint(isVisibleToUser);
+		isCanLoadData();
+	}
+
+	/**
+	 * 是否可以加载数据
+	 * 可以加载数据的条件：
+	 * 1.视图已经初始化
+	 * 2.视图对用户可见
+	 */
+	private void isCanLoadData() {
+		if (!isInit) {
+			return;
+		}
+
+		if (getUserVisibleHint()) {
+			if(isInit){
+
+				initEvent();
+				initRequest();
+			}
+			isLoad = true;
+		} else {
+			if (isLoad) {
+
+			}
+		}
 	}
 
 	private void initRequest() {
@@ -241,5 +275,11 @@ public class OpenCenterCSFFragment extends BaseFragment implements OnClickListen
 		poWindow.setOutsideTouchable(true);
 		poWindow.setBackgroundDrawable(new ColorDrawable(0x000000000));
 		poWindow.showAtLocation(bottomChooce, Gravity.BOTTOM, 0, 0);
+	}
+	@Override
+	public void onDestroyView() {
+		super.onDestroyView();
+		isInit = false;
+		isLoad = false;
 	}
 }

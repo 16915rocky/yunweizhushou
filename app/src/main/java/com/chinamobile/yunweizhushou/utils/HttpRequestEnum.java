@@ -266,6 +266,8 @@ public enum HttpRequestEnum {
 	// 详情
 	enum_function_analysis_detail,
 
+	enum_function_analysis_performmance_list2,
+
 	/**
 	 * 重大工作
 	 */
@@ -637,5 +639,9 @@ public enum HttpRequestEnum {
 	/*
 	* 统一查询
 	* */
-	enum_month_data_tab,enum_uq_search
+	enum_month_data_tab,enum_uq_search,
+	/*
+	* 漫游专区
+	* */
+	enum_roam
 }

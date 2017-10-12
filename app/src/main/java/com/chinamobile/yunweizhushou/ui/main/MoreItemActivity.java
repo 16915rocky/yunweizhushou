@@ -26,6 +26,7 @@ import com.chinamobile.yunweizhushou.common.Contants;
 import com.chinamobile.yunweizhushou.common.MainApplication;
 import com.chinamobile.yunweizhushou.ui.adapter.MoreItemEditGridAdapter;
 import com.chinamobile.yunweizhushou.ui.adapter.MoreItemListAdapter;
+import com.chinamobile.yunweizhushou.utils.ConstantValueUtil;
 import com.chinamobile.yunweizhushou.utils.MyHandlerUtil;
 import com.chinamobile.yunweizhushou.view.DragGridView;
 import com.chinamobile.yunweizhushou.view.MyListView;
@@ -323,7 +324,7 @@ public class MoreItemActivity extends AppCompatActivity implements View.OnClickL
         parameters.put("sessionId", userBean.getSessionId());
         Novate novate = new Novate.Builder(this)
                 .connectTimeout(8)
-                .baseUrl(Contants.BASE_URL)
+                .baseUrl(ConstantValueUtil.URL)
                 .addLog(true)
                 .build();
         novate.post("DirectoryManager", parameters, new BaseSubscriber<ResponseBody>(this) {

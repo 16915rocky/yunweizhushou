@@ -11,7 +11,7 @@ import java.util.HashMap;
 import okhttp3.ResponseBody;
 
 /**
- * Created by Administrator on 2017/5/23.
+ * Created by Administrator on 2017/5/23.dada
  */
 
  public class ApiClient {
@@ -25,6 +25,7 @@ import okhttp3.ResponseBody;
                 .baseUrl("you api url")
                 .addLog(true)
                 .build();
+
         novate.post("service/getIpInfo.php", parameters, new BaseSubscriber<ResponseBody>(activity) {
 
             @Override

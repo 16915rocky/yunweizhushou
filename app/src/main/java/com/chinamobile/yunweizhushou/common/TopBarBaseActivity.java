@@ -6,7 +6,6 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -105,15 +104,15 @@ public  abstract class TopBarBaseActivity extends AppCompatActivity {
                     public void onResponse(String response) {
                         try {
                             if (null != response) {
-                                Log.e("TAG", e.toString());
+                              //  Log.e("TAG", e.toString());
                                 JSONObject jsonObj = new JSONObject(response);
                                 if (jsonObj.has(MSG)) {
                                     responseBean.setMSG(jsonObj.getString(MSG));
-                                    Log.i("TAG", "msg >>>>>" + responseBean.getMSG());
+                                 //   Log.i("TAG", "msg >>>>>" + responseBean.getMSG());
                                 }
                                 if (jsonObj.has(DATA)) {
                                     responseBean.setDATA(jsonObj.getString(DATA));
-                                    Log.i("TAG", "data>>>>>" + responseBean.getDATA());
+                                  //  Log.i("TAG", "data>>>>>" + responseBean.getDATA());
                                 }
                                 onTaskFinish(e, responseBean);
                             } else {
@@ -128,8 +127,8 @@ public  abstract class TopBarBaseActivity extends AppCompatActivity {
 
             @Override
             public void onErrorResponse(VolleyError error) {
-                Log.i("TAG", "ERROR");
-                Log.e("TAG", error.getMessage() + ":" + error.toString());
+               // Log.i("TAG", "ERROR");
+               // Log.e("TAG", error.getMessage() + ":" + error.toString());
                 onTaskFinish(e, null);
             }
         }) {

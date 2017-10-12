@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/common_title"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="政企中心"
+            android:layout_margin="2dp"
+            android:gravity="center"
+            android:textColor="@color/color_white"
+            android:background="@color/color_blue"
+            android:layout_height="match_parent"
+            android:id="@+id/tv_item1" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="订单中心\n家庭订单中心"
+            android:layout_margin="2dp"
+            android:gravity="center"
+            android:textColor="@color/color_white"
+            android:background="@color/color_blue"
+            android:layout_height="match_parent"
+            android:id="@+id/tv_item2" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="资源中心"
+            android:layout_margin="2dp"
+            android:gravity="center"
+            android:textColor="@color/color_white"
+            android:background="@color/color_blue"
+            android:layout_height="match_parent"
+            android:id="@+id/tv_item3" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="客户中心"
+            android:layout_margin="2dp"
+            android:gravity="center"
+            android:textColor="@color/color_white"
+            android:background="@color/color_blue"
+            android:layout_height="match_parent"
+            android:id="@+id/tv_item4" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="客户中心\n政企客户中心"
+            android:layout_margin="2dp"
+            android:gravity="center"
+            android:textColor="@color/color_white"
+            android:background="@color/color_blue"
+            android:layout_height="match_parent"
+            android:id="@+id/tv_item5" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="网状网\n订单中心"
+            android:layout_margin="2dp"
+            android:gravity="center"
+            android:textColor="@color/color_white"
+            android:background="@color/color_blue"
+            android:layout_height="match_parent"
+            android:id="@+id/tv_item6" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="订单中心\n个人订单中心"
+            android:layout_margin="2dp"
+            android:gravity="center"
+            android:textColor="@color/color_white"
+            android:background="@color/color_blue"
+            android:layout_height="match_parent"
+            android:id="@+id/tv_item7" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="零售库存中心"
+            android:layout_margin="2dp"
+            android:gravity="center"
+            android:textColor="@color/color_white"
+            android:background="@color/color_blue"
+            android:layout_height="match_parent"
+            android:id="@+id/tv_item8" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="规则中心"
+            android:layout_margin="2dp"
+            android:gravity="center"
+            android:textColor="@color/color_white"
+            android:background="@color/color_blue"
+            android:layout_height="match_parent"
+            android:id="@+id/tv_item9" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="订单中心\n政企订单中心"
+            android:layout_margin="2dp"
+            android:gravity="center"
+            android:textColor="@color/color_white"
+            android:background="@color/color_blue"
+            android:layout_height="match_parent"
+            android:id="@+id/tv_item10" />
+    </LinearLayout>
+    <include layout="@layout/common_search_layout"/>
+    <include layout="@layout/common_list_4"/>
+</LinearLayout>

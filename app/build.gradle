@@ -1,6 +1,8 @@
 apply plugin: 'com.android.application'
+apply plugin: 'oneapm'
 
 android {
+
     compileSdkVersion 24
     buildToolsVersion "24.0.2"
     defaultConfig {
@@ -8,7 +10,7 @@ android {
         minSdkVersion 17
         targetSdkVersion 24
         versionCode 10
-        versionName "2.1.47"
+        versionName "2.1.50"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         // Enabling multidex support.
         multiDexEnabled true
@@ -23,8 +25,6 @@ android {
         checkReleaseBuilds false
         abortOnError false
     }
-
-
 }
 afterEvaluate {
     tasks.matching {
@@ -74,6 +74,6 @@ dependencies {
     compile 'com.android.support:support-v4:24.0.0-alpha1'
     compile 'com.android.support:design:24.0.0-alpha1'
     compile 'com.zhy:base-adapter:3.0.3'
-
-
+    compile 'com.zhy:base-rvadapter:3.0.3'
+    compile files('libs/oneapm-android-agent.jar')
 }

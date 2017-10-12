@@ -3,7 +3,6 @@ package com.chinamobile.yunweizhushou.common;
 import android.app.Dialog;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -72,15 +71,15 @@ public class BaseFragment extends Fragment {
 					public void onResponse(String response) {
 						try {
 							if (null != response) {
-								Log.e("TAG", e.toString());
+								//Log.e("TAG", e.toString());
 								JSONObject jsonObj = new JSONObject(response);
 								if (jsonObj.has(MSG)) {
 									responseBean.setMSG(jsonObj.getString(MSG));
-									Log.i("TAG", "msg >>>>>" + responseBean.getMSG());
+									//Log.i("TAG", "msg >>>>>" + responseBean.getMSG());
 								}
 								if (jsonObj.has(DATA)) {
 									responseBean.setDATA(jsonObj.getString(DATA));
-									Log.i("TAG", "data>>>>>" + responseBean.getDATA());
+								//	Log.i("TAG", "data>>>>>" + responseBean.getDATA());
 								}
 								// MDZZ
 								if (jsonObj.has("TOTAL")) {

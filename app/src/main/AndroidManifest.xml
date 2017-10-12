@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.chinamobile.yunweizhushou"
    >
 
@@ -40,10 +41,19 @@
     </uses-permission>
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" >
     </uses-permission>
+    <!--发送性能数据到服务器需要该权限-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--发送性能数据到服务器需要该权限-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--sdk读取设备识别码需要该权限-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!--【非必选】若想知道 Crash 的时候，后台有哪些任务运行，请引入该权限-->
+    <uses-permission android:name="android.permission.GET_TASKS" />
 
     <application
         android:name=".common.MainApplication"
-        android:allowBackup="true"
+        android:allowBackup="false"
+        tools:replace="android:allowBackup"
         android:icon="@mipmap/icon_logo"
         android:label="@string/app_name"
         android:supportsRtl="true"
@@ -60,7 +70,8 @@
         <activity android:name=".ui.main.MoreItemActivity" />
         <activity android:name=".common.permission.PermissionActivity"  android:theme="@style/AppTheme.NoBar"/>
         <activity android:name=".ui.login.LoginActivity" android:theme="@style/AppTheme.NoBar"/>
-        <activity android:name=".ui.main.MainPageActivity"/>
+        <activity android:name=".ui.main.MainPageActivity"
+            android:launchMode="singleTask"/>
         <!--故障-->
         <activity android:name=".ui.fault.CalendarActivity"/>
         <activity android:name=".ui.fault.ChangeActivity"/>
@@ -103,7 +114,8 @@
         <activity android:name=".ui.esbInterface.ESBNextManageActivity"/>
         <activity android:name=".ui.esbInterface.GovernAnalysisActivity"/>
         <activity android:name=".ui.esbInterface.WaterBallGraphActivity"/>
-        <activity android:name=".ui.esbInterface.WaterBallHorizenGraphActivity"/>
+        <activity android:name=".ui.esbInterface.WaterBallHorizenGraphActivity"
+            android:screenOrientation="landscape" />
         <!--日志专区-->
         <activity android:name=".logZone.LogZoneActivity"/>
         <activity android:name=".logZone.LogZoneGplotActivity"/>
@@ -199,6 +211,7 @@
         <!--性能分析-->
         <activity android:name=".ui.functionAnalysis.FunctionAnalysisActivity"/>
         <activity android:name=".ui.functionAnalysis.FunctionAnalysisDetailActivity"/>
+        <activity android:name=".ui.functionAnalysis.FAMoreCenterActivity"/>
         <!--权限审批-->
         <activity android:name=".ui.yiyangShenpi.YiyangShenpiActivity"/>
         <activity android:name=".ui.yiyangShenpi.YiyangShenpiNextActivity"/>
@@ -294,6 +307,13 @@
         <activity android:name=".ui.customerCenter.CustomerCenterManagerActivity"/>
         <!--监控-->
         <activity android:name=".ui.monitor.MonitorActivity"/>
+        <!--漫游专区-->
+        <activity android:name=".ui.roam.RoamActivity"/>
+        <!--超时接口-->
+        <activity android:name=".ui.interfaceOver.InterfaceOverNextActivity"
+            />
+        <activity android:name=".ui.interfaceOver.InterfaceOverActivity"
+            android:windowSoftInputMode="adjustNothing|stateHidden"/>
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />

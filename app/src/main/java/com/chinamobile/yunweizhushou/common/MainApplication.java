@@ -1,6 +1,9 @@
 package com.chinamobile.yunweizhushou.common;
 
 import android.content.Context;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.Signature;
 import android.support.multidex.MultiDexApplication;
 import android.util.DisplayMetrics;
 import android.view.WindowManager;
@@ -25,9 +28,13 @@ public class MainApplication extends MultiDexApplication {
 	public static RequestQueue mRequestQueue;
 	public static ImageLoader mImageLoader;
 	private static DisplayImageOptions options;
+	private String originalSign="308201dd30820146020101300d06092a864886f70d010105050030373116301406035504030c0d416e64726f69642044656275673110300e060355040a0c07416e64726f6964310b3009060355040613025553301e170d3136313130353036333031315a170d3436313032393036333031315a30373116301406035504030c0d416e64726f69642044656275673110300e060355040a0c07416e64726f6964310b300906035504061302555330819f300d06092a864886f70d010101050003818d0030818902818100b79da820a93b75e12953d7d593bbb84a4d1cbba0ab9bc35a5a1d11378609d9013b7167e663a44c57ffb73f11259212bf0ad0680135a6f9fc15159897ec0ae7e2ae62330851251a26c59fcb1fc41756df643d0c0a71f322a8ff1dfd40fabe3e75e04d52ccaf556a207c6a97bfd35ba91c0a8790f635e527a9266fac0db84848c10203010001300d06092a864886f70d01010505000381810041aba75d136c42ed16ec61b9de2175b60d9d678716e137efeb68ed5fb7276a2e4d03dfb8c43510f7c1be43d7c8e329afed149cdc41e51eae5d5abe210200c236d81496f68dd45712f9a67d20eaaf5219067d95d3b06de440076843edaf62d8b4ad2648b4c1af8ac4788f435f2bee7688e527d9ca2b7953e5b12902eb9b4a1c30";
 
 	@Override
 	public void onCreate() {
+		if(!verifySignature(this,originalSign)){
+			android.os.Process.killProcess(android.os.Process.myPid());
+		}
 		mRequestQueue = Volley.newRequestQueue(this);
 		mRequestQueue.start();
 		initImageLoader(getApplicationContext());
@@ -39,6 +46,31 @@ public class MainApplication extends MultiDexApplication {
 		ConstantValueUtil.WINDOW_HEIGHT = dm.heightPixels;
 		com.bangcle.uihijacksdk.BangcleUihijackSDK.init(MainApplication.this, null);
 	}
+	public static String getSignature(Context context) {
+		PackageManager pm = context.getPackageManager();
+		PackageInfo pi;
+		StringBuilder sb = new StringBuilder();
+
+		try {
+			pi = pm.getPackageInfo(context.getPackageName(), PackageManager.GET_SIGNATURES);
+			Signature[] signatures = pi.signatures;
+			for (Signature signature : signatures) {
+				sb.append(signature.toCharsString());
+			}
+		} catch (PackageManager.NameNotFoundException e) {
+			e.printStackTrace();
+		}
+
+		return sb.toString();
+	}
+	public static boolean verifySignature(Context context, String originalSign){
+		String currentSign = getSignature(context);
+		if (originalSign.equals(currentSign)) {
+			return true;//签名正确
+		}
+		return false;//签名被篡改
+	}
+
 
 
 	@Override

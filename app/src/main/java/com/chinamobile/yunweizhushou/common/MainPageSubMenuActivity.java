@@ -33,6 +33,7 @@ import com.chinamobile.yunweizhushou.ui.networkAcceptance.NetworkAcceptanceActiv
 import com.chinamobile.yunweizhushou.ui.networkFlowPay.EnetTrafficSysActivity;
 import com.chinamobile.yunweizhushou.ui.newBandService.GraphListActivity;
 import com.chinamobile.yunweizhushou.ui.reconciliationSchedule.ReconciliationScheduleActivity;
+import com.chinamobile.yunweizhushou.ui.roam.RoamActivity;
 import com.chinamobile.yunweizhushou.ui.threadCapacity.ThreadCapacityManagementActivity;
 import com.chinamobile.yunweizhushou.view.MyGridView;
 
@@ -158,6 +159,9 @@ public class MainPageSubMenuActivity extends BaseActivity {
 						break;
 					case "NetworkFlowPay"://全网流量统付
 						intent.setClass(MainPageSubMenuActivity.this, EnetTrafficSysActivity.class);
+						break;
+					case "RoamActivity"://漫游专区
+						intent.setClass(MainPageSubMenuActivity.this, RoamActivity.class);
 						break;
 				default:
 					break;

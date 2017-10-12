@@ -1,0 +1,77 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@color/color_blue"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/list_7_item1"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="中心"
+        android:textColor="@color/color_white"
+        android:layout_margin="5dp"
+        android:textSize="@dimen/default_ssmall_size" />
+
+    <TextView
+        android:id="@+id/list_7_item2"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="csf接口编号"
+        android:textColor="@color/color_white"
+        android:layout_margin="5dp"
+        android:textSize="@dimen/default_ssmall_size" />
+
+    <TextView
+        android:id="@+id/list_7_item3"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="cs名称"
+        android:textColor="@color/color_white"
+        android:layout_margin="5dp"
+        android:textSize="@dimen/default_ssmall_size" />
+
+    <TextView
+        android:id="@+id/list_7_item4"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="ESB接口编号"
+        android:textColor="@color/color_white"
+        android:layout_margin="5dp"
+        android:textSize="@dimen/default_ssmall_size" />
+    <TextView
+        android:id="@+id/list_7_item5"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:text="成功率"
+        android:textColor="@color/color_white"
+        android:gravity="center"
+        android:layout_margin="5dp"
+        android:textSize="@dimen/default_ssmall_size" />
+
+    <TextView
+        android:id="@+id/list_7_item6"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="耗时"
+        android:textColor="@color/color_white"
+        android:layout_margin="5dp"
+        android:textSize="@dimen/default_ssmall_size" />
+
+    <TextView
+        android:id="@+id/list_7_item7"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="调用量"
+        android:textColor="@color/color_white"
+        android:layout_margin="5dp"
+        android:textSize="@dimen/default_ssmall_size" />
+
+</LinearLayout>

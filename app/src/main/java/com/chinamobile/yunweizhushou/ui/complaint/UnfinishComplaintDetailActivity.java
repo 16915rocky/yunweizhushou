@@ -72,7 +72,7 @@ public class UnfinishComplaintDetailActivity extends BaseActivity implements OnC
 		map.put("action", "detailList");
 		map.put("chr_assigngroup", group);
 		map.put("chr_sdnumber", searchContent.getText().toString() + "");
-		startTask(HttpRequestEnum.enum_complain_unfinish_detail, ConstantValueUtil.URL + "ComplaintsBulletin?", map);
+		startTask(HttpRequestEnum.enum_complain_unfinish_detail, ConstantValueUtil.URL + "ComplaintsBulletin?", map,true);
 	}
 
 	@Override
