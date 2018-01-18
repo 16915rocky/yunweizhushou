@@ -628,7 +628,7 @@ public enum HttpRequestEnum {
 	/*
 	* 局数据专区
 	* */
-	enum_office_collecting,enum_office_release,enum_group_increment_check,enum_file_receiving,
+	enum_office_collecting,enum_office_release,enum_group_increment_check,enum_file_receiving,enum_getoffice_audit_data,
 	/*服务查询
 	* */
 	enum_service_log_query,
@@ -643,5 +643,13 @@ public enum HttpRequestEnum {
 	/*
 	* 漫游专区
 	* */
-	enum_roam
+	enum_roam,
+	/*
+	*调度平台任务查询
+	* */
+	enum_taskExecMonitorList,enum_TaskDetailList,enum_scheduling_piechart,enum_scheduling_list,enum_exec_failure_list,
+	/*
+	* 故障预警
+	* */
+	enum_fault_warning
 }

@@ -22,7 +22,6 @@ import com.chinamobile.yunweizhushou.R;
 import com.chinamobile.yunweizhushou.bean.MainPageGridBean;
 import com.chinamobile.yunweizhushou.bean.MoreItemListBean;
 import com.chinamobile.yunweizhushou.bean.UserBean;
-import com.chinamobile.yunweizhushou.common.Contants;
 import com.chinamobile.yunweizhushou.common.MainApplication;
 import com.chinamobile.yunweizhushou.ui.adapter.MoreItemEditGridAdapter;
 import com.chinamobile.yunweizhushou.ui.adapter.MoreItemListAdapter;
@@ -424,7 +423,7 @@ public class MoreItemActivity extends AppCompatActivity implements View.OnClickL
         parameters.put("hpDirectory", s);
         Novate novate = new Novate.Builder(this)
                 .connectTimeout(8)
-                .baseUrl(Contants.BASE_URL)
+                .baseUrl(ConstantValueUtil.URL)
                 .addLog(true)
                 .build();
         novate.post("DirectoryManager", parameters, new BaseSubscriber<ResponseBody>(this) {

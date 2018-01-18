@@ -238,7 +238,7 @@ public class UserPerceptionIndexNextActivity  extends BaseActivity {
        
         // create 3 datasets with different types
         BarDataSet set1 = new BarDataSet(yVals1, "2016");     
-        BarDataSet set2 = new BarDataSet(yVals2, "2017");     
+        BarDataSet set2 = new BarDataSet(yVals2, "2017");
         set1.setColor(this.getResources().getColor(R.color.color_orange));
         set2.setColor(this.getResources().getColor(R.color.color_lightblue));
         ArrayList dataSets = new ArrayList();
@@ -313,7 +313,7 @@ public class UserPerceptionIndexNextActivity  extends BaseActivity {
         l.setYOffset(0f);
         l.setYEntrySpace(2f);	
         l.setTextSize(10f);
-        l.setEnabled(true);
+        l.setEnabled(false);
         XAxis xl = barChart.getXAxis();
         xl.setPosition(XAxis.XAxisPosition.BOTTOM);
         

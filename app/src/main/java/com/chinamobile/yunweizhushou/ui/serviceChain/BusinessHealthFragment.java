@@ -92,7 +92,7 @@ public class BusinessHealthFragment extends BaseFragment {
     private void initRequest() {
         HashMap map = new HashMap<String, String>();
         map.put("action", "getScoreSummary");
-        startTask(HttpRequestEnum.enum_serviceChain_next, ConstantValueUtil.URL + "HealthManager?", map, false);
+            startTask(HttpRequestEnum.enum_serviceChain_next, ConstantValueUtil.URL + "HealthManager?", map, false);
 
     }
 

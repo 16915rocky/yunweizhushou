@@ -19,6 +19,9 @@ import com.chinamobile.yunweizhushou.widget.SelectDayDialog;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.lang.reflect.Type;
 import java.util.Calendar;
 import java.util.HashMap;
@@ -28,6 +31,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
+import static com.chinamobile.yunweizhushou.R.id.tv_desc;
 import static com.chinamobile.yunweizhushou.R.id.tv_time;
 
 /**
@@ -36,7 +40,8 @@ import static com.chinamobile.yunweizhushou.R.id.tv_time;
 
 public class GroupIncrementCheckFragment extends BaseFragment {
 
-
+    @BindView(tv_desc)
+    TextView tvDesc;
     @BindView(tv_time)
     TextView tvTime;
     @BindView(R.id.listView)
@@ -103,13 +108,24 @@ public class GroupIncrementCheckFragment extends BaseFragment {
         switch (e) {
             case enum_group_increment_check:
                 if (responseBean.isSuccess()) {
-                    Type t = new TypeToken<List<GroupIncrementCheckBean>>() {
-                    }.getType();
-                    mlist = new Gson().fromJson(responseBean.getDATA(), t);
-                    mAdapter = new GroupIncrementCheckAdapter(getActivity(), mlist, R.layout.item_list_3);
-                    if(listView!=null) {
-                        listView.setAdapter(mAdapter);
+                    JSONObject jo = null;
+                    try {
+                        jo = new JSONObject(responseBean.getDATA());
+                        String listStr = jo.getString("list");
+                        String total = jo.getString("total");
+                        String exception = jo.getString("exception");
+                        tvDesc.setText("共"+total+"类，异常"+exception+"类");
+                        Type t = new TypeToken<List<GroupIncrementCheckBean>>() {
+                        }.getType();
+                        mlist = new Gson().fromJson(listStr, t);
+                        mAdapter = new GroupIncrementCheckAdapter(getActivity(), mlist, R.layout.item_list_3);
+                        if(listView!=null) {
+                            listView.setAdapter(mAdapter);
+                        }
+                    } catch (JSONException e1) {
+                        e1.printStackTrace();
                     }
+
                 }
             default:
                 break;

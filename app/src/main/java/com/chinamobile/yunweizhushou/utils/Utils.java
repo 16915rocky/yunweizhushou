@@ -8,6 +8,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.PixelFormat;
 import android.graphics.drawable.Drawable;
+import android.telephony.TelephonyManager;
 import android.widget.Toast;
 
 import com.chinamobile.yunweizhushou.bean.FaultLineChartDataBean;
@@ -40,6 +41,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
+
+import static android.content.Context.TELEPHONY_SERVICE;
 
 @SuppressLint("SimpleDateFormat")
 public class Utils {
@@ -392,4 +395,6 @@ public class Utils {
 		sdf = new SimpleDateFormat("yyyy-MM");
 		return sdf.format(date);
 	}
+
+
 }

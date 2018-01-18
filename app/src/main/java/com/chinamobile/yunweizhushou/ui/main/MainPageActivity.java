@@ -7,6 +7,7 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -29,6 +30,7 @@ import com.chinamobile.yunweizhushou.db.DBUserManager;
 import com.chinamobile.yunweizhushou.ui.adapter.MainPageGridAdapter;
 import com.chinamobile.yunweizhushou.ui.complaint.ComplainManageActivity;
 import com.chinamobile.yunweizhushou.ui.fault.FaultManageActivity;
+import com.chinamobile.yunweizhushou.ui.faultWarning.FaultWarningActivity;
 import com.chinamobile.yunweizhushou.ui.login.LoginActivity;
 import com.chinamobile.yunweizhushou.ui.monitor.MonitorActivity;
 import com.chinamobile.yunweizhushou.ui.monitoring.DashBoard2Activity;
@@ -97,6 +99,8 @@ public class MainPageActivity extends TopBarBaseActivity implements View.OnClick
     TextView tvNum4;
     @BindView(R.id.ptrlt_mainpage)
     PullToRefreshLayout ptrltMainpage;
+    private Fragment ftCalendar;
+
 
 
     private UserBean userBean;
@@ -109,7 +113,7 @@ public class MainPageActivity extends TopBarBaseActivity implements View.OnClick
     private ActionBarDrawerToggle mDrawerToggle;
     private TextView nickName;
     private ImageView img_qr_code;
-    private LinearLayout lt_sign_out,lt_monitor;
+    private LinearLayout lt_sign_out, lt_monitor,lt_fault_warning;
     private SlidingMenu menu;
 
     @Override
@@ -186,6 +190,8 @@ public class MainPageActivity extends TopBarBaseActivity implements View.OnClick
                     public void run() {
                         // 结束刷新
                         getDataOfMunFromBackground();
+                        MainCalendarFragment ff=(MainCalendarFragment)ftCalendar;
+                        ff.initDataRequest();
                         ptrltMainpage.finishRefresh();
                     }
                 }, 2000);
@@ -241,6 +247,7 @@ public class MainPageActivity extends TopBarBaseActivity implements View.OnClick
     @Override
     protected void init(Bundle savedInstanceState) {
         ButterKnife.bind(this);
+        initFragment();
         EventBus.getDefault().register(this);
         userBean = getMyApplication().getUser();
         myHandler = new MyHandler(this);
@@ -248,6 +255,10 @@ public class MainPageActivity extends TopBarBaseActivity implements View.OnClick
         initGirdView();
         initSlidingMenu();
         initEvent();
+    }
+
+    private void initFragment() {
+         ftCalendar = getSupportFragmentManager().findFragmentById(R.id.ft_calendar);
     }
 
     private void initSlidingMenu() {
@@ -261,6 +272,7 @@ public class MainPageActivity extends TopBarBaseActivity implements View.OnClick
         nickName = (TextView) menu.findViewById(R.id.nickName);
         lt_sign_out = (LinearLayout) menu.findViewById(R.id.lt_sign_out);
         lt_monitor = (LinearLayout) menu.findViewById(R.id.lt_monitor);
+        lt_fault_warning = (LinearLayout) menu.findViewById(R.id.lt_fault_warning);
         img_qr_code = (ImageView) menu.findViewById(R.id.img_qr_code);
         setSlidingMenuButtonOnclick();
     }
@@ -269,6 +281,7 @@ public class MainPageActivity extends TopBarBaseActivity implements View.OnClick
         nickName.setText(userBean.getNickName());
         lt_sign_out.setOnClickListener(this);
         lt_monitor.setOnClickListener(this);
+        lt_fault_warning.setOnClickListener(this);
         img_qr_code.setOnClickListener(this);
     }
 
@@ -352,6 +365,9 @@ public class MainPageActivity extends TopBarBaseActivity implements View.OnClick
                 break;
             case R.id.lt_mainpage_check:
                 intent.setClass(this, TeamcheckManageActivity.class);
+                break;
+            case R.id.lt_fault_warning:
+                intent.setClass(this, FaultWarningActivity.class);
                 break;
             case R.id.lt_mainpage_complaint:
                 intent.setClass(this, ComplainManageActivity.class);

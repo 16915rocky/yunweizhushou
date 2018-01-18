@@ -5,12 +5,14 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.telephony.TelephonyManager;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.ai.appframe2.complex.util.e.K;
 import com.bangcle.uihijacksdk.BangcleViewHelper;
@@ -47,11 +49,14 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     private static final int REQUEST_CODE2 = 0;//请求码
 
     private CheckPermission checkPermission;//检测权限器
+    private String szImei;
+    private String imei21;
 
     //配置需要取的权限
     static final String[] PERMISSION = new String[]{
             Manifest.permission.WRITE_EXTERNAL_STORAGE,// 写入权限
             Manifest.permission.READ_EXTERNAL_STORAGE,  //读取权限
+            Manifest.permission.READ_PHONE_STATE,//
     };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +64,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE,
                 WindowManager.LayoutParams.FLAG_SECURE);
         BangcleViewHelper.onCreate(this, savedInstanceState);
+
         setContentView(R.layout.activity_login);
         initView();
         initEvent();
@@ -85,17 +91,26 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         if (checkPermission.permissionSet(PERMISSION)) {
             startPermissionActivity();
         }
+        //获取手机串码
+        TelephonyManager TelephonyMgr = (TelephonyManager)getSystemService(TELEPHONY_SERVICE);
+        szImei = TelephonyMgr.getDeviceId();
+        try {
+            imei21 = K.j(szImei);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
     //进入权限设置页面
     private void startPermissionActivity() {
         PermissionActivity.startActivityForResult(this, REQUEST_CODE2, PERMISSION);
+
     }
     //返回结果回调
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         //拒绝时，没有获取到主要权限，无法运行，关闭页面
-        if (requestCode == REQUEST_CODE2 && resultCode == PermissionActivity.PERMISSION_DENIEG) {
+        if (requestCode == REQUEST_CODE2 && resultCode == PermissionActivity.PERMISSION_DENIEG  ) {
             finish();
         }
     }
@@ -139,7 +154,11 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                 break;
             case R.id.btn_login:
                 if (state == 1) {
-                    initRequest();
+                    if("".equals(account.getText().toString()) || "".equals(psw.getText().toString())){
+                        Toast.makeText(LoginActivity.this,"请输入账号和密码!",Toast.LENGTH_SHORT).show();
+                    }else{
+                        initRequest();
+                    }
                 } else {
                    // inodeLogin();
                 }
@@ -165,11 +184,12 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     private void initResetRequest() {
         HashMap<String, String> map = new HashMap<>();
         map.put("action", "getPassword");
-        map.put("phone", /* account.getText().toString() + */ "qq");
+        map.put("phone", account.getText().toString());
+        map.put("ip", imei21);
         // startTask(HttpRequestEnum.enum_reset_password,
         // ConstantValueUtil.URL + "User?",map);
-        startTask(HttpRequestEnum.enum_reset_password, ConstantValueUtil.URL + "User?action=getPassword&phone="
-                + account.getText().toString() + "&deviceId=3&useType=2&sessionId=111", null);
+        startTask(HttpRequestEnum.enum_reset_password, ConstantValueUtil.URL + "User?"
+                 , map);
 
     }
 
@@ -187,6 +207,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         }
         map.put("userName", userName21);
         map.put("password", password21);
+        map.put("ip", imei21);
         map.put("phone_model",android.os.Build.BRAND+android.os.Build.MODEL+"");//手机型号
         map.put("phone_system","Android"+android.os.Build.VERSION.RELEASE+"");//系统版本号
         startTask(HttpRequestEnum.enum_login, ConstantValueUtil.URL + "User?", map);

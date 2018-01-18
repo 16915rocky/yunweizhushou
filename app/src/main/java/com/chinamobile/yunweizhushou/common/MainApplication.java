@@ -32,9 +32,9 @@ public class MainApplication extends MultiDexApplication {
 
 	@Override
 	public void onCreate() {
-		if(!verifySignature(this,originalSign)){
+		/*if(!verifySignature(this,originalSign)){
 			android.os.Process.killProcess(android.os.Process.myPid());
-		}
+		}*/
 		mRequestQueue = Volley.newRequestQueue(this);
 		mRequestQueue.start();
 		initImageLoader(getApplicationContext());

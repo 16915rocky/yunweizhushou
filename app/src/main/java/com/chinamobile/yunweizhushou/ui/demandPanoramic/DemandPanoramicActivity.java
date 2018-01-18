@@ -111,10 +111,11 @@ public class DemandPanoramicActivity extends BaseActivity implements OnClickList
 		public void onClick(View v) {					
 			switch (v.getId()) {
 			case R.id.popupwindow_tv1:
-				title_right_text.setText("历史");
+				title_right_text.setText("新版");
 				ishistory=true;
 				initRequest();
 				mPopupWindow.dismiss();
+
 				break;
 			case R.id.popupwindow_tv2:
 				title_right_text.setText("2017版");
@@ -122,7 +123,6 @@ public class DemandPanoramicActivity extends BaseActivity implements OnClickList
 				initRequest();
 				mPopupWindow.dismiss();
 				break;
-
 			default:
 				break;
 			}
@@ -262,12 +262,12 @@ public class DemandPanoramicActivity extends BaseActivity implements OnClickList
 	private void initRequest() {
 		HashMap<String, String> map = new HashMap<>();
 		if(ishistory){		
-			map.put("action", "findAll");
-			
+			map.put("action", "getNewDemandList");
+			map.put("state", "basesummary");
 		}else{
 			map.put("action", "newfindAll");
+			map.put("state", "title");
 		}
-		map.put("state", "title");
 		startTask(HttpRequestEnum.enum_demand_panoramic, ConstantValueUtil.URL + "Demand?", map);
 		
 		HashMap map2=new HashMap<String,String>();
@@ -304,7 +304,19 @@ public class DemandPanoramicActivity extends BaseActivity implements OnClickList
 
 				data.addAll(dataList);
 				adapter = new DemandPanoramicAdapter(this, dataList);
+				if(ishistory){
+					direction.setText("按SR专业方向");
+					duty.setText("按SR状态");
+					priority.setText("按BR需求管理员");
+					state.setText("按SR优先级");
+				}else{
+					direction.setText("按专业方向");
+					duty.setText("按责任人");
+					priority.setText("按优先级");
+					state.setText("按状态");
+				}
 				listView.setAdapter(adapter);
+
 				break;
 			case enum_demand_search:
 				searchData.clear();
@@ -374,41 +386,46 @@ public class DemandPanoramicActivity extends BaseActivity implements OnClickList
 		case R.id.direction:
 			HashMap<String, String> map = new HashMap<>();
 			if(ishistory){
-				map.put("action", "findAll");
+				map.put("action", "getNewDemandList");
+				map.put("state", "major_field");
 			}else{
 				map.put("action", "newfindAll");
+				map.put("state", "pro_direction");
 			}
-			map.put("state", "pro_direction");
 			startTask(HttpRequestEnum.enum_demand_panoramic, ConstantValueUtil.URL + "Demand?", map);
 			break;
 		case R.id.duty:
 			HashMap<String, String> map2 = new HashMap<>();
 			if(ishistory){
-				map2.put("action", "findAll");
+				map2.put("action", "getNewDemandList");
+				map2.put("state", "deadmini");
 			}else{
 				map2.put("action", "newfindAll");
+				map2.put("state", "charge_op_name");
 			}
-			map2.put("state", "charge_op_name");
 			startTask(HttpRequestEnum.enum_demand_panoramic, ConstantValueUtil.URL + "Demand?", map2);
 			break;
 		case R.id.state:
 			HashMap<String, String> map3 = new HashMap<>();
 			if(ishistory){
-				map3.put("action", "findAll");
+				map3.put("action", "getNewDemandList");
+				map3.put("state", "status");
 			}else{
 				map3.put("action", "newfindAll");
+				map3.put("state", "state");
 			}
-			map3.put("state", "state");
+
 			startTask(HttpRequestEnum.enum_demand_panoramic, ConstantValueUtil.URL + "Demand?", map3);
 			break;
 		case R.id.priority:
 			HashMap<String, String> map4 = new HashMap<>();
 			if(ishistory){
-				map4.put("action", "findAll");
+				map4.put("action", "getNewDemandList");
+				map4.put("state", "priority");
 			}else{
 				map4.put("action", "newfindAll");
+				map4.put("state", "state");
 			}
-			map4.put("state", "state");
 			startTask(HttpRequestEnum.enum_demand_panoramic, ConstantValueUtil.URL + "Demand?", map4);
 			break;
 		case R.id.title_right_text:
@@ -424,9 +441,16 @@ public class DemandPanoramicActivity extends BaseActivity implements OnClickList
 		@Override
 		public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 			if (searchState) {
-				Intent intent = new Intent(DemandPanoramicActivity.this, DemandPanoramicDetailActivity.class);
+				Intent intent = new Intent();
+				if(ishistory){
+					intent.putExtra("action", "getDemandBySearch");
+					intent.setClass(DemandPanoramicActivity.this, DemandPanoramicDetail2Activity.class);
+				}else{
+					intent.putExtra("action", "newfindById");
+					intent.setClass(DemandPanoramicActivity.this, DemandPanoramicDetailActivity.class);
+				}
 				intent.putExtra("title", searchData.get(position).getTitle());
-				intent.putExtra("action", "findById");
+
 				intent.putExtra("id", searchData.get(position).getId());
 				startActivity(intent);
 			} else {
@@ -439,12 +463,15 @@ public class DemandPanoramicActivity extends BaseActivity implements OnClickList
 						initRequest();
 						Toast.makeText(DemandPanoramicActivity.this, "正在请求数据",Toast.LENGTH_SHORT).show();
 					} else {
-						Intent intent = new Intent(DemandPanoramicActivity.this, DemandPanoramicDetailActivity.class);
+						Intent intent = new Intent();
 						intent.putExtra("title", data.get(position - 1).getChildItem().getTitle());
 						if(ishistory){
-							intent.putExtra("action", "findById");
+							intent.putExtra("action", "getDemandBySearch");
+							intent.setClass(DemandPanoramicActivity.this, DemandPanoramicDetail2Activity.class);
+							//intent.putExtra("action", "getDemandById");
 						}else{
 							intent.putExtra("action", "newfindById");
+							intent.setClass(DemandPanoramicActivity.this, DemandPanoramicDetailActivity.class);
 						}
 						intent.putExtra("id", data.get(position - 1).getChildItem().getId());
 						startActivity(intent);
@@ -541,7 +568,7 @@ public class DemandPanoramicActivity extends BaseActivity implements OnClickList
 				searchState = true;
 				HashMap<String, String> map = new HashMap<>();
 				if(ishistory){
-					map.put("action", "find");
+					map.put("action", "getDemandBySearch");
 				}else{
 					map.put("action", "newfind");
 				}

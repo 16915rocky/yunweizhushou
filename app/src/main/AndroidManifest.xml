@@ -9,7 +9,6 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
@@ -208,6 +207,7 @@
         <!--需求运营-->
         <activity android:name=".ui.demandPanoramic.DemandPanoramicActivity"/>
         <activity android:name=".ui.demandPanoramic.DemandPanoramicDetailActivity"/>
+        <activity android:name=".ui.demandPanoramic.DemandPanoramicDetail2Activity"/>
         <!--性能分析-->
         <activity android:name=".ui.functionAnalysis.FunctionAnalysisActivity"/>
         <activity android:name=".ui.functionAnalysis.FunctionAnalysisDetailActivity"/>
@@ -234,6 +234,7 @@
         <!--用户感知指标-->
         <activity android:name=".ui.userPerceptionIndex.UserPerceptionIndexActivity"/>
         <activity android:name=".ui.userPerceptionIndex.UserPerceptionIndexNextActivity"/>
+        <activity android:name=".ui.userPerceptionIndex.UserPerceptionIndexNext6Activity"/>
         <!--虚拟桌面-->
         <activity android:name=".ui.virtualDesktop.VirtualDesktopActivity"/>
         <!--核心业务分级标准-->
@@ -312,8 +313,20 @@
         <!--超时接口-->
         <activity android:name=".ui.interfaceOver.InterfaceOverNextActivity"
             />
+        <activity android:name=".ui.newBandService.BandServiceActivity"/>
         <activity android:name=".ui.interfaceOver.InterfaceOverActivity"
             android:windowSoftInputMode="adjustNothing|stateHidden"/>
+        <!--调度平台任务查询-->
+        <activity android:name=".ui.TaskExecMonitor.TaskExecMonitorActivity"/>
+        <activity android:name=".ui.TaskExecMonitor.TaskExecMonitorNextActivity"/>
+        <activity android:name=".ui.TaskExecMonitor.TaskExecManagerActivity"/>
+        <!--个人中心-->
+        <activity android:name=".ui.personCenter.PersonCenterManagerActivity"/>
+        <!--故障预警-->
+        <activity android:name=".ui.faultWarning.FaultWarningActivity"/>
+        <!--云管理中心-->
+        <activity android:name=".ui.cloudManagementCenter.CMCActivity"/>
+        <activity android:name=".ui.cloudManagementCenter.CMCNextActivity"/>
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />

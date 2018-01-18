@@ -13,6 +13,7 @@ import android.widget.TextView;
 import com.chinamobile.yunweizhushou.R;
 import com.chinamobile.yunweizhushou.common.BaseActivity;
 import com.chinamobile.yunweizhushou.ui.officeDataZone.fragments.GroupIncrementCheckFragment;
+import com.chinamobile.yunweizhushou.ui.officeDataZone.fragments.OfficeAuditDataFragment;
 import com.chinamobile.yunweizhushou.ui.officeDataZone.fragments.OfficeCollectingFragment;
 import com.chinamobile.yunweizhushou.ui.officeDataZone.fragments.OfficeFileReceivingFragment;
 import com.chinamobile.yunweizhushou.ui.officeDataZone.fragments.OfficeReleaseFragment;
@@ -58,6 +59,8 @@ public class OfficeDataZoneActivity extends BaseActivity implements OnClickListe
 		fragmentList.add(groupIncrementCheckFragment);
 		OfficeFileReceivingFragment officeFileReceivingFragment = new OfficeFileReceivingFragment();
 		fragmentList.add(officeFileReceivingFragment);
+		OfficeAuditDataFragment officeAuditDataFragment = new OfficeAuditDataFragment();
+		fragmentList.add(officeAuditDataFragment);
 		mAdapter = new FragmentPagerAdapter(getSupportFragmentManager()) {
 
 			@Override
@@ -89,6 +92,7 @@ public class OfficeDataZoneActivity extends BaseActivity implements OnClickListe
 		item2.setOnClickListener(this);
 		item3.setOnClickListener(this);
 		item4.setOnClickListener(this);
+		item5.setOnClickListener(this);
 
 
 		ViewGroup.LayoutParams params = bottomBar.getLayoutParams();
@@ -109,6 +113,8 @@ public class OfficeDataZoneActivity extends BaseActivity implements OnClickListe
 					item3.setTextColor(getResources().getColor(R.color.color_lightblue));
 				}else if (arg0 == 3) {
 					item4.setTextColor(getResources().getColor(R.color.color_lightblue));
+				}else if (arg0 == 4) {
+					item5.setTextColor(getResources().getColor(R.color.color_lightblue));
 				}
 			}
 
@@ -131,6 +137,7 @@ public class OfficeDataZoneActivity extends BaseActivity implements OnClickListe
 		item2 = (TextView) findViewById(R.id.rule_item2);
 		item3 = (TextView) findViewById(R.id.rule_item3);
 		item4 = (TextView) findViewById(R.id.rule_item4);
+		item5 = (TextView) findViewById(R.id.rule_item5);
 		viewPager = (MyViewPager) findViewById(R.id.rule_viewpager);
 		bottomBar = findViewById(R.id.rule_bottom_bar);
 		item1.setTextColor(getResources().getColor(R.color.color_lightblue));
@@ -159,6 +166,10 @@ public class OfficeDataZoneActivity extends BaseActivity implements OnClickListe
 				viewPager.setCurrentItem(3);
 				item4.setTextColor(getResources().getColor(R.color.color_lightblue));
 				break;
+			case R.id.rule_item5:
+				viewPager.setCurrentItem(4);
+				item5.setTextColor(getResources().getColor(R.color.color_lightblue));
+				break;
 			default:
 				break;
 		}
@@ -169,6 +180,7 @@ public class OfficeDataZoneActivity extends BaseActivity implements OnClickListe
 		item2.setTextColor(getResources().getColor(R.color.color_black));
 		item3.setTextColor(getResources().getColor(R.color.color_black));
 		item4.setTextColor(getResources().getColor(R.color.color_black));
+		item5.setTextColor(getResources().getColor(R.color.color_black));
 	}
 
 }

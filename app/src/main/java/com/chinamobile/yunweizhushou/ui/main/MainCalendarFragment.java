@@ -87,7 +87,7 @@ public class MainCalendarFragment extends BaseFragment implements OnDateSelected
        return view;
     }
 
-    private void initDataRequest() {
+    public void initDataRequest() {
         HashMap<String, String> map = new HashMap<>();
         map.put("action", "totalByMonth");
         map.put("date", currentDate);
@@ -273,7 +273,7 @@ public class MainCalendarFragment extends BaseFragment implements OnDateSelected
 
                         JSONObject rc = obj.getJSONObject("rc");
                         String high = rc.getString("high");
-                        String low = rc.getString("low");
+                            String low = rc.getString("low");
                         String middle = rc.getString("middle");
                         rcValue = rc.getString("menuVal");
                         rcItem1.setText(high + "项");

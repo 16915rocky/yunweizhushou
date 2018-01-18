@@ -14,7 +14,7 @@
             android:id="@+id/popupwindow_tv1"
 	        android:layout_width="70dp"
 	        android:layout_height="30dp"
-	        android:text="历史"
+	        android:text="新版"
 	          android:layout_margin="5dp"
 	        android:gravity="center"
 	        android:textColor="@color/color_blue"

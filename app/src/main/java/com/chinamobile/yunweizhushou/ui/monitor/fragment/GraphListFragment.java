@@ -37,6 +37,8 @@ import static com.chinamobile.yunweizhushou.R.id.tv_item3;
 import static com.chinamobile.yunweizhushou.R.id.tv_item4;
 import static com.chinamobile.yunweizhushou.R.id.tv_item5;
 import static com.chinamobile.yunweizhushou.R.id.tv_item6;
+import static com.chinamobile.yunweizhushou.R.id.tv_item7;
+import static com.chinamobile.yunweizhushou.R.id.tv_item8;
 import static com.chinamobile.yunweizhushou.R.id.view_line2;
 
 public class GraphListFragment extends BaseFragment implements View.OnClickListener {
@@ -47,9 +49,9 @@ public class GraphListFragment extends BaseFragment implements View.OnClickListe
 	private RechargeFunctionGraphBean beans;
 	private LinearLayout titleLt;
 	private TextView tvSelect;
-	private TextView tvItem1,tvItem2,tvItem3,tvItem4,tvItem5,tvItem6;
+	private TextView tvItem1,tvItem2,tvItem3,tvItem4,tvItem5,tvItem6,tvItem7,tvItem8;
 	private ImageView imgArrow;
-	private View  viewLine1,viewLine2,viewLine3,viewLine4,viewLine5,viewLine6;
+	private View  viewLine1,viewLine2,viewLine3,viewLine4,viewLine5,viewLine6,viewLine7,viewLine8;
 	private String defaultKey = "pament_business";
 	private String extraKey = "", extraValue = "";
 	private String extraKey2 = "", extraValue2 = "";
@@ -151,6 +153,10 @@ public class GraphListFragment extends BaseFragment implements View.OnClickListe
 			viewLine5 = view.findViewById(R.id.view_line5);
 			tvItem6 = (TextView) view.findViewById(tv_item6);
 			viewLine6 = view.findViewById(R.id.view_line6);
+			tvItem7 = (TextView) view.findViewById(tv_item7);
+			viewLine7 = view.findViewById(R.id.view_line7);
+			tvItem8 = (TextView) view.findViewById(tv_item8);
+			viewLine8 = view.findViewById(R.id.view_line8);
 			if ("2".equals(tab)) {
 				tvItem1.setVisibility(View.VISIBLE);
 				viewLine1.setVisibility(View.VISIBLE);
@@ -158,6 +164,11 @@ public class GraphListFragment extends BaseFragment implements View.OnClickListe
 				viewLine5.setVisibility(View.VISIBLE);
 				tvItem6.setVisibility(View.VISIBLE);
 				viewLine6.setVisibility(View.VISIBLE);
+				tvItem7.setVisibility(View.VISIBLE);
+				viewLine7.setVisibility(View.VISIBLE);
+				tvItem8.setVisibility(View.VISIBLE);
+				viewLine8.setVisibility(View.VISIBLE);
+
 			}else{
 				tvItem1.setVisibility(View.VISIBLE);
 				viewLine1.setVisibility(View.VISIBLE);
@@ -174,6 +185,8 @@ public class GraphListFragment extends BaseFragment implements View.OnClickListe
 			tvItem4.setOnClickListener(this);
 			tvItem5.setOnClickListener(this);
 			tvItem6.setOnClickListener(this);
+			tvItem7.setOnClickListener(this);
+			tvItem8.setOnClickListener(this);
 		}
 			popupWindow.showAsDropDown(tvSelect);
 
@@ -282,6 +295,22 @@ public class GraphListFragment extends BaseFragment implements View.OnClickListe
 				break;
 			case tv_item6:
 				extraValue=tvItem6.getText().toString();
+				tvSelect.setText(extraValue);
+				initRequest();
+				popupWindow.dismiss();
+				isPopShow=false;
+				imgArrow.setImageResource(R.mipmap.ic_down_white);
+				break;
+			case tv_item7:
+				extraValue=tvItem7.getText().toString();
+				tvSelect.setText(extraValue);
+				initRequest();
+				popupWindow.dismiss();
+				isPopShow=false;
+				imgArrow.setImageResource(R.mipmap.ic_down_white);
+				break;
+			case tv_item8:
+				extraValue=tvItem8.getText().toString();
 				tvSelect.setText(extraValue);
 				initRequest();
 				popupWindow.dismiss();

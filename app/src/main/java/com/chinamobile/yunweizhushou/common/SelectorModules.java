@@ -9,16 +9,19 @@ import com.chinamobile.yunweizhushou.bean.MainPageFragmentBean;
 import com.chinamobile.yunweizhushou.bean.UserBean;
 import com.chinamobile.yunweizhushou.logZone.LogZoneActivity;
 import com.chinamobile.yunweizhushou.ui.AccountCenter.IntegrationServiceActivity;
+import com.chinamobile.yunweizhushou.ui.TaskExecMonitor.TaskExecManagerActivity;
 import com.chinamobile.yunweizhushou.ui.abnormalZone.AbnormalZoneActivity;
 import com.chinamobile.yunweizhushou.ui.accountingArea.AccountingAareActivity;
 import com.chinamobile.yunweizhushou.ui.addUser.AddUserActivity;
 import com.chinamobile.yunweizhushou.ui.backlogZone.BacklogZoneActivity;
+import com.chinamobile.yunweizhushou.ui.bandService.BandServiceActivity;
 import com.chinamobile.yunweizhushou.ui.billFlow.GGPRSActivity;
 import com.chinamobile.yunweizhushou.ui.braceBroadcast.BraceBroadcastActivity;
 import com.chinamobile.yunweizhushou.ui.busifluct.BusifluctActivity2;
 import com.chinamobile.yunweizhushou.ui.businessaccept.BusinessAcceptManageActivity;
 import com.chinamobile.yunweizhushou.ui.capabilityPlatform.AbilityManageActivity;
 import com.chinamobile.yunweizhushou.ui.capitalrecorded.RityajiManageActivity;
+import com.chinamobile.yunweizhushou.ui.cloudManagementCenter.CMCNextActivity;
 import com.chinamobile.yunweizhushou.ui.creditControl.CreditControl3Activity;
 import com.chinamobile.yunweizhushou.ui.customerCenter.CustomerCenterManagerActivity;
 import com.chinamobile.yunweizhushou.ui.demandPanoramic.DemandPanoramicActivity;
@@ -31,13 +34,13 @@ import com.chinamobile.yunweizhushou.ui.interfaceOver.InterfaceOverActivity;
 import com.chinamobile.yunweizhushou.ui.levelStandar.LevelStandardActivity;
 import com.chinamobile.yunweizhushou.ui.main.MoreItemActivity;
 import com.chinamobile.yunweizhushou.ui.moneyoutCheck.MoneyoutCheckActivity;
-import com.chinamobile.yunweizhushou.ui.newBandService.GraphListActivity;
 import com.chinamobile.yunweizhushou.ui.newFaceRecognititon.FaceRecognititonManageActivity;
 import com.chinamobile.yunweizhushou.ui.nextCycle.NextActivity;
 import com.chinamobile.yunweizhushou.ui.officeDataZone.OfficeDataZoneActivity;
 import com.chinamobile.yunweizhushou.ui.onLinePreview.OnlinePreviewActivity;
 import com.chinamobile.yunweizhushou.ui.openCenter.OpenCenterActivity;
 import com.chinamobile.yunweizhushou.ui.orderCenter.OrderCenterActivity;
+import com.chinamobile.yunweizhushou.ui.personCenter.PersonCenterManagerActivity;
 import com.chinamobile.yunweizhushou.ui.planManagement.PlanManagementActivity;
 import com.chinamobile.yunweizhushou.ui.platformLogin.PlatformLoginActivity;
 import com.chinamobile.yunweizhushou.ui.produceLine.ProduceLineManageActivity;
@@ -180,7 +183,6 @@ public class SelectorModules {
                     intent.putExtra("name", "考核专区");
                     context.startActivity(intent);
                     break;
-                    default:break;
                 case "13":
                     ArrayList<MainPageFragmentBean> zglist = new ArrayList<>();
                     MainPageFragmentBean zgBean1 = new MainPageFragmentBean("对账单进度", "对账单进度", R.mipmap.icon_more_wave6,
@@ -233,7 +235,7 @@ public class SelectorModules {
                     context.startActivity(intent);
                     break;
                 case "52":
-                    intent.setClass(context, GraphListActivity.class);//宽带专区
+                    intent.setClass(context, BandServiceActivity.class);//宽带专区
                     intent.putExtra("action","findBroadbandWave");
                     context.startActivity(intent);
                     break;
@@ -382,8 +384,8 @@ public class SelectorModules {
                             "KQBKActivity");
                     MainPageFragmentBean hotzoneBean4 = new MainPageFragmentBean("物联网指标", "物联网指标专区", R.mipmap.ic_wlwzq,
                             "HotZoneWLWZBActivity");
-                    MainPageFragmentBean hotzoneBean5 = new MainPageFragmentBean("宽带专区", "宽带专区", R.mipmap.ic_kdzq,
-                            "GraphListActivity");
+                /*    MainPageFragmentBean hotzoneBean5 = new MainPageFragmentBean("宽带专区", "宽带专区", R.mipmap.ic_kdzq,
+                            "GraphListActivity");*/
                     MainPageFragmentBean hotzoneBean6 = new MainPageFragmentBean("告警专区", "告警专区", R.mipmap.ic_gaojing,
                             "GJTargetActivity");
                     MainPageFragmentBean hotzoneBean7 = new MainPageFragmentBean("漫游专区", "漫游专区", R.mipmap.ic_roam,
@@ -392,7 +394,7 @@ public class SelectorModules {
                     hotzoneList.add(hotzoneBean2);
                     hotzoneList.add(hotzoneBean3);
                     hotzoneList.add(hotzoneBean4);
-                    hotzoneList.add(hotzoneBean5);
+                /*    hotzoneList.add(hotzoneBean5);*/
                     hotzoneList.add(hotzoneBean6);
                     hotzoneList.add(hotzoneBean7);
                     intent.setClass(context, MainPageSubMenuActivity.class);
@@ -420,7 +422,62 @@ public class SelectorModules {
                     intent.setClass(context, InterfaceOverActivity.class);// 超时接口
                     context.startActivity(intent);
                     break;
-
+                case "59":
+                    intent.setClass(context, WebViewActivity.class);// 项目架构
+                    intent.putExtra("previewName", "对账规范");
+                    intent.putExtra("URL", "http://m360.zj.chinamobile.com/ywapp/document/ppt/201710061039264.1.pptx");
+                    context.startActivity(intent);
+                    break;
+                case "60":
+                    intent.setClass(context, TaskExecManagerActivity.class);// 调度平台任务查询
+                    context.startActivity(intent);
+                    break;
+                case "61":
+                    intent.setClass(context, PersonCenterManagerActivity.class);// 个人中心
+                    context.startActivity(intent);
+                    break;
+                case "62":
+                    intent.setClass(context, WebViewActivity.class);// 运维管理中心
+                    intent.putExtra("title", "运维管理中心");
+                    intent.putExtra("URL", "http://omwf.zj.chinamobile.com/portal/app/");
+                    context.startActivity(intent);
+                    break;
+                case "63":
+                    intent.setClass(context, CMCNextActivity.class);// 操作管理中心
+                    intent.putExtra("title", "操作管理中心");
+                   /* intent.putExtra("URL", "http://10.78.129.218:8080/app_web/index.html");*/
+                    context.startActivity(intent);
+                    break;
+                case "64":
+                    intent.setClass(context, WebViewActivity.class);// 监控管理中心
+                    intent.putExtra("title", "监控管理中心");
+                    intent.putExtra("URL", "http://10.78.129.218:8080/app_web/monitoring.html");
+                    context.startActivity(intent);
+                    break;
+                case "65":
+                    intent.setClass(context, WebViewActivity.class);// 数据管控
+                    intent.putExtra("title", "数据管控中心");
+                    intent.putExtra("URL", "http://10.78.129.218:8080/app_web/data_control.html");
+                    context.startActivity(intent);
+                    break;
+                case "66":
+                    intent.setClass(context, WebViewActivity.class);// 业务管理
+                    intent.putExtra("title", "业务管理中心");
+                    intent.putExtra("URL", "http://10.78.129.218:8080/app_web/business_implications.html");
+                    context.startActivity(intent);
+                    break;
+                case "67":
+                    intent.setClass(context, WebViewActivity.class);// 指标管理中心
+                    intent.putExtra("title", "指标管理中心");
+                    intent.putExtra("URL", "http://10.78.129.218:8080/app_web/target_management.html ");
+                    context.startActivity(intent);
+                    break;
+                case "69":
+                    intent.setClass(context, CMCNextActivity.class);// 云管理中心
+                    intent.putExtra("title","运营分析中心");
+                    context.startActivity(intent);
+                    break;
+                default:break;
 
             }
 

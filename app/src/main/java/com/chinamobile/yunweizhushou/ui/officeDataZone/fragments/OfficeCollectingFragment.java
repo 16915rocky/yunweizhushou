@@ -19,6 +19,9 @@ import com.chinamobile.yunweizhushou.widget.SelectDayDialog;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.lang.reflect.Type;
 import java.util.Calendar;
 import java.util.HashMap;
@@ -28,6 +31,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
+import static com.chinamobile.yunweizhushou.R.id.tv_desc;
 import static com.chinamobile.yunweizhushou.R.id.tv_time;
 
 /**
@@ -39,6 +43,8 @@ public class OfficeCollectingFragment extends BaseFragment {
 
     @BindView(tv_time)
     TextView tvTime;
+    @BindView(tv_desc)
+    TextView tvDesc;
     @BindView(R.id.listView)
     ListView listView;
     Unbinder unbinder;
@@ -103,12 +109,22 @@ public class OfficeCollectingFragment extends BaseFragment {
         switch (e) {
             case enum_office_collecting:
                 if (responseBean.isSuccess()) {
-                    Type t = new TypeToken<List<OfficeCollectingBean>>() {
-                    }.getType();
-                    mlist = new Gson().fromJson(responseBean.getDATA(), t);
-                    mAdapter = new OfficeCollectingAdapter(getActivity(), mlist, R.layout.item_office_collecting);
-                    if(listView!=null) {
-                        listView.setAdapter(mAdapter);
+
+                    try {
+                        JSONObject jo = new JSONObject(responseBean.getDATA());
+                        String listStr = jo.getString("list");
+                        String total = jo.getString("total");
+                        String exception = jo.getString("exception");
+                        tvDesc.setText("共"+total+"类，异常"+exception+"类");
+                        Type t = new TypeToken<List<OfficeCollectingBean>>() {
+                        }.getType();
+                        mlist = new Gson().fromJson(listStr, t);
+                        mAdapter = new OfficeCollectingAdapter(getActivity(), mlist, R.layout.item_office_collecting);
+                        if(listView!=null) {
+                            listView.setAdapter(mAdapter);
+                        }
+                    } catch (JSONException e1) {
+                        e1.printStackTrace();
                     }
                 }
             default:
