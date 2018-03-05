@@ -50,6 +50,7 @@ import com.tamic.novate.Throwable;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.lang.ref.WeakReference;
@@ -153,22 +154,22 @@ public class MainPageActivity extends TopBarBaseActivity implements View.OnClick
     }
 
 
-    public void initDrawerLayout() {
-        //创建返回键，并实现打开关/闭监听
-//        mDrawerToggle = new ActionBarDrawerToggle(this, dtMainpage, toolbar, R.string.open, R.string.close) {
-//            @Override
-//            public void onDrawerOpened(View drawerView) {
-//                super.onDrawerOpened(drawerView);
-//
-//            }
-//            @Override
-//            public void onDrawerClosed(View drawerView) {
-//                super.onDrawerClosed(drawerView);
-//            }
-//        };
-//        mDrawerToggle.syncState();
-//        dtMainpage.setDrawerListener(mDrawerToggle);
-    }
+   /* public void initDrawerLayout() {
+        创建返回键，并实现打开关/闭监听
+        mDrawerToggle = new ActionBarDrawerToggle(this, dtMainpage, toolbar, R.string.open, R.string.close) {
+            @Override
+            public void onDrawerOpened(View drawerView) {
+                super.onDrawerOpened(drawerView);
+
+            }
+            @Override
+            public void onDrawerClosed(View drawerView) {
+                super.onDrawerClosed(drawerView);
+            }
+        };
+        mDrawerToggle.syncState();
+        dtMainpage.setDrawerListener(mDrawerToggle);
+    }*/
 
     private void initEvent() {
         ltMainpageTrouble.setOnClickListener(this);
@@ -234,6 +235,25 @@ public class MainPageActivity extends TopBarBaseActivity implements View.OnClick
                     Utils.ShowErrorMsg(this, responseBean.getMSG());
                 }
                 break;
+            case enum_mainPage_gridView:
+                if (responseBean.isSuccess()) {
+                    JSONObject jo = null;
+                    try {
+                        jo = new JSONObject(responseBean.getDATA());
+                        Type type = new TypeToken<List<MainPageGridBean>>() {
+                        }.getType();
+                        List<MainPageGridBean> mList = new Gson().fromJson(jo.getJSONArray("itemList").toString(), type);
+                        Message msg = myHandler.obtainMessage();
+                        msg.what = REQUEST_CODE;
+                        msg.obj = mList;
+                        msg.sendToTarget();
+                    } catch (JSONException e1) {
+                        e1.printStackTrace();
+                    }
+
+                }else {
+                    Utils.ShowErrorMsg(this, responseBean.getMSG());
+                }
             default:
                 break;
         }
@@ -251,14 +271,16 @@ public class MainPageActivity extends TopBarBaseActivity implements View.OnClick
         EventBus.getDefault().register(this);
         userBean = getMyApplication().getUser();
         myHandler = new MyHandler(this);
-        getDataOfMunFromBackground();
-        initGirdView();
+       getDataOfMunFromBackground();
+      //  initGirdView();
+        getGirdViewData();
+
         initSlidingMenu();
         initEvent();
     }
 
     private void initFragment() {
-         ftCalendar = getSupportFragmentManager().findFragmentById(R.id.ft_calendar);
+     ftCalendar = getSupportFragmentManager().findFragmentById(R.id.ft_calendar);
     }
 
     private void initSlidingMenu() {
@@ -285,7 +307,14 @@ public class MainPageActivity extends TopBarBaseActivity implements View.OnClick
         img_qr_code.setOnClickListener(this);
     }
 
+    private void  getGirdViewData(){
+        HashMap<String, String> map = new HashMap<String, String>();
+        map.put("action", "getHomePageDir");
+        startTask(HttpRequestEnum.enum_mainPage_gridView, ConstantValueUtil.URL + "DirectoryManager?", map);
+    }
     private void initGirdView() {
+        int[] cerificates={R.raw.ca};
+        String[] hosts={"http://m360.zj.chinamobile.com"};
         Map<String, Object> parameters = new HashMap<>();
         parameters.put("action", "getHomePageDir");
         parameters.put("deviceId", "2");
@@ -295,6 +324,7 @@ public class MainPageActivity extends TopBarBaseActivity implements View.OnClick
                 .connectTimeout(8)
                 .baseUrl(ConstantValueUtil.URL)
                 .addLog(true)
+              //  .addSSL(hosts,cerificates)
                 .build();
         novate.post("DirectoryManager", parameters, new BaseSubscriber<ResponseBody>(this) {
             @Override

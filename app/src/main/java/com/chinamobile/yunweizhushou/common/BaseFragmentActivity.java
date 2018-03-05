@@ -24,6 +24,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.chinamobile.yunweizhushou.R;
 import com.chinamobile.yunweizhushou.bean.ResponseBean;
 import com.chinamobile.yunweizhushou.bean.UserBean;
+import com.chinamobile.yunweizhushou.utils.EncryptUtils;
 import com.chinamobile.yunweizhushou.utils.HttpRequestEnum;
 import com.chinamobile.yunweizhushou.view.TitleActionBar;
 
@@ -98,8 +99,10 @@ public class BaseFragmentActivity extends AppCompatActivity {
 				map.put("sessionId", ub.getSessionId());
 			}
 		}
+		//数据加密
+		HashMap<String, String> encrypt = EncryptUtils.encrypt(map);
 		final ResponseBean responseBean = new ResponseBean();
-		StringRequest stringRequest = new StringRequest(map == null ? Method.GET : Method.POST, url,
+		StringRequest stringRequest = new StringRequest(encrypt == null ? Method.GET : Method.POST, url,
 				new Listener<String>() {
 					@Override
 					public void onResponse(String response) {
@@ -112,7 +115,12 @@ public class BaseFragmentActivity extends AppCompatActivity {
 								//	Log.i("TAG", "msg >>>>>" + responseBean.getMSG());
 								}
 								if (jsonObj.has(DATA)) {
-									responseBean.setDATA(jsonObj.getString(DATA));
+									//数据解密
+									try {
+										responseBean.setDATA(EncryptUtils.decodeBase64ForSec(jsonObj.getString(DATA)));
+									} catch (Exception e1) {
+										e1.printStackTrace();
+									}
 									//Log.i("TAG", "data>>>>>" + responseBean.getDATA());
 								}
 								onTaskFinish(e, responseBean);

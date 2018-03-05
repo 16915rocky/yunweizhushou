@@ -30,6 +30,7 @@ import com.chinamobile.yunweizhushou.db.DBUserManager;
 import com.chinamobile.yunweizhushou.ui.login.impl.LoginModelImpl;
 import com.chinamobile.yunweizhushou.ui.main.MainPageActivity;
 import com.chinamobile.yunweizhushou.utils.ConstantValueUtil;
+import com.chinamobile.yunweizhushou.utils.EncryptUtils;
 import com.chinamobile.yunweizhushou.utils.HttpRequestEnum;
 import com.chinamobile.yunweizhushou.utils.Utils;
 import com.google.gson.Gson;
@@ -140,9 +141,15 @@ public class SplashActivity  extends BaseActivity {
 
 
     private void initCheckUpdateRequest() {
+
         HashMap map2=new HashMap<String,String>();
         map2.put("action", "find");
         map2.put("type", "3");
+        try {
+            String s = EncryptUtils.encodeBase64ForSec(map2.toString());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         startTask(HttpRequestEnum.enum_check_update, ConstantValueUtil.URL + "Version?", map2, false);
     }
     private void initRequest() {
@@ -215,6 +222,9 @@ public class SplashActivity  extends BaseActivity {
                 } else {
                     Utils.ShowErrorMsg(this, responseBean.getMSG());
                 }
+
+                break;
+            case enum_faultmanage_today:
 
                 break;
             default:

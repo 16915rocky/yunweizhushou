@@ -26,6 +26,7 @@ import com.chinamobile.yunweizhushou.common.MainApplication;
 import com.chinamobile.yunweizhushou.ui.adapter.MoreItemEditGridAdapter;
 import com.chinamobile.yunweizhushou.ui.adapter.MoreItemListAdapter;
 import com.chinamobile.yunweizhushou.utils.ConstantValueUtil;
+import com.chinamobile.yunweizhushou.utils.EncryptUtils;
 import com.chinamobile.yunweizhushou.utils.MyHandlerUtil;
 import com.chinamobile.yunweizhushou.view.DragGridView;
 import com.chinamobile.yunweizhushou.view.MyListView;
@@ -37,6 +38,8 @@ import com.google.gson.reflect.TypeToken;
 import com.tamic.novate.BaseSubscriber;
 import com.tamic.novate.Novate;
 import com.tamic.novate.Throwable;
+import com.zhy.http.okhttp.OkHttpUtils;
+import com.zhy.http.okhttp.callback.StringCallback;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -49,10 +52,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import okhttp3.Call;
 import okhttp3.ResponseBody;
 
 /**
@@ -315,54 +318,60 @@ public class MoreItemActivity extends AppCompatActivity implements View.OnClickL
         ltSearch.setOnClickListener(this);
     }
 
+
     private void initListView() {
-        Map<String, Object> parameters = new HashMap<>();
+        HashMap<String, String> parameters = new HashMap<>();
         parameters.put("action", "getAllDir");
         parameters.put("deviceId", "2");
         parameters.put("useType", "1");
         parameters.put("sessionId", userBean.getSessionId());
-        Novate novate = new Novate.Builder(this)
-                .connectTimeout(8)
-                .baseUrl(ConstantValueUtil.URL)
-                .addLog(true)
-                .build();
-        novate.post("DirectoryManager", parameters, new BaseSubscriber<ResponseBody>(this) {
-            @Override
-            public void onError(Throwable e) {
-                Log.e("cuowu", "错误");
-            }
+        //数据加密
+        HashMap<String, String> encrypt = EncryptUtils.encrypt(parameters);
+        OkHttpUtils
+                .get()
+                .url(ConstantValueUtil.URL+"DirectoryManager?")
+                .params(encrypt)
+                .build()
+                .execute(new StringCallback() {
+                    @Override
+                    public void onError(Call call, Exception e, int id) {
+                            Log.e("11","22");
+                    }
 
-            @Override
-            public void onNext(ResponseBody responseBody) {
-                try {
-                    String jstr = new String(responseBody.bytes());
-                    Log.e("jstr", jstr);
-                    JSONObject jo = new JSONObject(jstr).getJSONObject("DATA");
-                    Type type1 = new TypeToken<List<MainPageGridBean>>() {
-                    }.getType();
-                    List<MainPageGridBean> hotDirList = new Gson().fromJson(jo.getJSONArray("hotDir").toString(), type1);
-                    List<MainPageGridBean> recentDirList = new Gson().fromJson(jo.getJSONArray("recentDir").toString(), type1);
-                    List<MainPageGridBean> hpDirList = new Gson().fromJson(jo.getJSONArray("hpDir").toString(), type1);
-                    MoreItemListBean moreItemListBean1 = new MoreItemListBean("最近", recentDirList);
-                    MoreItemListBean moreItemListBean2 = new MoreItemListBean("推荐", hotDirList);
-                    Type type2 = new TypeToken<List<MoreItemListBean>>() {
-                    }.getType();
-                    List<MoreItemListBean> fullDirList = new Gson().fromJson(jo.getJSONArray("fullDir").toString(), type2);
-                    fullDirList.add(0, moreItemListBean1);
-                    fullDirList.add(1, moreItemListBean2);
-                    Message msg = myHandler.obtainMessage();
-                    msg.what = MOREITEM_GRID_DATA;
-                    msg.obj = fullDirList;
-                    msg.sendToTarget();
-                    Message msg2 = myHandler.obtainMessage();
-                    msg2.what = MAINPAGE_APPLY_DATA;
-                    msg2.obj = hpDirList;
-                    msg2.sendToTarget();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        });
+                    @Override
+                    public void onResponse(String response, int id) {
+                        try {
+                           /* String jstr = new String(responseBody.bytes());
+                            Log.e("jstr", jstr);*/
+                            //Log.e("TAG", e.toString());
+                            JSONObject jsonObj = new JSONObject(response);
+                            String data = EncryptUtils.decodeBase64ForSec(jsonObj.getString("DATA"));
+                            JSONObject jo = new JSONObject(data);
+                            Type type1 = new TypeToken<List<MainPageGridBean>>() {
+                            }.getType();
+                            List<MainPageGridBean> hotDirList = new Gson().fromJson(jo.getJSONArray("hotDir").toString(), type1);
+                            List<MainPageGridBean> recentDirList = new Gson().fromJson(jo.getJSONArray("recentDir").toString(), type1);
+                            List<MainPageGridBean> hpDirList = new Gson().fromJson(jo.getJSONArray("hpDir").toString(), type1);
+                            MoreItemListBean moreItemListBean1 = new MoreItemListBean("最近", recentDirList);
+                            MoreItemListBean moreItemListBean2 = new MoreItemListBean("推荐", hotDirList);
+                            Type type2 = new TypeToken<List<MoreItemListBean>>() {
+                            }.getType();
+                            List<MoreItemListBean> fullDirList = new Gson().fromJson(jo.getJSONArray("fullDir").toString(), type2);
+                            fullDirList.add(0, moreItemListBean1);
+                            fullDirList.add(1, moreItemListBean2);
+                            Message msg = myHandler.obtainMessage();
+                            msg.what = MOREITEM_GRID_DATA;
+                            msg.obj = fullDirList;
+                            msg.sendToTarget();
+                            Message msg2 = myHandler.obtainMessage();
+                            msg2.what = MAINPAGE_APPLY_DATA;
+                            msg2.obj = hpDirList;
+                            msg2.sendToTarget();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+                });
     }
 
     @Override
@@ -412,21 +421,24 @@ public class MoreItemActivity extends AppCompatActivity implements View.OnClickL
 
     private void editFinish() {
 
-        Map<String, Object> parameters = new HashMap<>();
+
+        HashMap<String, String> parameters = new HashMap<>();
         HashMap<String, Object> map = new HashMap<>();
         map.put("hpDirectory", hpDirectory);
         String s = new Gson().toJson(map);
+        parameters.put("hpDirectory", s);
         parameters.put("action", "modifyHPDirectory");
-        parameters.put("deviceId", "2");
+        parameters.put("deviceId", "3");
         parameters.put("useType", "1");
         parameters.put("sessionId", userBean.getSessionId());
-        parameters.put("hpDirectory", s);
+        //数据加密
+        String str = EncryptUtils.encryptToString(parameters);
         Novate novate = new Novate.Builder(this)
                 .connectTimeout(8)
                 .baseUrl(ConstantValueUtil.URL)
                 .addLog(true)
                 .build();
-        novate.post("DirectoryManager", parameters, new BaseSubscriber<ResponseBody>(this) {
+        novate.post("DirectoryManager?token="+str, null, new BaseSubscriber<ResponseBody>(this) {
             @Override
             public void onError(Throwable e) {
                 Log.e("上传", "失败");

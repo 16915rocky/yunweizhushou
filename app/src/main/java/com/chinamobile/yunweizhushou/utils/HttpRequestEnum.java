@@ -611,7 +611,7 @@ public enum HttpRequestEnum {
 	 *
 	 * MainPageActivity
 	 */
-	enum_mainPage_num,
+	enum_mainPage_num,enum_mainPage_gridView,
 	/*
 	* SearchActivity
 	* */
@@ -651,5 +651,13 @@ public enum HttpRequestEnum {
 	/*
 	* 故障预警
 	* */
-	enum_fault_warning
+	enum_fault_warning,
+	/*
+	* 模拟探测
+	* */
+	enum_analog_detection,enum_analog_detection_next,
+	/*
+	* 外设管理
+	* */
+	enum_peripher_management,enum_peripher_add
 }

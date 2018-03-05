@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <string-array name="city" id="arr_city">
+       <item name="570">衢州</item>
+       <item name="571">杭州</item>
+       <item name="572">湖州</item>
+       <item name="573">嘉兴</item>
+       <item name="574">宁波</item>
+       <item name="575">绍兴</item>
+       <item name="576">台州</item>
+       <item name="577">温州</item>
+       <item name="578">丽水</item>
+       <item name="579">金华</item>
+       <item name="580">舟山</item>
+   </string-array>
+    <string-array name="business" id="arr_business">
+        <item>营业厅</item>
+        <item>合作式渠道</item>
+    </string-array>
+</resources>

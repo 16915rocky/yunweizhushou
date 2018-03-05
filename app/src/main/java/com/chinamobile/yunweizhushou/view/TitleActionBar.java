@@ -18,6 +18,7 @@ public class TitleActionBar {
 	private TextView mTitle;
 	private EditText search;
 	private Window mWindow;
+	private TextView rightText;
 
 	public TitleActionBar(Window window) {
 		mWindow = window;
@@ -99,11 +100,22 @@ public class TitleActionBar {
 		return mRightButton2;
 	}
 
+	public TextView getRightText(){
+		if(rightText==null && mWindow != null){
+			rightText= (TextView) mWindow.findViewById(R.id.title_right_text);
+			rightText.setVisibility(View.VISIBLE);
+		}
+		return rightText;
+	}
 	public void setRightButton2(int drawable, OnClickListener listener) {
 		getRightButton2().setImageResource(drawable);
 		getRightButton2().setOnClickListener(listener);
 		getRightButton2().setClickable(true);
 		getRightButton2().setVisibility(View.VISIBLE);
+	}
+	public void setRightText(String text, OnClickListener listener) {
+		getRightText().setText(text);
+		getRightText().setOnClickListener(listener);
 	}
 
 }

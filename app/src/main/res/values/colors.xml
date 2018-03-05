@@ -95,4 +95,16 @@
     <color name="oval_sky_blue">#3299CC</color>
     <color name="oval_light_blue">#33b5e5</color>
 
+    <!--自定义键盘的所有颜色值-->
+    <color name="default_keyboard_bg">#999999</color>
+    <color name="default_keyTextColor">@color/black</color>
+    <color name="default_key_pressed">@color/golden</color>
+    <color name="default_key_normal">@color/white</color>
+    <color name="default_keyShadowColor">@color/white</color>
+    <color name="default_keyPreviewTextColor">@color/golden</color>
+
+    <color name="golden">#d2b167</color>
+  <!--  <color name="white">#ffffffff</color>-->
+    <color name="black">#ff000000</color>
+
 </resources>

@@ -7,27 +7,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.android.volley.AuthFailureError;
-import com.android.volley.DefaultRetryPolicy;
-import com.android.volley.NetworkResponse;
-import com.android.volley.Request.Method;
-import com.android.volley.Response;
-import com.android.volley.Response.ErrorListener;
-import com.android.volley.Response.Listener;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.HttpHeaderParser;
-import com.android.volley.toolbox.StringRequest;
 import com.chinamobile.yunweizhushou.R;
 import com.chinamobile.yunweizhushou.bean.ResponseBean;
 import com.chinamobile.yunweizhushou.bean.UserBean;
+import com.chinamobile.yunweizhushou.utils.EncryptUtils;
 import com.chinamobile.yunweizhushou.utils.HttpRequestEnum;
+import com.zhy.http.okhttp.OkHttpUtils;
+import com.zhy.http.okhttp.callback.StringCallback;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
-import java.util.Map;
+
+import okhttp3.Call;
 
 public class BaseFragment extends Fragment {
 
@@ -63,29 +56,45 @@ public class BaseFragment extends Fragment {
 			map.put("useType", "2");
 			map.put("sessionId", (ub != null && ub.getSessionId() != null) ? ub.getSessionId() : "");
 		}
+		//数据加密
+		HashMap<String, String> encrypt = EncryptUtils.encrypt(map);
 		final ResponseBean responseBean = new ResponseBean();
-		StringRequest stringRequest = new StringRequest(map == null ? Method.GET : Method.POST, url,
-				new Listener<String>() {
+		OkHttpUtils
+				.get()
+				.url(url)
+				.params(encrypt)
+				.build()
+				.execute(new StringCallback()
+				{
+					@Override
+					public void onError(Call call, Exception ex, int id) {
+						onTaskFinish(e, null);
+					}
 
 					@Override
-					public void onResponse(String response) {
+					public void onResponse(String response, int id) {
 						try {
 							if (null != response) {
+
 								//Log.e("TAG", e.toString());
 								JSONObject jsonObj = new JSONObject(response);
 								if (jsonObj.has(MSG)) {
 									responseBean.setMSG(jsonObj.getString(MSG));
 									//Log.i("TAG", "msg >>>>>" + responseBean.getMSG());
+
+									//检查sessionId( 安全登录 msg)
+									SecureLoginCheck.checkSessionId(getActivity(),responseBean.getMSG());
 								}
 								if (jsonObj.has(DATA)) {
-									responseBean.setDATA(jsonObj.getString(DATA));
-								//	Log.i("TAG", "data>>>>>" + responseBean.getDATA());
-								}
-								// MDZZ
-								if (jsonObj.has("TOTAL")) {
-									responseBean.setTOTAL(jsonObj.getString("TOTAL"));
-								}
+									//数据解密
+									try {
+										responseBean.setDATA(EncryptUtils.decodeBase64ForSec(jsonObj.getString(DATA)));
+									} catch (Exception e1) {
+										e1.printStackTrace();
+									}
 
+									//Log.i("TAG", "data>>>>>" + responseBean.getDATA());
+								}
 								onTaskFinish(e, responseBean);
 							} else {
 								onTaskFinish(e, null);
@@ -95,34 +104,7 @@ public class BaseFragment extends Fragment {
 							e.printStackTrace();
 						}
 					}
-				}, new ErrorListener() {
-
-					@Override
-					public void onErrorResponse(VolleyError error) {
-						onTaskFinish(e, null);
-					}
-				}) {
-			@Override
-			protected Map<String, String> getParams() throws AuthFailureError {
-				return map;
-			}
-
-			@Override
-			protected Response<String> parseNetworkResponse(NetworkResponse response) {
-				String jsonString;
-				try {
-					jsonString = new String(response.data, "UTF-8");
-
-				} catch (UnsupportedEncodingException e) {
-					jsonString = new String(response.data);
-				}
-				return Response.success(jsonString, HttpHeaderParser.parseCacheHeaders(response));
-			}
-		};
-		stringRequest.setRetryPolicy(new DefaultRetryPolicy(INITIAL_TIMEOUT_MS, DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
-				DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
-		MainApplication.mRequestQueue.add(stringRequest);
-
+				});
 	}
 
 	protected void onTaskFinish(HttpRequestEnum e, ResponseBean responseBean) {

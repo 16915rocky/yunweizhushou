@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="@color/lightgray"
+        android:layout_marginTop="10dp"
+        android:layout_height="40dp">
+
+    <TextView
+        android:id="@+id/tv_item1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="地市" />
+
+    <TextView
+        android:id="@+id/tv_item2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="类别" />
+
+    <TextView
+        android:id="@+id/tv_item3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="名称" />
+
+    <TextView
+        android:id="@+id/tv_item4"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="外设\n类型" />
+
+    <TextView
+        android:id="@+id/tv_item5"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="可用率" />
+
+    <TextView
+        android:id="@+id/tv_item6"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="可用数" />
+
+    <TextView
+        android:id="@+id/tv_item7"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="不可\n用数" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -7,12 +7,13 @@ import android.util.Log;
 import com.chinamobile.yunweizhushou.R;
 import com.chinamobile.yunweizhushou.bean.MainPageFragmentBean;
 import com.chinamobile.yunweizhushou.bean.UserBean;
-import com.chinamobile.yunweizhushou.logZone.LogZoneActivity;
 import com.chinamobile.yunweizhushou.ui.AccountCenter.IntegrationServiceActivity;
 import com.chinamobile.yunweizhushou.ui.TaskExecMonitor.TaskExecManagerActivity;
 import com.chinamobile.yunweizhushou.ui.abnormalZone.AbnormalZoneActivity;
 import com.chinamobile.yunweizhushou.ui.accountingArea.AccountingAareActivity;
 import com.chinamobile.yunweizhushou.ui.addUser.AddUserActivity;
+import com.chinamobile.yunweizhushou.ui.analogDetection.AnalogDetectionActivity;
+import com.chinamobile.yunweizhushou.ui.answeringMachine.AnsweringMachineActivity;
 import com.chinamobile.yunweizhushou.ui.backlogZone.BacklogZoneActivity;
 import com.chinamobile.yunweizhushou.ui.bandService.BandServiceActivity;
 import com.chinamobile.yunweizhushou.ui.billFlow.GGPRSActivity;
@@ -32,6 +33,7 @@ import com.chinamobile.yunweizhushou.ui.flowProvince.FlowProvinceActivity;
 import com.chinamobile.yunweizhushou.ui.functionAnalysis.FunctionAnalysisActivity;
 import com.chinamobile.yunweizhushou.ui.interfaceOver.InterfaceOverActivity;
 import com.chinamobile.yunweizhushou.ui.levelStandar.LevelStandardActivity;
+import com.chinamobile.yunweizhushou.ui.logZone.LogZoneActivity;
 import com.chinamobile.yunweizhushou.ui.main.MoreItemActivity;
 import com.chinamobile.yunweizhushou.ui.moneyoutCheck.MoneyoutCheckActivity;
 import com.chinamobile.yunweizhushou.ui.newFaceRecognititon.FaceRecognititonManageActivity;
@@ -40,6 +42,7 @@ import com.chinamobile.yunweizhushou.ui.officeDataZone.OfficeDataZoneActivity;
 import com.chinamobile.yunweizhushou.ui.onLinePreview.OnlinePreviewActivity;
 import com.chinamobile.yunweizhushou.ui.openCenter.OpenCenterActivity;
 import com.chinamobile.yunweizhushou.ui.orderCenter.OrderCenterActivity;
+import com.chinamobile.yunweizhushou.ui.peripheralsManagement.PeripheralsManagementActivity;
 import com.chinamobile.yunweizhushou.ui.personCenter.PersonCenterManagerActivity;
 import com.chinamobile.yunweizhushou.ui.planManagement.PlanManagementActivity;
 import com.chinamobile.yunweizhushou.ui.platformLogin.PlatformLoginActivity;
@@ -472,9 +475,23 @@ public class SelectorModules {
                     intent.putExtra("URL", "http://10.78.129.218:8080/app_web/target_management.html ");
                     context.startActivity(intent);
                     break;
+                case "68":
+                    intent.setClass(context, AnalogDetectionActivity.class);// 模拟探测
+                    intent.putExtra("title","模拟探测");
+                    context.startActivity(intent);
+                    break;
                 case "69":
                     intent.setClass(context, CMCNextActivity.class);// 云管理中心
                     intent.putExtra("title","运营分析中心");
+                    context.startActivity(intent);
+                    break;
+                case "70":
+                    intent.setClass(context, PeripheralsManagementActivity.class);// 云管理中心
+                    intent.putExtra("title","运营分析中心");
+                    context.startActivity(intent);
+                    break;
+                case "71":
+                    intent.setClass(context, AnsweringMachineActivity.class);// 知识答题
                     context.startActivity(intent);
                     break;
                 default:break;

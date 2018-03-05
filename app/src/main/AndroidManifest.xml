@@ -68,7 +68,9 @@
         <activity android:name=".ui.main.MainActivity" />
         <activity android:name=".ui.main.MoreItemActivity" />
         <activity android:name=".common.permission.PermissionActivity"  android:theme="@style/AppTheme.NoBar"/>
-        <activity android:name=".ui.login.LoginActivity" android:theme="@style/AppTheme.NoBar"/>
+        <activity android:name=".ui.login.LoginActivity"
+            android:theme="@style/AppTheme.NoBar"
+            />
         <activity android:name=".ui.main.MainPageActivity"
             android:launchMode="singleTask"/>
         <!--故障-->
@@ -116,9 +118,9 @@
         <activity android:name=".ui.esbInterface.WaterBallHorizenGraphActivity"
             android:screenOrientation="landscape" />
         <!--日志专区-->
-        <activity android:name=".logZone.LogZoneActivity"/>
-        <activity android:name=".logZone.LogZoneGplotActivity"/>
-        <activity android:name=".logZone.LogZoneTable3Activity"/>
+        <activity android:name=".ui.logZone.LogZoneActivity"/>
+        <activity android:name=".ui.logZone.LogZoneGplotActivity"/>
+        <activity android:name=".ui.logZone.LogZoneTable3Activity"/>
         <!--积压专区-->
         <activity android:name=".ui.backlogZone.BacklogZoneActivity"/>
         <activity android:name=".ui.backlogZone.GraphListActivity"/>
@@ -327,6 +329,16 @@
         <!--云管理中心-->
         <activity android:name=".ui.cloudManagementCenter.CMCActivity"/>
         <activity android:name=".ui.cloudManagementCenter.CMCNextActivity"/>
+        <!--模拟探测-->
+        <activity android:name=".ui.analogDetection.AnalogDetectionActivity"/>
+        <activity android:name=".ui.analogDetection.AnalogDetectionNextActivty"/>
+        <!--手势-->
+        <activity android:name=".common.GestureActivity"/>
+        <!--外设管理-->
+        <activity android:name=".ui.peripheralsManagement.PeripheralsManagementActivity"/>
+        <activity android:name=".ui.peripheralsManagement.PeripheralsAddActivity"
+            android:windowSoftInputMode="adjustNothing|stateHidden"/>
+        <activity android:name=".ui.answeringMachine.AnsweringMachineActivity"/>
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
