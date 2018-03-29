@@ -659,5 +659,9 @@ public enum HttpRequestEnum {
 	/*
 	* 外设管理
 	* */
-	enum_peripher_management,enum_peripher_add
+	enum_peripher_management,enum_peripher_add,
+	/*
+	*答题器
+	* */
+	enum_answering_machine_questions,enum_answering_machine_submit
 }

@@ -37,8 +37,8 @@ public class AnalogDetectionNextActivty extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        alarm_time=getIntent().getStringExtra("alarm_time");
-        area= getIntent().getStringExtra("area");
+        alarm_time=getIntent().getStringExtra("alarm_time")==null ? "":getIntent().getStringExtra("alarm_time");
+        area= getIntent().getStringExtra("area")==null ? "":getIntent().getStringExtra("area");
         setContentView(R.layout.activity_analog_detectin_next);
         ButterKnife.bind(this);
         initRequest();

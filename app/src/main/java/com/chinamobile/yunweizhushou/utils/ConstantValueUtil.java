@@ -6,9 +6,9 @@ import com.chinamobile.yunweizhushou.R;
 
 public class ConstantValueUtil {
 	// main
-	 //public static final String URL = "https://m360.zj.chinamobile.com/ywapp/";
+	 public static final String URL = "https://m360.zj.chinamobile.com/ywapp/";
 
-	public static final String URL = "http://10.73.131.139:8898/ywapp/";
+	//public static final String URL = "http://10.73.131.139:8898/ywapp/";
 	// public static final String URL = "http://192.168.1.113:8080/ywapp/";
 
 

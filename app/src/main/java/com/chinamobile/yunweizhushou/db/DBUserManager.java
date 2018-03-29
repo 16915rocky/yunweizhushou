@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteDatabase;
 
 import com.chinamobile.yunweizhushou.bean.UserBean;
 
-public class DBUserManager {
+public class 	DBUserManager {
 
 	private DatabaseHelper dbHelper;
 	private SQLiteDatabase db;
@@ -93,7 +93,9 @@ public class DBUserManager {
 			bean.setPassword(cursor.getString(1));
 			bean.setSessionId(cursor.getString(2));
 			bean.setGesture(cursor.getString(3));
+			bean.setPhone(cursor.getString(4));
 			bean.setNickName(cursor.getString(5));
+
 		}
 		cursor.close();
 		db.close();

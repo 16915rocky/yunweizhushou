@@ -67,7 +67,6 @@ public class BaseActivity extends FragmentActivity {
 		}
 		//数据加密
 		HashMap<String, String> encrypt = EncryptUtils.encrypt(map);
-
 		final ResponseBean responseBean = new ResponseBean();
 		OkHttpUtils
 				.get()
@@ -88,7 +87,7 @@ public class BaseActivity extends FragmentActivity {
 								//Log.e("TAG", e.toString());
 								JSONObject jsonObj = new JSONObject(response);
 								if (jsonObj.has(MSG)) {
-									responseBean.setMSG(jsonObj.getString(MSG));
+										responseBean.setMSG(jsonObj.getString(MSG));
 
 									//Log.i("TAG", "msg >>>>>" + responseBean.getMSG());
 									//检查sessionId( 安全登录 msg)

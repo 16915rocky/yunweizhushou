@@ -108,7 +108,7 @@ public class MainPageActivity extends TopBarBaseActivity implements View.OnClick
     private boolean isDestoryed;
     private MainPageGridAdapter mpgAdapter;
     public List<MainPageGridBean> mList;
-    private static final int REQUEST_CODE = 0x1;
+    private static final int    REQUEST_CODE = 0x1;
     private MyHandler myHandler;
     private List<MainPageNumBean> numList;
     private ActionBarDrawerToggle mDrawerToggle;

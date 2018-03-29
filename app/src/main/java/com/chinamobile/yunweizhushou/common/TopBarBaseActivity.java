@@ -43,7 +43,7 @@ public  abstract class TopBarBaseActivity extends AppCompatActivity {
     private static final int INITIAL_TIMEOUT_MS = 20000;
     private Dialog mDialog;
 
-    protected void setTopLeftButton(int iconResId, View.OnClickListener onClickListener ){
+     protected void setTopLeftButton(int iconResId, View.OnClickListener onClickListener ){
         toolbar.setNavigationIcon(iconResId);
         toolbar.setNavigationOnClickListener(onClickListener);
     }
